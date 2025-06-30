@@ -109,17 +109,11 @@ const Text = styled.p`
   margin-bottom: 1rem;
 `;
 
-const FeatureGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-`;
-
-const FeatureCard = styled.div`
+const ClassInfo = styled.div`
   background: ${colors.black}80;
   border: 1px solid ${colors.red}50;
   padding: 1.5rem;
+  margin: 1rem 0;
   position: relative;
   
   &::before {
@@ -133,7 +127,7 @@ const FeatureCard = styled.div`
   }
 `;
 
-const FeatureTitle = styled.h3`
+const ClassTitle = styled.h3`
   font-family: 'Orbitron', monospace;
   font-size: 1.3rem;
   font-weight: 700;
@@ -142,139 +136,64 @@ const FeatureTitle = styled.h3`
   text-transform: uppercase;
 `;
 
-const FeatureText = styled.p`
+const ClassDetails = styled.p`
   font-size: 1rem;
   line-height: 1.6;
   color: ${colors.white};
 `;
 
-const CTAButton = styled.button`
-  background: ${colors.red};
-  color: ${colors.white};
-  border: 2px solid ${colors.red};
-  font-family: 'Orbitron', monospace;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 2rem;
-  
-  &:hover {
-    background: transparent;
-    color: ${colors.red};
-    box-shadow: 0 0 20px ${colors.red}50;
-  }
-`;
-
-export default function MMAPage() {
+export default function NicoMangano() {
   return (
     <PageContainer>
       <Navigation />
       <Content>
         <HeroSection>
-          <Title>MMA</Title>
-          <Subtitle>Complete Mixed Martial Arts</Subtitle>
+          <Title>NICO MANGANO</Title>
+          <Subtitle>Kids Muay Thai Instructor</Subtitle>
         </HeroSection>
 
         <Section>
-          <SectionTitle>About Our MMA Program</SectionTitle>
+          <SectionTitle>About Nico</SectionTitle>
           <Text>
-            Our comprehensive MMA program combines the best of multiple martial arts 
-            disciplines to create complete fighters. Whether you're interested in 
-            competing professionally or just want to learn the most effective 
-            self-defense system, our MMA program provides the complete package.
+            Nico Mangano is a dedicated Muay Thai instructor specializing in teaching kids. 
+            With a passion for martial arts and a natural ability to connect with young students, 
+            Nico creates a fun and engaging learning environment where kids can develop their 
+            Muay Thai skills while building confidence and discipline.
           </Text>
           <Text>
-            Under the guidance of experienced coaches including Head Coach Sean Rubchinuk 
-            and Muay Thai specialist Diego Martin, you'll develop skills in striking, 
-            grappling, wrestling, and the seamless transitions between all ranges of combat.
-          </Text>
-        </Section>
-
-        <FeatureGrid>
-          <FeatureCard>
-            <FeatureTitle>Striking</FeatureTitle>
-            <FeatureText>
-              Master boxing, Muay Thai, and kickboxing techniques. Learn proper footwork, 
-              combinations, and how to generate power while maintaining defense.
-            </FeatureText>
-          </FeatureCard>
-
-          <FeatureCard>
-            <FeatureTitle>Grappling</FeatureTitle>
-            <FeatureText>
-              Brazilian Jiu-Jitsu and wrestling fundamentals. Learn takedowns, 
-              submissions, and ground control techniques that work in real fights.
-            </FeatureText>
-          </FeatureCard>
-
-          <FeatureCard>
-            <FeatureTitle>Clinch Work</FeatureTitle>
-            <FeatureText>
-              Muay Thai clinch techniques, dirty boxing, and takedown defense. 
-              Master the close-range fighting that's essential in MMA.
-            </FeatureText>
-          </FeatureCard>
-
-          <FeatureCard>
-            <FeatureTitle>Cage Work</FeatureTitle>
-            <FeatureText>
-              Learn to use the cage as a weapon. Master wall walks, cage takedowns, 
-              and positional control against the fence.
-            </FeatureText>
-          </FeatureCard>
-
-          <FeatureCard>
-            <FeatureTitle>Fight IQ</FeatureTitle>
-            <FeatureText>
-              Develop strategic thinking and fight intelligence. Learn to read opponents, 
-              adapt your game plan, and make split-second decisions.
-            </FeatureText>
-          </FeatureCard>
-
-          <FeatureCard>
-            <FeatureTitle>Conditioning</FeatureTitle>
-            <FeatureText>
-              MMA-specific conditioning that builds the endurance and strength needed 
-              for three to five rounds of intense competition.
-            </FeatureText>
-          </FeatureCard>
-        </FeatureGrid>
-
-        <Section>
-          <SectionTitle>Training Structure</SectionTitle>
-          <Text>
-            Our MMA program is structured to develop complete fighters through a 
-            systematic approach to training. Each session focuses on specific aspects 
-            of mixed martial arts while building the overall skill set needed for success.
-          </Text>
-          <Text>
-            From technical drilling to live sparring, our training methods are designed 
-            to prepare you for real competition while maintaining safety and proper 
-            progression for all skill levels.
+            His approach focuses on age-appropriate training methods that emphasize technique, 
+            fitness, and character development. Nico's classes are designed to be both challenging 
+            and enjoyable, helping kids develop a love for martial arts that will last a lifetime.
           </Text>
         </Section>
 
         <Section>
-          <SectionTitle>Why Choose BST MMA?</SectionTitle>
-          <Text>
-            BST MMA stands out for its comprehensive approach to mixed martial arts 
-            training. Our program combines world-class instruction in multiple disciplines 
-            with a supportive community of fighters and coaches dedicated to your success.
-          </Text>
-          <Text>
-            Whether you're a complete beginner or an experienced fighter looking to 
-            take your skills to the next level, our MMA program provides the training, 
-            guidance, and environment you need to achieve your goals in the cage.
-          </Text>
+          <SectionTitle>Classes Taught</SectionTitle>
+          
+          <ClassInfo>
+            <ClassTitle>Kids Muay Thai</ClassTitle>
+            <ClassDetails>
+              Age-appropriate Muay Thai training for children. Classes focus on fundamental 
+              techniques, fitness, coordination, and character development in a safe and 
+              supportive environment.
+            </ClassDetails>
+          </ClassInfo>
         </Section>
 
-        <div style={{ textAlign: 'center', margin: '3rem 0' }}>
-          <CTAButton>Begin Your MMA Journey</CTAButton>
-        </div>
+        <Section>
+          <SectionTitle>Teaching Philosophy</SectionTitle>
+          <Text>
+            Nico believes that martial arts training for kids should be about more than just 
+            learning techniques. His classes emphasize respect, discipline, confidence, and 
+            personal growth. He creates an environment where every child feels valued and 
+            encouraged to reach their full potential.
+          </Text>
+          <Text>
+            Through structured training and positive reinforcement, Nico helps kids develop 
+            not only their physical skills but also important life skills that will serve 
+            them well both in and out of the gym.
+          </Text>
+        </Section>
       </Content>
     </PageContainer>
   );

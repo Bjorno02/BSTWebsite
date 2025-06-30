@@ -219,7 +219,7 @@ const ContactInfo = styled.div`
   }
 `;
 
-const TIMES = ['1PM', '5PM', '6PM', '7PM', '8PM'] as const;
+const TIMES = ['12PM', '1PM', '5PM', '6PM', '7PM', '8PM'] as const;
 const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'] as const;
 
 type ScheduleTime = typeof TIMES[number];
@@ -242,23 +242,32 @@ export default function Schedule() {
     times: TIMES,
     days: DAYS,
     classes: {
+      '12PM': {
+        SUN: '',
+        MON: 'Jiu-Jitsu Fundamentals',
+        TUE: 'Jiu-Jitsu Fundamentals',
+        WED: '',
+        THU: 'Jiu-Jitsu Fundamentals',
+        FRI: '',
+        SAT: ''
+      },
       '1PM': {
-        SUN: 'Beginner Jiu-Jitsu',
+        SUN: 'Kids Muay Thai',
         MON: '',
         TUE: '',
         WED: '',
         THU: '',
         FRI: '',
-        SAT: 'Beginner Jiu-Jitsu'
+        SAT: 'Kids Muay Thai'
       },
       '5PM': {
-        SUN: 'MMA',
+        SUN: '',
         MON: 'Kids Jiu-Jitsu',
         TUE: 'Kids Wrestling',
         WED: 'Kids Jiu-Jitsu',
         THU: 'Kids Wrestling',
         FRI: 'Kids Jiu-Jitsu',
-        SAT: 'MMA'
+        SAT: ''
       },
       '6PM': {
         SUN: 'Beginner Jiu-Jitsu',
@@ -335,20 +344,7 @@ export default function Schedule() {
 
           <PricingSection>
             <Container>
-              <Title>Membership Options</Title>
               <PricingContainer>
-                <PricingOption>
-                  <h3>COMPLETE MMA PACKAGE</h3>
-                  <p>$179.99/month</p>
-                </PricingOption>
-                <PricingOption>
-                  <h3>UNLIMITED JIU-JITSU MEMBERSHIP</h3>
-                  <p>$150/month</p>
-                </PricingOption>
-                <PricingOption>
-                  <h3>KIDS GRAPPLING MEMBERSHIP</h3>
-                  <p>$75/month</p>
-                </PricingOption>
                 <NoContract>
                   <h3>NO CONTRACT - NO COMMITMENT</h3>
                   <p>SPACE LIMITED</p>

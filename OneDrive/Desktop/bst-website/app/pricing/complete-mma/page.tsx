@@ -151,30 +151,25 @@ const ProgramsGrid = styled.div`
   margin: 3rem 0;
 `;
 
-const PricingCard = styled.div`
+const ProgramCard = styled.div`
   background: #1a1a1a;
-  border: 2px solid ${colors.red};
-  padding: 2.5rem;
-  border-radius: 8px;
+  border: 1px solid ${colors.red};
+  padding: 1.5rem;
+  border-radius: 6px;
   text-align: center;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   
-  &::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border: 1px solid ${colors.dustyRed};
-    transform: rotate(1deg);
-    pointer-events: none;
+  h4 {
+    color: ${colors.red};
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
   }
   
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(220, 20, 60, 0.3);
+  p {
+    color: ${colors.white};
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.9;
   }
 `;
 
@@ -230,31 +225,54 @@ const ContactInfo = styled.div`
   }
 `;
 
-export default function CompleteMMAPricing() {
+const BookNowButton = styled.a`
+  display: block;
+  background: ${colors.red};
+  color: ${colors.white};
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 2rem auto;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease;
+  border: 2px solid ${colors.red};
+  text-align: center;
+  max-width: 300px;
+  
+  &:hover {
+    background: ${colors.dustyRed};
+    border-color: ${colors.dustyRed};
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 20, 60, 0.3);
+  }
+`;
+
+export default function JiuJitsuMuayThaiPricing() {
   return (
     <PageContainer>
       <Navigation />
       <PricingSection>
         <Container>
-          <Title>Complete MMA Package</Title>
-          <Subtitle>Access to All Programs and Classes</Subtitle>
+          <Title>Jiu-Jitsu + Muay Thai Package</Title>
+          <Subtitle>Complete Martial Arts Training</Subtitle>
           <Description>
-            The ultimate martial arts experience. Get unlimited access to all our programs, 
-            including Jiu-Jitsu, MMA, Muay Thai, Wrestling, and Kids classes. Perfect for 
-            serious practitioners who want to master multiple disciplines.
+            The ultimate combination package. Get unlimited access to both Jiu-Jitsu and Muay Thai classes. 
+            Perfect for practitioners who want to develop both grappling and striking skills in a comprehensive 
+            martial arts program.
           </Description>
           
           <MainPricingCard>
-            <CardTitle>Complete MMA Package</CardTitle>
+            <CardTitle>Jiu-Jitsu + Muay Thai Package</CardTitle>
             <Price>
               <span className="currency">$</span>179.99
               <span className="period">/month</span>
             </Price>
             <Features>
               <Feature>Unlimited Jiu-Jitsu classes (Beginner & Advanced)</Feature>
-              <Feature>Unlimited MMA training sessions</Feature>
               <Feature>Unlimited Muay Thai classes</Feature>
-              <Feature>Unlimited Wrestling sessions</Feature>
               <Feature>Access to all Open Mat sessions</Feature>
               <Feature>Priority registration for special events</Feature>
               <Feature>Free equipment usage</Feature>
@@ -262,12 +280,17 @@ export default function CompleteMMAPricing() {
             </Features>
           </MainPricingCard>
           
+          <BookNowButton href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+            Book Now
+          </BookNowButton>
+          
           <InfoSection>
             <h3>What's Included</h3>
             <p>
-              The Complete MMA Package gives you access to our full range of martial arts training. 
-              Train as much as you want, when you want, across all disciplines. This package is 
-              perfect for those who want to become well-rounded martial artists or compete in MMA.
+              The Jiu-Jitsu + Muay Thai Package gives you access to both of our core martial arts programs. 
+              Train in Brazilian Jiu-Jitsu for grappling and ground fighting, and Muay Thai for striking and 
+              stand-up fighting. This combination creates a well-rounded martial artist with both offensive 
+              and defensive skills.
             </p>
           </InfoSection>
           
@@ -277,16 +300,8 @@ export default function CompleteMMAPricing() {
               <p>Brazilian Jiu-Jitsu fundamentals and advanced techniques</p>
             </ProgramCard>
             <ProgramCard>
-              <h4>MMA</h4>
-              <p>Mixed martial arts training combining all disciplines</p>
-            </ProgramCard>
-            <ProgramCard>
               <h4>Muay Thai</h4>
               <p>Traditional Thai boxing with modern applications</p>
-            </ProgramCard>
-            <ProgramCard>
-              <h4>Wrestling</h4>
-              <p>Folkstyle and freestyle wrestling techniques</p>
             </ProgramCard>
             <ProgramCard>
               <h4>Open Mat</h4>
@@ -301,7 +316,7 @@ export default function CompleteMMAPricing() {
           <InfoSection>
             <h3>Training Schedule</h3>
             <p>
-              With the Complete MMA Package, you can attend classes throughout the week. 
+              With the Jiu-Jitsu + Muay Thai Package, you can attend classes throughout the week. 
               Our schedule includes morning, afternoon, and evening classes to fit your lifestyle. 
               Check our schedule page for detailed class times and availability.
             </p>
@@ -317,13 +332,8 @@ export default function CompleteMMAPricing() {
           </InfoSection>
           
           <ContactInfo>
-            <h3>Ready to Start Your MMA Journey?</h3>
+            <h3>Ready to Start Your Martial Arts Journey?</h3>
             <p>Call or text us to get started: <strong>978-810-247</strong></p>
-            <p>Or book online: 
-              <a href="https://www.bloodsweattearsjjujitsu.com/book-online" target="_blank" rel="noopener noreferrer">
-                Book Online
-              </a>
-            </p>
             <p>58 Pulaski Street, Building A, 2nd Floor, Peabody, MA</p>
           </ContactInfo>
         </Container>

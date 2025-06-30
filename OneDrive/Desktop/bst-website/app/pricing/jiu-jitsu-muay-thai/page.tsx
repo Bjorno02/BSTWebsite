@@ -144,24 +144,51 @@ const Feature = styled.li`
   }
 `;
 
-const LimitedBadge = styled.div`
-  position: absolute;
-  top: -15px;
-  right: 20px;
-  background: ${colors.red};
-  color: ${colors.white};
-  padding: 0.75rem 1.5rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 25px;
-  font-family: 'Orbitron', sans-serif;
-  animation: pulse 2s infinite;
+const ProgramsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+`;
+
+const PricingCard = styled.div`
+  background: #1a1a1a;
+  border: 2px solid ${colors.red};
+  padding: 2.5rem;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid ${colors.dustyRed};
+    transform: rotate(1deg);
+    pointer-events: none;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(220, 20, 60, 0.3);
+  }
+`;
+
+const ProgramCard = styled(PricingCard)`
+  h4 {
+    color: ${colors.red};
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  p {
+    color: ${colors.white};
+    line-height: 1.6;
   }
 `;
 
@@ -233,6 +260,8 @@ const BookNowButton = styled.a`
   border: 2px solid ${colors.red};
   text-align: center;
   max-width: 300px;
+  cursor: pointer;
+  pointer-events: auto;
   
   &:hover {
     background: ${colors.dustyRed};
@@ -242,35 +271,32 @@ const BookNowButton = styled.a`
   }
 `;
 
-export default function SpecialOffer() {
+export default function JiuJitsuMuayThaiPricing() {
   return (
     <PageContainer>
       <Navigation />
       <PricingSection>
         <Container>
-          <Title>Limited-Time Offer!</Title>
-          <Subtitle>Get Started with Blood Sweat and Tears Jiu Jitsu and MMA for Only $220</Subtitle>
+          <Title>Jiu-Jitsu + Muay Thai Package</Title>
+          <Subtitle>Complete Martial Arts Training</Subtitle>
           <Description>
-            For just $220, you'll receive a premium pair of Boxing Gloves, Striking Shin Guards, 
-            and ONE FULL MONTH of BST's Unlimited Membership!
+            The ultimate combination package. Get unlimited access to both Jiu-Jitsu and Muay Thai classes. 
+            Perfect for practitioners who want to master both grappling and striking disciplines.
           </Description>
           
           <MainPricingCard>
-            <LimitedBadge>Limited Time!</LimitedBadge>
-            <CardTitle>Special Starter Package</CardTitle>
+            <CardTitle>Jiu-Jitsu + Muay Thai Package</CardTitle>
             <Price>
-              <span className="currency">$</span>220
-              <span className="period">One Time</span>
+              <span className="currency">$</span>179.99
+              <span className="period">/month</span>
             </Price>
             <Features>
-              <Feature>Premium Boxing Gloves</Feature>
-              <Feature>Striking Shin Guards</Feature>
-              <Feature>ONE FULL MONTH of Unlimited Membership</Feature>
-              <Feature>Access to all 22 weekly classes</Feature>
-              <Feature>Brazilian Jiu-Jitsu and MMA training</Feature>
-              <Feature>Top-tier equipment included</Feature>
-              <Feature>Perfect for beginners and experienced fighters</Feature>
-              <Feature>No additional fees or commitments</Feature>
+              <Feature>Unlimited Jiu-Jitsu classes (Beginner & Advanced)</Feature>
+              <Feature>Unlimited Muay Thai classes</Feature>
+              <Feature>Access to all Open Mat sessions</Feature>
+              <Feature>Priority registration for special events</Feature>
+              <Feature>Free equipment usage</Feature>
+              <Feature>No contracts, cancel anytime</Feature>
             </Features>
           </MainPricingCard>
           
@@ -281,30 +307,53 @@ export default function SpecialOffer() {
           <InfoSection>
             <h3>What's Included</h3>
             <p>
-              This all-inclusive deal gives you the gear you need to train hard and the access 
-              to all of our 22 weekly classes. Whether you're a beginner or a seasoned fighter, 
-              get ready to level up your skills in Brazilian Jiu-Jitsu and MMA with top-tier 
-              equipment and unlimited training.
+              The Jiu-Jitsu + Muay Thai Package gives you access to both of our core martial arts programs. 
+              Train in both grappling and striking disciplines, becoming a well-rounded martial artist. 
+              This package is perfect for those who want to develop both ground fighting and stand-up skills.
             </p>
+          </InfoSection>
+          
+          <ProgramsGrid>
+            <ProgramCard>
+              <h4>Jiu-Jitsu</h4>
+              <p>Brazilian Jiu-Jitsu fundamentals and advanced techniques</p>
+            </ProgramCard>
+            <ProgramCard>
+              <h4>Muay Thai</h4>
+              <p>Traditional Thai boxing with modern applications</p>
+            </ProgramCard>
+            <ProgramCard>
+              <h4>Open Mat</h4>
+              <p>Unstructured training time for practice and sparring</p>
+            </ProgramCard>
+            <ProgramCard>
+              <h4>Conditioning</h4>
+              <p>Fight-specific strength and conditioning</p>
+            </ProgramCard>
+          </ProgramsGrid>
+          
+          <InfoSection>
+            <h3>Training Schedule</h3>
             <p>
-              <strong>Don't miss out—your journey starts here!</strong>
+              With the Jiu-Jitsu + Muay Thai Package, you can attend classes throughout the week. 
+              Our schedule includes morning, afternoon, and evening classes to fit your lifestyle. 
+              Check our schedule page for detailed class times and availability.
             </p>
           </InfoSection>
           
           <InfoSection>
-            <h3>Why This Offer?</h3>
+            <h3>No Commitment Policy</h3>
             <p>
-              We want to make it as easy as possible for you to start your martial arts journey. 
-              This special package eliminates the common barriers to getting started: equipment 
-              costs and membership commitments. You get everything you need to succeed from day one.
+              We believe in earning your business every month. There are no long-term contracts, 
+              no hidden fees, and no pressure. You can cancel your membership at any time with 
+              no penalties. We're confident you'll love training with us!
             </p>
           </InfoSection>
           
           <ContactInfo>
-            <h3>Ready to Claim Your Special Offer?</h3>
-            <p>Call or text us to secure your spot: <strong>978-810-247</strong></p>
+            <h3>Ready to Start Your Martial Arts Journey?</h3>
+            <p>Call or text us to get started: <strong>978-810-247</strong></p>
             <p>58 Pulaski Street, Building A, 2nd Floor, Peabody, MA</p>
-            <p><strong>Limited time offer - don't wait!</strong></p>
           </ContactInfo>
         </Container>
       </PricingSection>

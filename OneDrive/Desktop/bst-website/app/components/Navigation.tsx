@@ -23,8 +23,9 @@ const NavContent = styled.div`
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 3rem;
 `;
 
 const LogoContainer = styled.div`
@@ -35,7 +36,7 @@ const LogoContainer = styled.div`
 
 const NavMenu = styled.div`
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 `;
 
@@ -191,17 +192,13 @@ function Navigation() {
                 <DropdownTitle>Jiu-Jitsu</DropdownTitle>
                 <DropdownDescription>No-Gi training, self-defense, competition prep</DropdownDescription>
               </DropdownLink>
-              <DropdownLink href="/programs/mma">
-                <DropdownTitle>MMA</DropdownTitle>
-                <DropdownDescription>Complete mixed martial arts training</DropdownDescription>
-              </DropdownLink>
               <DropdownLink href="/programs/muay-thai">
                 <DropdownTitle>Muay Thai</DropdownTitle>
                 <DropdownDescription>Traditional striking with Diego Martin</DropdownDescription>
               </DropdownLink>
               <DropdownLink href="/programs/kids">
-                <DropdownTitle>Kids Grappling</DropdownTitle>
-                <DropdownDescription>Character development</DropdownDescription>
+                <DropdownTitle>Kids</DropdownTitle>
+                <DropdownDescription>Age-appropriate martial arts for children</DropdownDescription>
               </DropdownLink>
             </Dropdown>
           </NavItem>
@@ -211,16 +208,12 @@ function Navigation() {
           </NavItem>
 
           <NavItem>
-            <NavLink href="/gallery">Gallery</NavLink>
-          </NavItem>
-
-          <NavItem>
             <NavButton
-              onMouseEnter={() => handleDropdownToggle('instructors')}
+              onMouseEnter={() => handleDropdownToggle('adultInstructors')}
             >
-              Instructors
+              Adult Instructors
             </NavButton>
-            <Dropdown $isOpen={openDropdown === 'instructors'}>
+            <Dropdown $isOpen={openDropdown === 'adultInstructors'}>
               <DropdownLink href="/instructors/sean-rubchinuk">
                 <DropdownTitle>Sean Rubchinuk</DropdownTitle>
                 <DropdownDescription>Head Coach & World Champion</DropdownDescription>
@@ -228,6 +221,40 @@ function Navigation() {
               <DropdownLink href="/instructors/diego-martin">
                 <DropdownTitle>Diego Martin</DropdownTitle>
                 <DropdownDescription>Muay Thai Instructor</DropdownDescription>
+              </DropdownLink>
+              <DropdownLink href="/instructors/dundi-vedantam">
+                <DropdownTitle>Dundi Vedantam</DropdownTitle>
+                <DropdownDescription>Jiu-Jitsu Fundamentals Instructor</DropdownDescription>
+              </DropdownLink>
+              <DropdownLink href="/instructors/cole-patrick">
+                <DropdownTitle>Cole Patrick</DropdownTitle>
+                <DropdownDescription>Jiu-Jitsu Fundamentals Instructor</DropdownDescription>
+              </DropdownLink>
+              <DropdownLink href="/instructors/mario-hoxha">
+                <DropdownTitle>Mario Hoxha</DropdownTitle>
+                <DropdownDescription>Wrestling Instructor</DropdownDescription>
+              </DropdownLink>
+            </Dropdown>
+          </NavItem>
+
+          <NavItem>
+            <NavButton
+              onMouseEnter={() => handleDropdownToggle('kidsInstructors')}
+            >
+              Kids Instructors
+            </NavButton>
+            <Dropdown $isOpen={openDropdown === 'kidsInstructors'}>
+              <DropdownLink href="/instructors/bjorn-shurdha">
+                <DropdownTitle>Bjorn Shurdha</DropdownTitle>
+                <DropdownDescription>Kids Jiu-Jitsu Instructor</DropdownDescription>
+              </DropdownLink>
+              <DropdownLink href="/instructors/luke-loureiro">
+                <DropdownTitle>Luke Loureiro</DropdownTitle>
+                <DropdownDescription>Kids Wrestling Instructor</DropdownDescription>
+              </DropdownLink>
+              <DropdownLink href="/instructors/nico-mangano">
+                <DropdownTitle>Nico Mangano</DropdownTitle>
+                <DropdownDescription>Kids Muay Thai Instructor</DropdownDescription>
               </DropdownLink>
             </Dropdown>
           </NavItem>
@@ -243,9 +270,13 @@ function Navigation() {
                 <DropdownTitle>Drop-In Classes</DropdownTitle>
                 <DropdownDescription>Single class and day pass options</DropdownDescription>
               </DropdownLink>
-              <DropdownLink href="/pricing/complete-mma">
-                <DropdownTitle>Complete MMA</DropdownTitle>
-                <DropdownDescription>Access to all programs and classes</DropdownDescription>
+              <DropdownLink href="/pricing/jiu-jitsu-muay-thai">
+                <DropdownTitle>Jiu-Jitsu + Muay Thai Package</DropdownTitle>
+                <DropdownDescription>Access to Jiu-Jitsu and Muay Thai classes</DropdownDescription>
+              </DropdownLink>
+              <DropdownLink href="/pricing/muay-thai">
+                <DropdownTitle>Muay Thai Only</DropdownTitle>
+                <DropdownDescription>Unlimited Muay Thai classes</DropdownDescription>
               </DropdownLink>
               <DropdownLink href="/pricing/jiu-jitsu">
                 <DropdownTitle>Jiu-Jitsu Only</DropdownTitle>
@@ -260,6 +291,10 @@ function Navigation() {
                 <DropdownDescription>Limited-time: $220 for gear + 1 month unlimited</DropdownDescription>
               </DropdownLink>
             </Dropdown>
+          </NavItem>
+
+          <NavItem>
+            <NavLink href="/achievements">Achievements</NavLink>
           </NavItem>
 
           <ContactButton href="/contact">Contact Us</ContactButton>

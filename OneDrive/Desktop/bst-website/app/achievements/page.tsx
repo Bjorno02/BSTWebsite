@@ -1,8 +1,8 @@
 "use client";
 
 import styled from 'styled-components';
-import { colors } from '../../components/StyledComponents';
-import Navigation from '../../components/Navigation';
+import { Container, colors } from '../components/StyledComponents';
+import Navigation from '../components/Navigation';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -109,140 +109,167 @@ const Text = styled.p`
   margin-bottom: 1rem;
 `;
 
-const FeatureGrid = styled.div`
+const AchievementGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 `;
 
-const FeatureCard = styled.div`
+const AchievementCard = styled.div`
   background: ${colors.black}80;
-  border: 1px solid ${colors.red}50;
-  padding: 1.5rem;
+  border: 2px solid ${colors.red};
+  padding: 2rem;
   position: relative;
+  text-align: center;
   
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: ${colors.red};
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid ${colors.dustyRed};
+    transform: rotate(1deg);
+    pointer-events: none;
   }
 `;
 
-const FeatureTitle = styled.h3`
+const AchievementTitle = styled.h3`
   font-family: 'Orbitron', monospace;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: ${colors.red};
   margin-bottom: 1rem;
   text-transform: uppercase;
 `;
 
-const FeatureText = styled.p`
+const AchievementDate = styled.div`
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  color: ${colors.dustyRed};
+  margin-bottom: 1rem;
+  font-weight: 600;
+`;
+
+const AchievementDescription = styled.p`
   font-size: 1rem;
   line-height: 1.6;
   color: ${colors.white};
 `;
 
-export default function JiuJitsu() {
+const HighlightSection = styled.div`
+  background: ${colors.red}10;
+  border: 3px solid ${colors.red};
+  padding: 3rem;
+  margin: 3rem 0;
+  text-align: center;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid ${colors.dustyRed};
+    transform: rotate(2deg);
+    pointer-events: none;
+  }
+`;
+
+const HighlightTitle = styled.h2`
+  font-family: 'Orbitron', monospace;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: ${colors.red};
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0px ${colors.black};
+`;
+
+const HighlightText = styled.p`
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: ${colors.white};
+  margin-bottom: 1rem;
+  font-weight: 600;
+`;
+
+export default function Achievements() {
   return (
     <PageContainer>
       <Navigation />
       <Content>
         <HeroSection>
-          <Title>JIU-JITSU</Title>
-          <Subtitle>No-Gi Brazilian Jiu-Jitsu</Subtitle>
+          <Title>ACHIEVEMENTS</Title>
+          <Subtitle>Blood Sweat and Tears Competition Team</Subtitle>
         </HeroSection>
 
-        <Section>
-          <SectionTitle>About Our No-Gi Jiu-Jitsu Program</SectionTitle>
+        <HighlightSection>
+          <HighlightTitle>2nd Place Overall</HighlightTitle>
+          <HighlightText>
+            Grappling Industries Event
+          </HighlightText>
           <Text>
-            Our No-Gi Jiu-Jitsu program focuses on modern grappling techniques without 
-            the traditional kimono. This approach makes the training more applicable 
-            to real-world self-defense situations and MMA competition.
+            The BST Competition Team proudly secured second place overall at the recent Grappling Industries event. 
+            This remarkable achievement showcases the hard work, dedication, and skill of our athletes. Our team members 
+            demonstrated exceptional technique and sportsmanship, representing BST with pride.
           </Text>
+        </HighlightSection>
+
+        <Section>
+          <SectionTitle>Recent Competition Results</SectionTitle>
           <Text>
-            <strong>Classes are available every single day of the week.</strong> Whether 
-            you're a complete beginner or an experienced grappler, our program offers 
-            the training you need to develop your ground fighting skills in a supportive, 
-            competitive environment.
+            Our competition team continues to build on our success, representing BST with excellence 
+            in tournaments across New England. Each competition brings new challenges and opportunities 
+            for growth.
           </Text>
         </Section>
 
-        <FeatureGrid>
-          <FeatureCard>
-            <FeatureTitle>Beginner Classes</FeatureTitle>
-            <FeatureText>
-              Perfect for newcomers to Jiu-Jitsu. Learn fundamental techniques, basic 
-              positions, and essential self-defense skills. Build a strong foundation 
-              in No-Gi grappling. Available every single day.
-            </FeatureText>
-          </FeatureCard>
+        <AchievementGrid>
+          <AchievementCard>
+            <AchievementTitle>Grappling Industries</AchievementTitle>
+            <AchievementDate>2024</AchievementDate>
+            <AchievementDescription>
+              2nd Place Overall Team Performance. Multiple individual medals across weight divisions 
+              and skill levels. Outstanding sportsmanship and technical excellence.
+            </AchievementDescription>
+          </AchievementCard>
 
-          <FeatureCard>
-            <FeatureTitle>Advanced Classes</FeatureTitle>
-            <FeatureText>
-              For experienced practitioners looking to refine their skills and learn 
-              advanced techniques. Focus on complex submissions, transitions, and 
-              competition strategies. Available every single day.
-            </FeatureText>
-          </FeatureCard>
+          <AchievementCard>
+            <AchievementTitle>New England Championships</AchievementTitle>
+            <AchievementDate>2024</AchievementDate>
+            <AchievementDescription>
+              Strong showing in regional competition with multiple podium finishes. 
+              Team members demonstrated exceptional technique and competitive spirit.
+            </AchievementDescription>
+          </AchievementCard>
 
-          <FeatureCard>
-            <FeatureTitle>Open Mat Sessions</FeatureTitle>
-            <FeatureText>
-              Unstructured training time for practice, drilling, and sparring. Perfect 
-              for refining techniques and building relationships with training partners. 
-              Available every single day.
-            </FeatureText>
-          </FeatureCard>
-
-          <FeatureCard>
-            <FeatureTitle>Modern Approach</FeatureTitle>
-            <FeatureText>
-              No-Gi training focuses on modern grappling techniques without the 
-              traditional kimono, making it more applicable to real-world situations 
-              and MMA competition.
-            </FeatureText>
-          </FeatureCard>
-
-          <FeatureCard>
-            <FeatureTitle>Athletic Development</FeatureTitle>
-            <FeatureText>
-              Build strength, flexibility, and cardiovascular endurance through 
-              dynamic No-Gi training. Improve your overall athletic performance 
-              and conditioning.
-            </FeatureText>
-          </FeatureCard>
-
-          <FeatureCard>
-            <FeatureTitle>Self-Defense</FeatureTitle>
-            <FeatureText>
-              Learn practical self-defense techniques that work in real situations. 
-              No-Gi training prepares you for scenarios where traditional clothing 
-              grips aren't available.
-            </FeatureText>
-          </FeatureCard>
-        </FeatureGrid>
+          <AchievementCard>
+            <AchievementTitle>Local Tournaments</AchievementTitle>
+            <AchievementDate>2024</AchievementDate>
+            <AchievementDescription>
+              Consistent success in local and regional tournaments. Team members 
+              continue to develop and improve with each competition experience.
+            </AchievementDescription>
+          </AchievementCard>
+        </AchievementGrid>
 
         <Section>
-          <SectionTitle>Why Choose BST No-Gi Jiu-Jitsu?</SectionTitle>
+          <SectionTitle>Join the Legacy</SectionTitle>
           <Text>
-            BST No-Gi Jiu-Jitsu stands out for its modern approach to grappling training. 
-            Our program focuses on techniques that work in real-world situations and 
-            MMA competition, while maintaining the technical depth and strategic thinking 
-            that makes Jiu-Jitsu such an effective martial art.
+            <strong>JOIN THE BEGINNING OF A NEW GENERATION OF JIU-JITSU IN NEW ENGLAND</strong>
           </Text>
           <Text>
-            With classes available every single day and instruction from experienced 
-            coaches, our No-Gi program provides the training environment you need to 
-            develop your grappling skills and achieve your goals, whether that's 
-            self-defense, competition, or simply improving your overall fitness and 
-            martial arts knowledge.
+            Be part of something special. Our competition team is more than just training - it's about building 
+            champions, creating a legacy, and pushing the boundaries of what's possible in New England Jiu-Jitsu.
+          </Text>
+          <Text>
+            Whether you're interested in competing or simply want to train with champions, 
+            BST provides the environment and coaching you need to achieve your goals.
           </Text>
         </Section>
       </Content>

@@ -206,17 +206,16 @@ export default function KidsPage() {
       <Navigation />
       <Content>
         <HeroSection>
-          <Title>Kids Grappling</Title>
-          <Subtitle>Building Champions for Life</Subtitle>
+          <Title>Kids Programs</Title>
+          <Subtitle>Jiu-Jitsu • Wrestling • Muay Thai</Subtitle>
         </HeroSection>
 
         <Section>
-          <SectionTitle>About Our Kids Program</SectionTitle>
+          <SectionTitle>About Our Kids Programs</SectionTitle>
           <Text>
-            Our Kids Grappling program is designed for children, focusing on 
-            character development and the fundamentals of Brazilian Jiu-Jitsu. We believe 
-            that martial arts training provides the perfect foundation for building 
-            confident, respectful, and resilient young people.
+            Our Kids Programs offer comprehensive martial arts training for children ages 7-12, 
+            including Brazilian Jiu-Jitsu, Wrestling, and Muay Thai. We believe that martial arts 
+            training provides the perfect foundation for building confident, respectful, and resilient young people.
           </Text>
           <Text>
             Under the guidance of experienced instructors who specialize in youth development, 
@@ -226,15 +225,39 @@ export default function KidsPage() {
         </Section>
 
         <AgeGroup>
-          <AgeTitle>Kids Classes</AgeTitle>
+          <AgeTitle>Kids Classes (Ages 7-12)</AgeTitle>
           <Text>
-            Age-appropriate training that focuses on fun, safety, and skill development. 
-            Classes are structured to keep kids engaged while building the foundation 
-            for lifelong martial arts practice.
+            Age-appropriate training that focuses on fun, safety, and skill development across 
+            multiple martial arts disciplines. Classes are structured to keep kids engaged while 
+            building the foundation for lifelong martial arts practice.
           </Text>
         </AgeGroup>
 
         <FeatureGrid>
+          <FeatureCard>
+            <FeatureTitle>Brazilian Jiu-Jitsu</FeatureTitle>
+            <FeatureText>
+              Learn the art of grappling and ground fighting. Kids develop technique, 
+              strategy, and problem-solving skills through structured BJJ training.
+            </FeatureText>
+          </FeatureCard>
+
+          <FeatureCard>
+            <FeatureTitle>Wrestling</FeatureTitle>
+            <FeatureText>
+              Build strength, coordination, and takedown skills. Wrestling classes focus 
+              on fundamental techniques and physical conditioning.
+            </FeatureText>
+          </FeatureCard>
+
+          <FeatureCard>
+            <FeatureTitle>Muay Thai</FeatureTitle>
+            <FeatureText>
+              Develop striking skills, coordination, and fitness through traditional 
+              Thai boxing techniques adapted for children.
+            </FeatureText>
+          </FeatureCard>
+
           <FeatureCard>
             <FeatureTitle>Character Development</FeatureTitle>
             <FeatureText>
@@ -287,13 +310,13 @@ export default function KidsPage() {
         <Section>
           <SectionTitle>Program Benefits</SectionTitle>
           <Text>
-            Our Kids Grappling program offers numerous benefits that extend far beyond 
+            Our Kids Programs offer numerous benefits that extend far beyond 
             the mat. Children develop physical skills, mental toughness, and character 
             traits that will serve them in school, sports, and life.
           </Text>
           <Text>
             Parents consistently report improvements in their children's confidence, 
-            behavior, academic performance, and social interactions after joining our program.
+            behavior, academic performance, and social interactions after joining our programs.
           </Text>
         </Section>
 
@@ -313,8 +336,8 @@ export default function KidsPage() {
         <Section>
           <SectionTitle>Why Choose BST Kids?</SectionTitle>
           <Text>
-            BST Kids Grappling provides a unique combination of martial arts training 
-            and character development. Our program is designed specifically for children, 
+            BST Kids Programs provide a unique combination of martial arts training 
+            and character development. Our programs are designed specifically for children, 
             with experienced instructors who understand how to make learning fun and effective.
           </Text>
           <Text>

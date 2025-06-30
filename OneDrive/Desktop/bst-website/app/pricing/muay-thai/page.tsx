@@ -144,24 +144,32 @@ const Feature = styled.li`
   }
 `;
 
-const LimitedBadge = styled.div`
-  position: absolute;
-  top: -15px;
-  right: 20px;
-  background: ${colors.red};
-  color: ${colors.white};
-  padding: 0.75rem 1.5rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 25px;
-  font-family: 'Orbitron', sans-serif;
-  animation: pulse 2s infinite;
+const ProgramsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+`;
+
+const ProgramCard = styled.div`
+  background: #1a1a1a;
+  border: 1px solid ${colors.red};
+  padding: 1.5rem;
+  border-radius: 6px;
+  text-align: center;
   
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+  h4 {
+    color: ${colors.red};
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  p {
+    color: ${colors.white};
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.9;
   }
 `;
 
@@ -233,6 +241,8 @@ const BookNowButton = styled.a`
   border: 2px solid ${colors.red};
   text-align: center;
   max-width: 300px;
+  cursor: pointer;
+  pointer-events: auto;
   
   &:hover {
     background: ${colors.dustyRed};
@@ -242,35 +252,34 @@ const BookNowButton = styled.a`
   }
 `;
 
-export default function SpecialOffer() {
+export default function MuayThaiPricing() {
   return (
     <PageContainer>
       <Navigation />
       <PricingSection>
         <Container>
-          <Title>Limited-Time Offer!</Title>
-          <Subtitle>Get Started with Blood Sweat and Tears Jiu Jitsu and MMA for Only $220</Subtitle>
+          <Title>Muay Thai Program</Title>
+          <Subtitle>Traditional Thai Boxing Training</Subtitle>
           <Description>
-            For just $220, you'll receive a premium pair of Boxing Gloves, Striking Shin Guards, 
-            and ONE FULL MONTH of BST's Unlimited Membership!
+            Master the art of Muay Thai with our comprehensive striking program. Learn traditional 
+            Thai boxing techniques, improve your fitness, and develop powerful striking skills 
+            under the guidance of experienced instructors.
           </Description>
           
           <MainPricingCard>
-            <LimitedBadge>Limited Time!</LimitedBadge>
-            <CardTitle>Special Starter Package</CardTitle>
+            <CardTitle>Muay Thai Membership</CardTitle>
             <Price>
-              <span className="currency">$</span>220
-              <span className="period">One Time</span>
+              <span className="currency">$</span>125
+              <span className="period">/month</span>
             </Price>
             <Features>
-              <Feature>Premium Boxing Gloves</Feature>
-              <Feature>Striking Shin Guards</Feature>
-              <Feature>ONE FULL MONTH of Unlimited Membership</Feature>
-              <Feature>Access to all 22 weekly classes</Feature>
-              <Feature>Brazilian Jiu-Jitsu and MMA training</Feature>
-              <Feature>Top-tier equipment included</Feature>
-              <Feature>Perfect for beginners and experienced fighters</Feature>
-              <Feature>No additional fees or commitments</Feature>
+              <Feature>Unlimited Muay Thai classes</Feature>
+              <Feature>Traditional Thai boxing techniques</Feature>
+              <Feature>Striking and clinch work</Feature>
+              <Feature>Fight conditioning and fitness</Feature>
+              <Feature>Access to Open Mat sessions</Feature>
+              <Feature>Free equipment usage</Feature>
+              <Feature>No contracts, cancel anytime</Feature>
             </Features>
           </MainPricingCard>
           
@@ -281,30 +290,54 @@ export default function SpecialOffer() {
           <InfoSection>
             <h3>What's Included</h3>
             <p>
-              This all-inclusive deal gives you the gear you need to train hard and the access 
-              to all of our 22 weekly classes. Whether you're a beginner or a seasoned fighter, 
-              get ready to level up your skills in Brazilian Jiu-Jitsu and MMA with top-tier 
-              equipment and unlimited training.
+              Our Muay Thai program focuses on traditional Thai boxing techniques including punches, 
+              kicks, elbows, and knees. You'll learn proper form, develop power and speed, and 
+              improve your overall fitness. Classes are suitable for all skill levels, from beginners 
+              to advanced practitioners.
             </p>
+          </InfoSection>
+          
+          <ProgramsGrid>
+            <ProgramCard>
+              <h4>Striking Techniques</h4>
+              <p>Punches, kicks, elbows, and knees</p>
+            </ProgramCard>
+            <ProgramCard>
+              <h4>Clinch Work</h4>
+              <p>Close-range fighting and control</p>
+            </ProgramCard>
+            <ProgramCard>
+              <h4>Fight Conditioning</h4>
+              <p>Strength, endurance, and power training</p>
+            </ProgramCard>
+            <ProgramCard>
+              <h4>Self-Defense</h4>
+              <p>Practical applications for real situations</p>
+            </ProgramCard>
+          </ProgramsGrid>
+          
+          <InfoSection>
+            <h3>Training Schedule</h3>
             <p>
-              <strong>Don't miss out—your journey starts here!</strong>
+              Muay Thai classes are held Monday, Wednesday, and Friday at 8PM. Classes focus on 
+              technique development, conditioning, and practical application. Check our schedule 
+              page for detailed class times and availability.
             </p>
           </InfoSection>
           
           <InfoSection>
-            <h3>Why This Offer?</h3>
+            <h3>No Commitment Policy</h3>
             <p>
-              We want to make it as easy as possible for you to start your martial arts journey. 
-              This special package eliminates the common barriers to getting started: equipment 
-              costs and membership commitments. You get everything you need to succeed from day one.
+              We believe in earning your business every month. There are no long-term contracts, 
+              no hidden fees, and no pressure. You can cancel your membership at any time with 
+              no penalties. We're confident you'll love training with us!
             </p>
           </InfoSection>
           
           <ContactInfo>
-            <h3>Ready to Claim Your Special Offer?</h3>
-            <p>Call or text us to secure your spot: <strong>978-810-247</strong></p>
+            <h3>Ready to Start Your Muay Thai Journey?</h3>
+            <p>Call or text us to get started: <strong>978-810-247</strong></p>
             <p>58 Pulaski Street, Building A, 2nd Floor, Peabody, MA</p>
-            <p><strong>Limited time offer - don't wait!</strong></p>
           </ContactInfo>
         </Container>
       </PricingSection>

@@ -69,28 +69,37 @@ const Description = styled.p`
   opacity: 0.9;
 `;
 
-const MainPricingCard = styled.div`
+const PricingGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+`;
+
+const PricingCard = styled.div`
   background: #1a1a1a;
-  border: 3px solid ${colors.red};
-  padding: 3rem;
+  border: 2px solid ${colors.red};
+  padding: 2.5rem;
   border-radius: 12px;
   text-align: center;
   position: relative;
-  margin: 3rem 0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &::before {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border: 2px solid ${colors.dustyRed};
-    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid ${colors.dustyRed};
+    transform: rotate(1deg);
     pointer-events: none;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(220, 20, 60, 0.3);
   }
 `;
 
@@ -102,37 +111,37 @@ const CardTitle = styled.h3`
   text-transform: uppercase;
 `;
 
-const Price = styled.div`
-  font-size: 3.5rem;
+const CardPrice = styled.div`
+  font-size: 2.5rem;
   font-weight: 700;
   color: ${colors.white};
   margin-bottom: 1rem;
   
   .currency {
-    font-size: 2rem;
+    font-size: 1.5rem;
     vertical-align: top;
   }
   
   .period {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: ${colors.dustyRed};
     font-weight: 400;
   }
 `;
 
-const Features = styled.ul`
+const CardFeatures = styled.ul`
   list-style: none;
   padding: 0;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   text-align: left;
 `;
 
-const Feature = styled.li`
+const CardFeature = styled.li`
   color: ${colors.white};
-  margin-bottom: 1rem;
-  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
   position: relative;
-  font-size: 1.1rem;
+  font-size: 1rem;
   
   &::before {
     content: '✓';
@@ -140,35 +149,7 @@ const Feature = styled.li`
     position: absolute;
     left: 0;
     font-weight: bold;
-    font-size: 1.2rem;
-  }
-`;
-
-const BenefitsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 3rem 0;
-`;
-
-const BenefitCard = styled.div`
-  background: ${colors.darkGrey};
-  border: 1px solid ${colors.red};
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  
-  h4 {
-    color: ${colors.red};
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-  }
-  
-  p {
-    color: ${colors.white};
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 1.1rem;
   }
 `;
 
@@ -249,42 +230,141 @@ const ContactInfo = styled.div`
   }
 `;
 
+const BenefitsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+`;
+
+const BenefitCard = styled.div`
+  background: ${colors.darkGrey};
+  border: 1px solid ${colors.red};
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  
+  h4 {
+    color: ${colors.red};
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  p {
+    color: ${colors.white};
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+`;
+
+const BookNowButton = styled.a`
+  display: block;
+  background: ${colors.red};
+  color: ${colors.white};
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 2rem auto;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease;
+  border: 2px solid ${colors.red};
+  text-align: center;
+  max-width: 300px;
+  cursor: pointer;
+  pointer-events: auto;
+  
+  &:hover {
+    background: ${colors.dustyRed};
+    border-color: ${colors.dustyRed};
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 20, 60, 0.3);
+  }
+`;
+
 export default function KidsPricing() {
   return (
     <PageContainer>
       <Navigation />
       <PricingSection>
         <Container>
-          <Title>Kids Grappling Program</Title>
-          <Subtitle>Jiu-Jitsu and Wrestling for Kids</Subtitle>
+          <Title>Kids Programs</Title>
+          <Subtitle>Martial Arts Training for Children</Subtitle>
           <Description>
             Build confidence, discipline, and character through martial arts training. Our kids 
-            program focuses on self-defense and personal development in a safe, 
+            programs focus on self-defense and personal development in a safe, 
             supportive environment.
           </Description>
           
-          <MainPricingCard>
-            <CardTitle>Kids Grappling Membership</CardTitle>
-            <Price>
-              <span className="currency">$</span>75
-              <span className="period">/month</span>
-            </Price>
-            <Features>
-              <Feature>Unlimited Kids Jiu-Jitsu classes</Feature>
-              <Feature>Unlimited Kids Wrestling classes</Feature>
-              <Feature>Age-appropriate training</Feature>
-              <Feature>Self-defense curriculum</Feature>
-              <Feature>Character development</Feature>
-              <Feature>Belt progression system</Feature>
-              <Feature>Free equipment usage</Feature>
-              <Feature>No contracts, cancel anytime</Feature>
-            </Features>
-          </MainPricingCard>
+          <PricingGrid>
+            <PricingCard>
+              <CardTitle>Unlimited Kids Membership</CardTitle>
+              <CardPrice>
+                <span className="currency">$</span>125
+                <span className="period">/month</span>
+              </CardPrice>
+              <CardFeatures>
+                <CardFeature>Unlimited Kids Jiu-Jitsu classes</CardFeature>
+                <CardFeature>Unlimited Kids Wrestling classes</CardFeature>
+                <CardFeature>Unlimited Kids Muay Thai classes</CardFeature>
+                <CardFeature>Access to all kids programs</CardFeature>
+                <CardFeature>Age-appropriate training</CardFeature>
+                <CardFeature>Self-defense curriculum</CardFeature>
+                <CardFeature>Character development</CardFeature>
+                <CardFeature>Belt progression system</CardFeature>
+                <CardFeature>Free equipment usage</CardFeature>
+                <CardFeature>No contracts, cancel anytime</CardFeature>
+              </CardFeatures>
+            </PricingCard>
+
+            <PricingCard>
+              <CardTitle>Kids Grappling Membership</CardTitle>
+              <CardPrice>
+                <span className="currency">$</span>75
+                <span className="period">/month</span>
+              </CardPrice>
+              <CardFeatures>
+                <CardFeature>Unlimited Kids Jiu-Jitsu classes</CardFeature>
+                <CardFeature>Unlimited Kids Wrestling classes</CardFeature>
+                <CardFeature>Age-appropriate training</CardFeature>
+                <CardFeature>Self-defense curriculum</CardFeature>
+                <CardFeature>Character development</CardFeature>
+                <CardFeature>Belt progression system</CardFeature>
+                <CardFeature>Free equipment usage</CardFeature>
+                <CardFeature>No contracts, cancel anytime</CardFeature>
+              </CardFeatures>
+            </PricingCard>
+
+            <PricingCard>
+              <CardTitle>Kids Muay Thai Membership</CardTitle>
+              <CardPrice>
+                <span className="currency">$</span>75
+                <span className="period">/month</span>
+              </CardPrice>
+              <CardFeatures>
+                <CardFeature>Unlimited Kids Muay Thai classes</CardFeature>
+                <CardFeature>Age-appropriate striking training</CardFeature>
+                <CardFeature>Self-defense techniques</CardFeature>
+                <CardFeature>Character development</CardFeature>
+                <CardFeature>Physical fitness and coordination</CardFeature>
+                <CardFeature>Discipline and respect training</CardFeature>
+                <CardFeature>Free equipment usage</CardFeature>
+                <CardFeature>No contracts, cancel anytime</CardFeature>
+              </CardFeatures>
+            </PricingCard>
+          </PricingGrid>
+          
+          <BookNowButton href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+            Book Now
+          </BookNowButton>
           
           <InfoSection>
             <h3>Program Overview</h3>
             <p>
-              Our Kids Grappling Program is specifically designed for children. 
+              Our Kids Programs are specifically designed for children. 
               We focus on building confidence, teaching self-defense, and developing character 
               through martial arts training. Our curriculum emphasizes respect, discipline, 
               and personal growth in a fun, safe environment.
@@ -321,23 +401,10 @@ export default function KidsPricing() {
           <InfoSection>
             <h3>Age Groups</h3>
             <p>
-              Our kids program is divided into age-appropriate groups to ensure the best 
-              learning experience for each child:
+              Our kids programs are designed for children ages 7-12. We provide age-appropriate 
+              training that focuses on building confidence, teaching self-defense, and developing 
+              character through martial arts.
             </p>
-            <AgeGroupInfo>
-              <AgeGroup>
-                <h4>Ages 6-8</h4>
-                <p>Fundamentals focus, fun-based learning, basic techniques</p>
-              </AgeGroup>
-              <AgeGroup>
-                <h4>Ages 9-10</h4>
-                <p>Intermediate techniques, increased discipline, competition prep</p>
-              </AgeGroup>
-              <AgeGroup>
-                <h4>Ages 11-12</h4>
-                <p>Advanced techniques, leadership development, tournament training</p>
-              </AgeGroup>
-            </AgeGroupInfo>
           </InfoSection>
           
           <InfoSection>
@@ -362,11 +429,6 @@ export default function KidsPricing() {
           <ContactInfo>
             <h3>Ready to Get Your Child Started?</h3>
             <p>Call or text us to schedule a free trial class: <strong>978-810-247</strong></p>
-            <p>Or book online: 
-              <a href="https://www.bloodsweattearsjjujitsu.com/book-online" target="_blank" rel="noopener noreferrer">
-                Book Online
-              </a>
-            </p>
             <p>58 Pulaski Street, Building A, 2nd Floor, Peabody, MA</p>
           </ContactInfo>
         </Container>

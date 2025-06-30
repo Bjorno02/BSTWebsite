@@ -216,6 +216,33 @@ const ContactInfo = styled.div`
   }
 `;
 
+const BookNowButton = styled.a`
+  display: block;
+  background: ${colors.red};
+  color: ${colors.white};
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 2rem auto;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease;
+  border: 2px solid ${colors.red};
+  text-align: center;
+  max-width: 300px;
+  cursor: pointer;
+  pointer-events: auto;
+  
+  &:hover {
+    background: ${colors.dustyRed};
+    border-color: ${colors.dustyRed};
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 20, 60, 0.3);
+  }
+`;
+
 export default function DropInPricing() {
   return (
     <PageContainer>
@@ -246,6 +273,10 @@ export default function DropInPricing() {
             </PricingCard>
           </PricingGrid>
           
+          <BookNowButton href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+            Book Now
+          </BookNowButton>
+          
           <InfoSection>
             <h3>What to Expect</h3>
             <p>
@@ -271,11 +302,6 @@ export default function DropInPricing() {
           <ContactInfo>
             <h3>Ready to Start?</h3>
             <p>Call or text us to reserve your spot: <strong>978-810-247</strong></p>
-            <p>Or book online: 
-              <a href="https://www.bloodsweattearsjjujitsu.com/book-online" target="_blank" rel="noopener noreferrer">
-                Book Online
-              </a>
-            </p>
             <p>58 Pulaski Street, Building A, 2nd Floor, Peabody, MA</p>
           </ContactInfo>
         </Container>
