@@ -271,16 +271,12 @@ function Navigation() {
                 <DropdownDescription>Single class and day pass options</DropdownDescription>
               </DropdownLink>
               <DropdownLink href="/pricing/jiu-jitsu-muay-thai">
-                <DropdownTitle>Jiu-Jitsu + Muay Thai Package</DropdownTitle>
+                <DropdownTitle>Complete BST Package</DropdownTitle>
                 <DropdownDescription>Access to Jiu-Jitsu and Muay Thai classes</DropdownDescription>
               </DropdownLink>
               <DropdownLink href="/pricing/muay-thai">
                 <DropdownTitle>Muay Thai Only</DropdownTitle>
                 <DropdownDescription>Unlimited Muay Thai classes</DropdownDescription>
-              </DropdownLink>
-              <DropdownLink href="/pricing/jiu-jitsu">
-                <DropdownTitle>Jiu-Jitsu Only</DropdownTitle>
-                <DropdownDescription>Unlimited Jiu-Jitsu classes</DropdownDescription>
               </DropdownLink>
               <DropdownLink href="/pricing/kids">
                 <DropdownTitle>Kids Program</DropdownTitle>

@@ -155,27 +155,50 @@ export default function MarioHoxha() {
             <Title>Mario Hoxha</Title>
             <Subtitle>Wrestling Instructor</Subtitle>
             <Description>
-              Mario Hoxha leads our Wrestling program, teaching fundamental wrestling techniques 
-              and building strength, coordination, and takedown skills for students of all levels.
+              Mario Hoxha is a dedicated wrestling instructor with over 8 years of experience coaching and competing at a high level. 
+              A former team captain and MVP, Mario placed in both the CAL/NEC and sectional championships, was a state qualifier, 
+              and was recognized as a Salem News All-Star.
             </Description>
             
             <InstructorCard>
               <InstructorInfo>
                 <InfoSection>
+                  <h3>Wrestling Achievements</h3>
+                  <ul>
+                    <li>Former team captain and MVP</li>
+                    <li>CAL/NEC and sectional championships placement</li>
+                    <li>State qualifier</li>
+                    <li>Salem News All-Star</li>
+                  </ul>
+                </InfoSection>
+                
+                <InfoSection>
+                  <h3>Jiu-Jitsu Success</h3>
+                  <ul>
+                    <li>Gold medal at Grappling Industries</li>
+                    <li>3 Time Enigma Superfight Champion</li>
+                    <li>Strong grappling foundation from wrestling background</li>
+                  </ul>
+                </InfoSection>
+              </InstructorInfo>
+              
+              <InstructorInfo>
+                <InfoSection>
                   <h3>Background</h3>
                   <p>
-                    Mario Hoxha brings his passion and expertise in wrestling to our program, 
-                    focusing on fundamental techniques and physical conditioning. His approach 
-                    emphasizes proper form, strength development, and takedown skills.
+                    After transitioning to Brazilian Jiu-Jitsu, his strong grappling foundation quickly led to success—earning him 
+                    a gold medal at Grappling Industries and championship victories in super fights for Enigma. Known for his deep 
+                    technical knowledge, leadership, and passion for combat sports, he's committed to helping athletes of all levels 
+                    build strong fundamentals, discipline, and confidence both on and off the mat.
                   </p>
                 </InfoSection>
                 
                 <InfoSection>
                   <h3>Teaching Philosophy</h3>
                   <p>
-                    Mario believes in building a strong foundation in wrestling fundamentals 
-                    while developing physical strength and coordination. His classes provide 
-                    structured training that benefits both beginners and advanced practitioners.
+                    Mario believes in building a strong foundation in wrestling fundamentals while developing physical strength and coordination. 
+                    His classes provide structured training that benefits both beginners and advanced practitioners, with an emphasis on 
+                    proper technique, discipline, and building confidence both on and off the mat.
                   </p>
                 </InfoSection>
               </InstructorInfo>

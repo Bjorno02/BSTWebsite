@@ -244,15 +244,15 @@ export default function Schedule() {
     classes: {
       '12PM': {
         SUN: '',
-        MON: 'Jiu-Jitsu Fundamentals',
+        MON: 'Adults Jiu-Jitsu',
         TUE: 'Jiu-Jitsu Fundamentals',
-        WED: '',
+        WED: 'Jiu-Jitsu Fundamentals',
         THU: 'Jiu-Jitsu Fundamentals',
         FRI: '',
-        SAT: ''
+        SAT: 'Adults Jiu-Jitsu'
       },
       '1PM': {
-        SUN: 'Kids Muay Thai',
+        SUN: '',
         MON: '',
         TUE: '',
         WED: '',
@@ -270,31 +270,31 @@ export default function Schedule() {
         SAT: ''
       },
       '6PM': {
-        SUN: 'Beginner Jiu-Jitsu',
-        MON: 'Beginner Jiu-Jitsu',
-        TUE: 'Wrestling',
-        WED: 'Beginner Jiu-Jitsu',
-        THU: 'Wrestling',
-        FRI: 'Beginner Jiu-Jitsu',
-        SAT: 'Beginner Jiu-Jitsu'
+        SUN: 'Adults Jiu-Jitsu',
+        MON: 'Adults Jiu-Jitsu',
+        TUE: 'Adults Wrestling',
+        WED: 'Adults Jiu-Jitsu',
+        THU: 'Adults Wrestling',
+        FRI: 'Adults Jiu-Jitsu',
+        SAT: 'Adults Jiu-Jitsu'
       },
       '7PM': {
-        SUN: 'Advanced Jiu-Jitsu',
-        MON: 'Advanced Jiu-Jitsu',
-        TUE: 'Open Mat (Team Training)',
-        WED: 'Advanced Jiu-Jitsu',
-        THU: 'Open Mat (Team Training)',
-        FRI: 'Advanced Jiu-Jitsu',
-        SAT: 'Advanced Jiu-Jitsu'
+        SUN: 'Adults Jiu-Jitsu',
+        MON: 'Jiu-Jitsu Adults',
+        TUE: 'Adults Jiu-Jitsu',
+        WED: 'Adults Jiu-Jitsu',
+        THU: 'Adults Jiu-Jitsu',
+        FRI: 'Adults Jiu-Jitsu',
+        SAT: 'Adults Jiu-Jitsu'
       },
       '8PM': {
-        SUN: 'Open Mat',
-        MON: 'MUAY THAI',
+        SUN: '',
+        MON: 'Adults Muay Thai',
         TUE: '',
-        WED: 'MUAY THAI',
+        WED: 'Adults Muay Thai',
         THU: '',
-        FRI: 'MUAY THAI',
-        SAT: 'Open Mat'
+        FRI: 'Adults Muay Thai',
+        SAT: ''
       }
     }
   };
@@ -345,6 +345,36 @@ export default function Schedule() {
           <PricingSection>
             <Container>
               <PricingContainer>
+                <PricingOption>
+                  <h3>Blood Sweat and Tears Unlimited</h3>
+                  <p>$150</p>
+                </PricingOption>
+                <PricingOption>
+                  <h3>Blood Sweat and Tears Youth MMA Program!</h3>
+                </PricingOption>
+                <PricingOption>
+                  <h3>Unlimited Youth Membership</h3>
+                  <p>$125</p>
+                </PricingOption>
+                <PricingOption>
+                  <h3>Youth Grappling Membership</h3>
+                  <p>$75</p>
+                </PricingOption>
+                <PricingOption>
+                  <h3>Youth Striking Membership</h3>
+                  <p>$75</p>
+                </PricingOption>
+                <PricingOption>
+                  <h3>Blood Sweat and Tears Striking Program</h3>
+                </PricingOption>
+                <PricingOption>
+                  <h3>Striking Membership</h3>
+                  <p>$125</p>
+                </PricingOption>
+                <PricingOption>
+                  <h3>ONE MONTH UNLIMITED + Shin Pads & Gloves</h3>
+                  <p>$250</p>
+                </PricingOption>
                 <NoContract>
                   <h3>NO CONTRACT - NO COMMITMENT</h3>
                   <p>SPACE LIMITED</p>

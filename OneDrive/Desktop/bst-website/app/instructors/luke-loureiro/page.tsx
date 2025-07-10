@@ -155,27 +155,51 @@ export default function LukeLoureiro() {
             <Title>Luke Loureiro</Title>
             <Subtitle>Kids Wrestling Instructor</Subtitle>
             <Description>
-              Luke Loureiro leads our Kids Wrestling program, teaching children ages 7-12 the fundamentals 
-              of wrestling in a safe and supportive environment that builds strength, coordination, and character.
+              Luke Loureiro is a highly experienced wrestling coach with over 10 years of wrestling experience and extensive coaching background. 
+              A 4-year letter winner and 2x division and conference all-star at Beverly High School, Luke brings exceptional expertise to our kids program.
             </Description>
             
             <InstructorCard>
               <InstructorInfo>
                 <InfoSection>
+                  <h3>Wrestling Achievements</h3>
+                  <ul>
+                    <li>10+ years of wrestling experience</li>
+                    <li>4-year letter winner at Beverly High School</li>
+                    <li>Junior and senior captain of Beverly wrestling</li>
+                    <li>2x division and conference all-star</li>
+                  </ul>
+                </InfoSection>
+                
+                <InfoSection>
+                  <h3>Coaching Experience</h3>
+                  <ul>
+                    <li>Coaching Beverly youth for 8 years</li>
+                    <li>Coaching Beverly high school for 5 years</li>
+                    <li>Extensive experience with all age groups</li>
+                    <li>Specialized in youth wrestling development</li>
+                  </ul>
+                </InfoSection>
+              </InstructorInfo>
+              
+              <InstructorInfo>
+                <InfoSection>
                   <h3>Background</h3>
                   <p>
-                    Luke Loureiro brings his passion for wrestling to our kids program, focusing on 
-                    teaching fundamental wrestling techniques and building physical strength and coordination. 
-                    His approach emphasizes safety and proper technique development.
+                    Luke Loureiro brings his extensive wrestling experience and coaching background to our kids program, 
+                    focusing on teaching fundamental wrestling techniques and building physical strength and coordination. 
+                    His proven track record as both a successful wrestler and experienced coach makes him an exceptional 
+                    instructor for young athletes.
                   </p>
                 </InfoSection>
                 
                 <InfoSection>
                   <h3>Teaching Philosophy</h3>
                   <p>
-                    Luke believes in creating a structured and fun environment where children can learn 
-                    wrestling fundamentals while developing physical fitness, discipline, and sportsmanship. 
-                    He emphasizes proper technique and safety in all training sessions.
+                    Luke believes in a reward-based learning system with any ages from elementary to high school. 
+                    The more the students pay attention and work hard during practice, the more time they have to learn 
+                    cool moves from the internet and play games. This approach creates an engaging and motivating 
+                    environment where children develop both wrestling skills and a love for the sport.
                   </p>
                 </InfoSection>
               </InstructorInfo>

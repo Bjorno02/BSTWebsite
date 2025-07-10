@@ -199,50 +199,54 @@ export default function DiegoMartin() {
             <Title>Diego Martin</Title>
             <Subtitle>Muay Thai Instructor / Striking Coach</Subtitle>
             <Description>
-              As a lifelong martial artist from a family of fighters with extensive experience competing across South America, 
-              Europe, and the United States, Diego Martin brings a wealth of experience and a unique global perspective to Muay Thai in the West.
+              Diego Martin is a multiple-time gold and silver medalist with SKIF and AGL Rank 5 in the WBC MDL circuit. 
+              A lifelong martial artist from a family of fighters, Diego has competed across South America, Europe, and the United States.
             </Description>
             
             <InstructorCard>
               <InstructorInfo>
                 <InfoSection>
+                  <h3>Competition Achievements</h3>
+                  <ul>
+                    <li>Multiple-time gold and silver medalist with SKIF</li>
+                    <li>AGL Rank 5 in the WBC MDL circuit</li>
+                    <li>Extensive competition experience across South America, Europe, and United States</li>
+                    <li>Lifelong martial artist from a family of fighters</li>
+                  </ul>
+                </InfoSection>
+                
+                <InfoSection>
+                  <h3>Training & Mentorship</h3>
+                  <ul>
+                    <li>Trained with ONE FC fighter and Muay Thai legend Nong-O</li>
+                    <li>Trained with Ajarn Phil Nurse</li>
+                    <li>Currently under tutelage of Marc Meltzer</li>
+                    <li>Devoted practitioner and Nak Muay</li>
+                  </ul>
+                </InfoSection>
+              </InstructorInfo>
+              
+              <InstructorInfo>
+                <InfoSection>
                   <h3>Background</h3>
                   <p>
-                    As a lifelong martial artist from a family of fighters with extensive experience competing across South America, 
-                    Europe, and the United States, Diego Martin brings a wealth of experience and a unique global perspective to Muay Thai in the West.
-                  </p>
-                  <p>
-                    A devoted practitioner and Nak Muay, Diego has had the privilege of training with prominent figures in the sport, 
-                    such as ONE FC fighter and Muay Thai legend Nong-O, and Ajarn Phil Nurse. Diego is currently stabled with and 
-                    under the tutelage of local legend Marc Meltzer.
+                    Diego Martin brings a wealth of experience and a unique global perspective to Muay Thai in the West. 
+                    His extensive competition experience across multiple continents has given him a comprehensive understanding 
+                    of Muay Thai techniques and strategies. His training with world-class fighters and instructors has shaped 
+                    his teaching methodology and approach to the sport.
                   </p>
                 </InfoSection>
                 
                 <InfoSection>
-                  <h3>Training & Experience</h3>
+                  <h3>Teaching Philosophy</h3>
                   <p>
-                    Diego's extensive competition experience across multiple continents has given him a comprehensive understanding 
-                    of Muay Thai techniques and strategies. His training with world-class fighters and instructors has shaped his 
-                    teaching methodology and approach to the sport.
-                  </p>
-                  <p>
-                    Currently training under Marc Meltzer, Diego continues to develop his skills and knowledge while sharing his 
-                    expertise with students at Blood Sweat and Tears Jiu-Jitsu.
+                    Diego's training with prominent figures in the sport, including ONE FC fighter and Muay Thai legend Nong-O, 
+                    and Ajarn Phil Nurse, has shaped his teaching methodology. Currently training under Marc Meltzer, Diego 
+                    continues to develop his skills while sharing his expertise with students, emphasizing traditional Muay Thai 
+                    techniques and modern applications.
                   </p>
                 </InfoSection>
               </InstructorInfo>
-              
-              <InfoSection>
-                <h3>Major Achievements</h3>
-                <AchievementsList>
-                  <Achievement>Multiple-time gold and silver medalist with SKIF</Achievement>
-                  <Achievement>AGL Rank 5 in the WBC MDL circuit</Achievement>
-                  <Achievement>Lifelong martial artist from a family of fighters</Achievement>
-                  <Achievement>Trained with ONE FC fighter and Muay Thai legend Nong-O</Achievement>
-                  <Achievement>Trained with Ajarn Phil Nurse</Achievement>
-                  <Achievement>Currently under tutelage of Marc Meltzer</Achievement>
-                </AchievementsList>
-              </InfoSection>
             </InstructorCard>
           </Container>
         </InstructorSection>

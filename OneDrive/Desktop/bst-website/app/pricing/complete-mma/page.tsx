@@ -280,7 +280,7 @@ export default function JiuJitsuMuayThaiPricing() {
             </Features>
           </MainPricingCard>
           
-          <BookNowButton href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+          <BookNowButton href="https://www.vagaro.com/bloodsweattearsjiujitsu" target="_blank" rel="noopener noreferrer">
             Book Now
           </BookNowButton>
           

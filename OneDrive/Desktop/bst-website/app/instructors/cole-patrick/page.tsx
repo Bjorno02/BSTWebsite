@@ -155,18 +155,40 @@ export default function ColePatrick() {
             <Title>Cole Patrick</Title>
             <Subtitle>Jiu-Jitsu Fundamentals Instructor</Subtitle>
             <Description>
-              Cole Patrick leads our Monday Jiu-Jitsu Fundamentals class at 12PM, 
-              providing comprehensive instruction in the core techniques and principles of Brazilian Jiu-Jitsu.
+              Cole Patrick is a highly accomplished grappler with over 6 years of experience and over 50 total wins in competition. 
+              A former high school state placer wrestler, Cole has achieved remarkable success in jiu-jitsu competitions.
             </Description>
             
             <InstructorCard>
               <InstructorInfo>
                 <InfoSection>
+                  <h3>Competition Achievements</h3>
+                  <ul>
+                    <li>6 Grappling Industries tournament wins</li>
+                    <li>Multiple placings at IBJJF tournaments</li>
+                    <li>Jiu-Jitsu World League tournament winner</li>
+                    <li>Over 50 total wins in competition</li>
+                  </ul>
+                </InfoSection>
+                
+                <InfoSection>
+                  <h3>Wrestling Background</h3>
+                  <ul>
+                    <li>State placer in high school wrestling</li>
+                    <li>6+ years total grappling experience</li>
+                    <li>Strong foundation in takedowns and control</li>
+                  </ul>
+                </InfoSection>
+              </InstructorInfo>
+              
+              <InstructorInfo>
+                <InfoSection>
                   <h3>Background</h3>
                   <p>
-                    Cole Patrick brings his expertise in Brazilian Jiu-Jitsu fundamentals to our 
+                    Cole Patrick brings his extensive competition experience and wrestling background to our 
                     Monday noon classes, focusing on building a strong foundation in technique and principles. 
-                    His classes are perfect for beginners and those looking to refine their basics.
+                    His proven track record in both wrestling and jiu-jitsu competitions makes him an exceptional 
+                    instructor for students of all levels.
                   </p>
                 </InfoSection>
                 
@@ -175,7 +197,8 @@ export default function ColePatrick() {
                   <p>
                     Cole believes in the importance of mastering fundamentals as the foundation for 
                     advanced techniques. His Monday noon classes provide a structured approach to learning 
-                    Jiu-Jitsu basics in a supportive environment suitable for all skill levels.
+                    Jiu-Jitsu basics in a supportive environment suitable for all skill levels, drawing from 
+                    his extensive competition experience to help students develop both technical skills and competitive mindset.
                   </p>
                 </InfoSection>
               </InstructorInfo>

@@ -172,52 +172,56 @@ export default function SeanRubchinuk() {
             <Title>Sean Rubchinuk</Title>
             <Subtitle>Head Coach & Owner</Subtitle>
             <Description>
-              At just 19 years old, Sean Rubchinuk embodies the spirit and passion of Blood Sweat and Tears Jiu Jitsu 
-              as its head coach and owner. A dedicated practitioner with years of experience on the mats, 
-              Sean has honed his skills through rigorous training and competition, earning the respect of peers and mentors alike.
+              Sean Rubchinuk is a prodigious talent in the martial arts world, achieving the pinnacle of success as the 2021 IBJJF World Champion 
+              at just 19 years old. As the head coach and owner of Blood Sweat and Tears Jiu-Jitsu, Sean has established himself 
+              as one of the most accomplished young martial artists in the sport.
             </Description>
             
             <InstructorCard>
               <InstructorInfo>
                 <InfoSection>
+                  <h3>World-Class Achievements</h3>
+                  <ul>
+                    <li>2021 IBJJF World Champion</li>
+                  
+                    <li>Amateur MMA Record: 1-0</li>
+                    <li>Countless tournament Gold Medals</li>
+                  </ul>
+                </InfoSection>
+                
+                <InfoSection>
+                  <h3>Leadership & Business</h3>
+                  <ul>
+                    <li>Head Coach & Owner of BST Jiu-Jitsu</li>
+                    <li>Founded successful martial arts academy at 18 years old</li>
+                    <li>Established premier training facility</li>
+                    <li>Mentor to countless students</li>
+                  </ul>
+                </InfoSection>
+              </InstructorInfo>
+              
+              <InstructorInfo>
+                <InfoSection>
                   <h3>Background</h3>
                   <p>
-                    At just 19 years old, Sean Rubchinuk embodies the spirit and passion of Blood Sweat and Tears Jiu Jitsu 
-                    as its head coach and owner. A dedicated practitioner with years of experience on the mats, 
-                    Sean has honed his skills through rigorous training and competition, earning the respect of peers and mentors alike.
-                  </p>
-                  <p>
-                    As the founder and owner of BST Jiu-Jitsu, Sean has created a training environment 
-                    that emphasizes technique, discipline, and personal growth. His young age brings fresh 
-                    energy and modern perspectives to traditional martial arts training.
+                    Sean Rubchinuk is a prodigious talent who has achieved what most martial artists only dream of - 
+                    becoming an IBJJF World Champion at the young age of 15. His remarkable journey from 
+                    dedicated practitioner to world champion and successful business owner demonstrates his exceptional 
+                    talent, work ethic, and leadership abilities. As the founder and owner of BST Jiu-Jitsu, 
+                    Sean has created a world-class training environment that emphasizes technique, discipline, and personal growth.
                   </p>
                 </InfoSection>
                 
                 <InfoSection>
                   <h3>Teaching Philosophy</h3>
                   <p>
-                    Sean believes in creating a supportive and challenging environment where 
-                    students can push their limits while building confidence and character. 
-                    His classes emphasize:
+                    Sean believes in creating a supportive and challenging environment where students can push their limits 
+                    while building confidence and character. His world-class experience allows him to provide unparalleled 
+                    instruction in technical precision, mental toughness, and competitive strategy. Sean's teaching emphasizes 
+                    fundamentals, sportsmanship, continuous improvement, and building a strong martial arts community.
                   </p>
-                  <ul>
-                    <li>Technical precision and fundamentals</li>
-                    <li>Mental toughness and discipline</li>
-                    <li>Sportsmanship and respect</li>
-                    <li>Continuous improvement and growth</li>
-                    <li>Building a strong community</li>
-                  </ul>
                 </InfoSection>
               </InstructorInfo>
-              
-              <InfoSection>
-                <h3>Major Achievements</h3>
-                <AchievementsList>
-                  <Achievement>2021 IBJJF World Champion</Achievement>
-                  <Achievement>Amateur MMA Record: 1-0</Achievement>
-                  <Achievement>Head Coach & Owner of BST Jiu-Jitsu</Achievement>
-                </AchievementsList>
-              </InfoSection>
             </InstructorCard>
           </Container>
         </InstructorSection>

@@ -155,27 +155,53 @@ export default function DundiVedantam() {
             <Title>Dundi Vedantam</Title>
             <Subtitle>Jiu-Jitsu Fundamentals Instructor</Subtitle>
             <Description>
-              Dundi Vedantam leads our Jiu-Jitsu Fundamentals classes at 12PM on Tuesday and Thursday, 
-              providing comprehensive instruction in the core techniques and principles of Brazilian Jiu-Jitsu.
+              Dundi Vedantam is a dedicated blue belt with over 2 years of jiu-jitsu training experience. 
+              He has developed a systematic approach to teaching that emphasizes mastering fundamentals through 
+              focused, position-specific training.
             </Description>
             
             <InstructorCard>
+              <InstructorInfo>
+                <InfoSection>
+                  <h3>Teaching Experience</h3>
+                  <ul>
+                    <li>2+ years of jiu-jitsu training experience</li>
+                    <li>Extensive experience teaching fundamentals</li>
+                    <li>Specializes in systematic, position-focused training</li>
+                    <li>Dedicated to helping students master core techniques</li>
+                  </ul>
+                </InfoSection>
+                
+                <InfoSection>
+                  <h3>Training Background</h3>
+                  <ul>
+                    <li>Comprehensive understanding of jiu-jitsu fundamentals</li>
+                    <li>Developed systematic approach to learning</li>
+                    <li>Strong foundation in position-specific training</li>
+                    <li>Passionate about structured learning methods</li>
+                  </ul>
+                </InfoSection>
+              </InstructorInfo>
+              
               <InstructorInfo>
                 <InfoSection>
                   <h3>Background</h3>
                   <p>
                     Dundi Vedantam brings his expertise in Brazilian Jiu-Jitsu fundamentals to our 
                     Tuesday and Thursday noon classes, focusing on building a strong foundation in technique and principles. 
-                    His classes are perfect for beginners and those looking to refine their basics.
+                    His systematic approach to teaching emphasizes mastering one position at a time, allowing students to 
+                    develop deep understanding and muscle memory before moving to the next technique.
                   </p>
                 </InfoSection>
                 
                 <InfoSection>
                   <h3>Teaching Philosophy</h3>
                   <p>
-                    Dundi believes in the importance of mastering fundamentals as the foundation for 
-                    advanced techniques. His Tuesday and Thursday noon classes provide a structured approach to learning 
-                    Jiu-Jitsu basics in a supportive environment suitable for all skill levels.
+                    Dundi believes in enriching his students as much as possible in one position, providing them with 
+                    countless repetitions to master each technique. His systematic approach segments training into focused 
+                    learning blocks, giving beginners the opportunity to learn fundamentals at an accelerated rate compared 
+                    to unstructured learning and rolling. This methodical approach ensures students build a solid foundation 
+                    that serves them throughout their jiu-jitsu journey.
                   </p>
                 </InfoSection>
               </InstructorInfo>

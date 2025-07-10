@@ -213,7 +213,7 @@ export default function KidsPage() {
         <Section>
           <SectionTitle>About Our Kids Programs</SectionTitle>
           <Text>
-            Our Kids Programs offer comprehensive martial arts training for children ages 7-12, 
+            Our Kids Programs offer comprehensive martial arts training for children ages 5-13, 
             including Brazilian Jiu-Jitsu, Wrestling, and Muay Thai. We believe that martial arts 
             training provides the perfect foundation for building confident, respectful, and resilient young people.
           </Text>
@@ -225,7 +225,7 @@ export default function KidsPage() {
         </Section>
 
         <AgeGroup>
-          <AgeTitle>Kids Classes (Ages 7-12)</AgeTitle>
+          <AgeTitle>Kids Classes (Ages 5-13)</AgeTitle>
           <Text>
             Age-appropriate training that focuses on fun, safety, and skill development across 
             multiple martial arts disciplines. Classes are structured to keep kids engaged while 

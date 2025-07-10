@@ -1,7 +1,7 @@
 "use client";
 
 import styled from 'styled-components';
-import { colors } from '../../components/StyledComponents';
+import { Container, Section, colors } from '../../components/StyledComponents';
 import Navigation from '../../components/Navigation';
 
 const PageContainer = styled.div`
@@ -48,36 +48,48 @@ const HeroSection = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: 'Orbitron', monospace;
-  font-size: 4rem;
-  font-weight: 900;
+  font-size: 2.5rem;
   color: ${colors.red};
-  text-shadow: 3px 3px 0px ${colors.black};
-  margin-bottom: 1rem;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
-  }
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 `;
 
-const Subtitle = styled.p`
-  font-family: 'Orbitron', monospace;
-  font-size: 1.2rem;
+const Subtitle = styled.h2`
+  font-size: 1.5rem;
+  color: ${colors.dustyRed};
+  text-align: center;
+  margin: 0.5rem 0 2rem;
+  font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
+`;
+
+const Description = styled.p`
+  text-align: center;
+  max-width: 800px;
+  margin: 1rem auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: ${colors.white};
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  opacity: 0.9;
 `;
 
-const Section = styled.section`
-  margin: 4rem 0;
-  padding: 2rem;
-  background: ${colors.darkGrey}80;
+const InstructorSection = styled(Section)`
+  padding: 6rem 0 4rem;
+  background: ${colors.black};
+  color: ${colors.white};
+`;
+
+const InstructorCard = styled.div`
+  background: ${colors.darkGrey};
   border: 2px solid ${colors.red};
+  padding: 3rem;
+  border-radius: 8px;
+  margin: 2rem 0;
   position: relative;
-  
   &::before {
     content: '';
     position: absolute;
@@ -91,55 +103,46 @@ const Section = styled.section`
   }
 `;
 
-const SectionTitle = styled.h2`
-  font-family: 'Orbitron', monospace;
-  font-size: 2rem;
-  font-weight: 700;
-  color: ${colors.red};
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-shadow: 2px 2px 0px ${colors.black};
-`;
-
-const Text = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: ${colors.white};
-  margin-bottom: 1rem;
-`;
-
-const ClassInfo = styled.div`
-  background: ${colors.black}80;
-  border: 1px solid ${colors.red}50;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  position: relative;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: ${colors.red};
+const InstructorInfo = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
-const ClassTitle = styled.h3`
-  font-family: 'Orbitron', monospace;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: ${colors.red};
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-`;
-
-const ClassDetails = styled.p`
-  font-size: 1rem;
-  line-height: 1.6;
-  color: ${colors.white};
+const InfoSection = styled.div`
+  h3 {
+    color: ${colors.red};
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  p {
+    color: ${colors.white};
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    color: ${colors.white};
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    &::before {
+      content: '•';
+      color: ${colors.red};
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  }
 `;
 
 export default function NicoMangano() {
@@ -147,53 +150,51 @@ export default function NicoMangano() {
     <PageContainer>
       <Navigation />
       <Content>
-        <HeroSection>
-          <Title>NICO MANGANO</Title>
-          <Subtitle>Kids Muay Thai Instructor</Subtitle>
-        </HeroSection>
-
-        <Section>
-          <SectionTitle>About Nico</SectionTitle>
-          <Text>
-            Nico Mangano is a dedicated Muay Thai instructor specializing in teaching kids. 
-            With a passion for martial arts and a natural ability to connect with young students, 
-            Nico creates a fun and engaging learning environment where kids can develop their 
-            Muay Thai skills while building confidence and discipline.
-          </Text>
-          <Text>
-            His approach focuses on age-appropriate training methods that emphasize technique, 
-            fitness, and character development. Nico's classes are designed to be both challenging 
-            and enjoyable, helping kids develop a love for martial arts that will last a lifetime.
-          </Text>
-        </Section>
-
-        <Section>
-          <SectionTitle>Classes Taught</SectionTitle>
-          
-          <ClassInfo>
-            <ClassTitle>Kids Muay Thai</ClassTitle>
-            <ClassDetails>
-              Age-appropriate Muay Thai training for children. Classes focus on fundamental 
-              techniques, fitness, coordination, and character development in a safe and 
-              supportive environment.
-            </ClassDetails>
-          </ClassInfo>
-        </Section>
-
-        <Section>
-          <SectionTitle>Teaching Philosophy</SectionTitle>
-          <Text>
-            Nico believes that martial arts training for kids should be about more than just 
-            learning techniques. His classes emphasize respect, discipline, confidence, and 
-            personal growth. He creates an environment where every child feels valued and 
-            encouraged to reach their full potential.
-          </Text>
-          <Text>
-            Through structured training and positive reinforcement, Nico helps kids develop 
-            not only their physical skills but also important life skills that will serve 
-            them well both in and out of the gym.
-          </Text>
-        </Section>
+        <InstructorSection>
+          <Container>
+            <Title>Nico Mangano</Title>
+            <Subtitle>Kids Muay Thai Instructor</Subtitle>
+            <Description>
+              Nico Mangano is a dedicated martial artist and coach with years of striking experience, an undefeated amateur Muay Thai record, and a background in athletics. He brings a unique blend of discipline, technical skill, and passion to his coaching.
+            </Description>
+            <InstructorCard>
+              <InstructorInfo>
+                <InfoSection>
+                  <h3>Athletic Achievements</h3>
+                  <ul style={{marginBottom: '1.5rem'}}>
+                    <li>Collegiate football athlete</li>
+                    <li>4-year high school varsity football player</li>
+                    <li>Experience in strength & conditioning for sports</li>
+                    <li>Team leadership and discipline through athletics</li>
+                  </ul>
+                </InfoSection>
+                <InfoSection>
+                  <h3>Martial Arts Experience</h3>
+                  <ul style={{marginBottom: '1.5rem'}}>
+                    <li>3+ years of Jeet-Kune-Do</li>
+                    <li>3+ years of Muay Thai</li>
+                    <li>1-0 undefeated amateur Muay Thai fighter</li>
+                    <li>1+ year teaching kids Muay Thai and private sessions</li>
+                  </ul>
+                </InfoSection>
+              </InstructorInfo>
+              <InstructorInfo>
+                <InfoSection>
+                  <h3>Background</h3>
+                  <p>
+                    Nico’s experience as a martial artist and athlete has shaped his approach to coaching. He is passionate about sharing his knowledge of Muay Thai and self-defense with the next generation, helping young athletes build confidence, discipline, and resilience.
+                  </p>
+                </InfoSection>
+                <InfoSection>
+                  <h3>Teaching Philosophy</h3>
+                  <p>
+                    Nico’s ultimate goal is to teach youth self-defense through Muay Thai, providing them with a toolset that will benefit them in all areas of life. He believes in fostering confidence, hard work, and consistency, empowering his students to succeed both on and off the mats.
+                  </p>
+                </InfoSection>
+              </InstructorInfo>
+            </InstructorCard>
+          </Container>
+        </InstructorSection>
       </Content>
     </PageContainer>
   );

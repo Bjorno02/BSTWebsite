@@ -277,7 +277,7 @@ export default function JiuJitsuMuayThaiPricing() {
       <Navigation />
       <PricingSection>
         <Container>
-          <Title>Jiu-Jitsu + Muay Thai Package</Title>
+          <Title>Complete BST Package</Title>
           <Subtitle>Complete Martial Arts Training</Subtitle>
           <Description>
             The ultimate combination package. Get unlimited access to both Jiu-Jitsu and Muay Thai classes. 
@@ -285,9 +285,9 @@ export default function JiuJitsuMuayThaiPricing() {
           </Description>
           
           <MainPricingCard>
-            <CardTitle>Jiu-Jitsu + Muay Thai Package</CardTitle>
+            <CardTitle>Complete BST Package</CardTitle>
             <Price>
-              <span className="currency">$</span>179.99
+              <span className="currency">$</span>150
               <span className="period">/month</span>
             </Price>
             <Features>
