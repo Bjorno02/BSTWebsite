@@ -352,7 +352,7 @@ export default function JiuJitsuMuayThaiPricing() {
           
           <ContactInfo>
             <h3>Ready to Start Your Martial Arts Journey?</h3>
-            <p>Call or text us to get started: <strong>978-810-247</strong></p>
+            <p>Call or text us to get started: <strong>978-810-2471</strong></p>
             <p>58 Pulaski Street, Building A, 2nd Floor, Peabody, MA</p>
           </ContactInfo>
         </Container>

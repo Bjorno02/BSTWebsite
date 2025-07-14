@@ -155,32 +155,58 @@ export default function BjornShurdha() {
             <Title>Bjorn Shurdha</Title>
             <Subtitle>Kids Jiu-Jitsu Instructor</Subtitle>
             <Description>
-              Bjorn Shurdha leads our Kids Jiu-Jitsu program, creating a fun and engaging environment 
-              where children ages 7-12 can learn martial arts while building confidence and character.
+              Bjorn Shurdha is a dedicated martial artist and coach with extensive competition experience, multiple super fight victories, and a deep understanding of the game of jiu-jitsu. He brings his wealth of knowledge and passion to teaching the next generation of martial artists.
             </Description>
             
             <InstructorCard>
               <InstructorInfo>
                 <InfoSection>
+                  <h3>Athletic Achievements</h3>
+                  <ul style={{marginBottom: '1.5rem'}}>
+                    <li>Multiple super fight wins</li>
+                    <li>Multiple Grappling Industries placements</li>
+                    <li>Extensive competition experience</li>
+                    <li>Deep understanding of jiu-jitsu strategy</li>
+                  </ul>
+                </InfoSection>
+                <InfoSection>
+                  <h3>Martial Arts Experience</h3>
+                  <ul style={{marginBottom: '1.5rem'}}>
+                    <li>3+ years of Jiu-Jitsu training</li>
+                    <li>Fundamental grasp of BST curriculum</li>
+                    <li>Extensive coaching experience during competition</li>
+                    <li>Over 1 year of teaching experience</li>
+                  </ul>
+                </InfoSection>
+              </InstructorInfo>
+              <InstructorInfo>
+                <InfoSection>
                   <h3>Background</h3>
                   <p>
-                    Bjorn Shurdha is dedicated to teaching the fundamentals of Brazilian Jiu-Jitsu 
-                    to children in a safe and supportive environment. His approach focuses on 
-                    building confidence, discipline, and respect through martial arts training.
+                    Bjorn's journey in martial arts has been marked by continuous growth and achievement. His extensive competition experience, including multiple super fight victories and Grappling Industries placements, has given him a comprehensive understanding of jiu-jitsu at the highest levels. His deep knowledge of the game, combined with his fundamental grasp of the BST curriculum, makes him an exceptional instructor for students of all ages.
                   </p>
                 </InfoSection>
-                
                 <InfoSection>
                   <h3>Teaching Philosophy</h3>
                   <p>
-                    Bjorn believes in making martial arts training fun and accessible for children 
-                    while instilling important life skills such as respect, discipline, and perseverance. 
-                    He creates a positive learning environment where every child can succeed.
+                    Bjorn believes in creating a supportive and engaging learning environment where students can develop both their technical skills and character. His approach emphasizes building confidence through achievement, fostering discipline through consistent practice, and instilling respect for the art and fellow practitioners. He is passionate about sharing his knowledge and helping students reach their full potential both on and off the mats.
                   </p>
                 </InfoSection>
               </InstructorInfo>
             </InstructorCard>
           </Container>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+            <img 
+              src="/bjorn1.JPG" 
+              alt="Bjorn Shurdha 1" 
+              style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+            <img 
+              src="/bjorn2.jpeg" 
+              alt="Bjorn Shurdha 2" 
+              style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+          </div>
         </InstructorSection>
       </Content>
     </PageContainer>

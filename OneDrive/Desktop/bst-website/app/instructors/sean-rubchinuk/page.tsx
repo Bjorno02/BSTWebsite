@@ -224,6 +224,23 @@ export default function SeanRubchinuk() {
               </InstructorInfo>
             </InstructorCard>
           </Container>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+            <img 
+              src="/sean 1.jpg" 
+              alt="Sean Rubchinuk 1" 
+              style={{ maxWidth: '350px', width: '100%', height: 'auto', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+            <img 
+              src="/sean2.jpeg" 
+              alt="Sean Rubchinuk 2" 
+              style={{ maxWidth: '350px', width: '100%', height: 'auto', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+            <img 
+              src="/sean3.jpeg" 
+              alt="Sean Rubchinuk 3" 
+              style={{ maxWidth: '350px', width: '100%', height: 'auto', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+          </div>
         </InstructorSection>
       </Content>
     </PageContainer>

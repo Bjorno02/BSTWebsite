@@ -390,7 +390,7 @@ export default function Schedule() {
             <h3>Contact Information</h3>
             <p>58 Pulaski Street, Building A, 2nd Floor</p>
             <p>Peabody, MA</p>
-            <p>Call or Text: 978-810-247</p>
+            <p>Call or Text: 978-810-2471</p>
             <p>
               <a href="https://www.bloodsweattearsjjujitsu.com/book-online" target="_blank" rel="noopener noreferrer">
                 Book Online

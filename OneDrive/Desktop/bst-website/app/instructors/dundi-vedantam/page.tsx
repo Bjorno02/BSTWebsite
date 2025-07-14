@@ -207,6 +207,18 @@ export default function DundiVedantam() {
               </InstructorInfo>
             </InstructorCard>
           </Container>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+            <img 
+              src="/dundi1.JPG" 
+              alt="Dundi Vedantam 1" 
+              style={{ maxWidth: '400px', width: '100%', height: '300px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+            <img 
+              src="/dundi2.JPG" 
+              alt="Dundi Vedantam 2" 
+              style={{ maxWidth: '400px', width: '100%', height: '300px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+          </div>
         </InstructorSection>
       </Content>
     </PageContainer>

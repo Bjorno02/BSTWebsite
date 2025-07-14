@@ -249,6 +249,18 @@ export default function DiegoMartin() {
               </InstructorInfo>
             </InstructorCard>
           </Container>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+            <img 
+              src="/diego1.JPG" 
+              alt="Diego Martin 1" 
+              style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+            <img 
+              src="/diego2.JPG" 
+              alt="Diego Martin 2" 
+              style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+          </div>
         </InstructorSection>
       </Content>
     </PageContainer>

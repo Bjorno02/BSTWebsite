@@ -204,6 +204,18 @@ export default function MarioHoxha() {
               </InstructorInfo>
             </InstructorCard>
           </Container>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+            <img 
+              src="/mario-wrestling.jpeg" 
+              alt="Mario Hoxha Wrestling 1" 
+              style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+            <img 
+              src="/mario-wrestling2.JPG" 
+              alt="Mario Hoxha Wrestling 2" 
+              style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+          </div>
         </InstructorSection>
       </Content>
     </PageContainer>

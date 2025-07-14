@@ -71,101 +71,13 @@ const Subtitle = styled.p`
   letter-spacing: 0.05em;
 `;
 
-const Section = styled.section`
+const AchievementSection = styled.div`
   margin: 4rem 0;
-  padding: 2rem;
-  background: ${colors.darkGrey}80;
-  border: 2px solid ${colors.red};
-  position: relative;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border: 1px solid ${colors.dustyRed};
-    transform: rotate(1deg);
-    pointer-events: none;
-  }
-`;
-
-const SectionTitle = styled.h2`
-  font-family: 'Orbitron', monospace;
-  font-size: 2rem;
-  font-weight: 700;
-  color: ${colors.red};
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-shadow: 2px 2px 0px ${colors.black};
-`;
-
-const Text = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: ${colors.white};
-  margin-bottom: 1rem;
-`;
-
-const AchievementGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-`;
-
-const AchievementCard = styled.div`
-  background: ${colors.black}80;
-  border: 2px solid ${colors.red};
-  padding: 2rem;
-  position: relative;
-  text-align: center;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border: 1px solid ${colors.dustyRed};
-    transform: rotate(1deg);
-    pointer-events: none;
-  }
-`;
-
-const AchievementTitle = styled.h3`
-  font-family: 'Orbitron', monospace;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: ${colors.red};
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-`;
-
-const AchievementDate = styled.div`
-  font-family: 'Orbitron', monospace;
-  font-size: 1rem;
-  color: ${colors.dustyRed};
-  margin-bottom: 1rem;
-  font-weight: 600;
-`;
-
-const AchievementDescription = styled.p`
-  font-size: 1rem;
-  line-height: 1.6;
-  color: ${colors.white};
-`;
-
-const HighlightSection = styled.div`
-  background: ${colors.red}10;
-  border: 3px solid ${colors.red};
   padding: 3rem;
-  margin: 3rem 0;
-  text-align: center;
+  background: ${colors.black}80;
+  border: 3px solid ${colors.red};
   position: relative;
+  text-align: center;
   
   &::before {
     content: '';
@@ -180,22 +92,44 @@ const HighlightSection = styled.div`
   }
 `;
 
-const HighlightTitle = styled.h2`
+const AchievementTitle = styled.h3`
   font-family: 'Orbitron', monospace;
-  font-size: 2.5rem;
-  font-weight: 900;
+  font-size: 2.2rem;
+  font-weight: 700;
   color: ${colors.red};
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
-  text-shadow: 3px 3px 0px ${colors.black};
 `;
 
-const HighlightText = styled.p`
-  font-size: 1.2rem;
+const AchievementDate = styled.div`
+  font-family: 'Orbitron', monospace;
+  font-size: 1.3rem;
+  color: ${colors.dustyRed};
+  margin-bottom: 2rem;
+  font-weight: 600;
+`;
+
+const AchievementDescription = styled.div`
+  font-size: 1.1rem;
   line-height: 1.8;
   color: ${colors.white};
-  margin-bottom: 1rem;
-  font-weight: 600;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
+const ImagePlaceholder = styled.div`
+  width: 100%;
+  height: 300px;
+  background: ${colors.darkGrey};
+  border: 2px dashed ${colors.red};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  color: ${colors.dustyRed};
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
 `;
 
 export default function Achievements() {
@@ -208,70 +142,63 @@ export default function Achievements() {
           <Subtitle>Blood Sweat and Tears Competition Team</Subtitle>
         </HeroSection>
 
-        <HighlightSection>
-          <HighlightTitle>2nd Place Overall</HighlightTitle>
-          <HighlightText>
-            Grappling Industries Event
-          </HighlightText>
-          <Text>
-            The BST Competition Team proudly secured second place overall at the recent Grappling Industries event. 
-            This remarkable achievement showcases the hard work, dedication, and skill of our athletes. Our team members 
-            demonstrated exceptional technique and sportsmanship, representing BST with pride.
-          </Text>
-        </HighlightSection>
+        <AchievementSection>
+          <AchievementTitle>Team Gold - Grappling Industries Boston</AchievementTitle>
+          <AchievementDate>July 12, 2025</AchievementDate>
+          <AchievementDescription>
+            BST secured 1st Place Overall Team Performance at Grappling Industries Boston, dominating the competition with an impressive medal haul. Our team brought home 6 individual gold medals, 2 silver medals, and 2 bronze medals, showcasing the depth and skill of our entire roster.
+            <br /><br />
+            The victory was highlighted by Sean Rubchinuk's spectacular submission of a brown belt world champion, whose team ultimately finished in 2nd place. This triumph over multiple elite schools solidified BST's position as a powerhouse in the New England grappling scene.
+          </AchievementDescription>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+            <img 
+              src="/TeamGold717.JPG" 
+              alt="Team Gold July 17" 
+              style={{ maxWidth: '500px', width: '500px', height: '350px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+          </div>
+        </AchievementSection>
 
-        <Section>
-          <SectionTitle>Recent Competition Results</SectionTitle>
-          <Text>
-            Our competition team continues to build on our success, representing BST with excellence 
-            in tournaments across New England. Each competition brings new challenges and opportunities 
-            for growth.
-          </Text>
-        </Section>
+        <AchievementSection>
+          <AchievementTitle>Quintet Tournament Champions - Z Team Invitational 3</AchievementTitle>
+          <AchievementDate>June 28, 2025</AchievementDate>
+          <AchievementDescription>
+            BST emerged victorious at the prestigious Quintet Tournament hosted by Z Team Jiu Jitsu, demonstrating exceptional team strategy and individual skill. Our championship team consisted of Mario Hoxha, Bjorn Shurdha, Sean Rubchinuk, Keanu Shurdha, and Anthony Gojani.
+            <br /><br />
+            The victory was secured through an excellent team plan and outstanding execution: Mario Hoxha and Bjorn Shurdha each eliminated two opponents, while Keanu Shurdha finished the tournament by taking out the final opponent. We defeated 10th Planet Springfield, with our extensive leg lock training leading up to the tournament producing incredible results.
+            <br /><br />
+            This victory showcased the comprehensive training methodology at BST, where each team member's individual excellence contributes to collective success.
+          </AchievementDescription>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+            <img 
+              src="/quintet1.JPG" 
+              alt="Quintet Tournament 1" 
+              style={{ maxWidth: '300px', width: '300px', height: '300px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+            <img 
+              src="/quintet2.JPG" 
+              alt="Quintet Tournament 2" 
+              style={{ maxWidth: '300px', width: '300px', height: '300px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+          </div>
+        </AchievementSection>
 
-        <AchievementGrid>
-          <AchievementCard>
-            <AchievementTitle>Grappling Industries</AchievementTitle>
-            <AchievementDate>2024</AchievementDate>
-            <AchievementDescription>
-              2nd Place Overall Team Performance. Multiple individual medals across weight divisions 
-              and skill levels. Outstanding sportsmanship and technical excellence.
-            </AchievementDescription>
-          </AchievementCard>
-
-          <AchievementCard>
-            <AchievementTitle>New England Championships</AchievementTitle>
-            <AchievementDate>2024</AchievementDate>
-            <AchievementDescription>
-              Strong showing in regional competition with multiple podium finishes. 
-              Team members demonstrated exceptional technique and competitive spirit.
-            </AchievementDescription>
-          </AchievementCard>
-
-          <AchievementCard>
-            <AchievementTitle>Local Tournaments</AchievementTitle>
-            <AchievementDate>2024</AchievementDate>
-            <AchievementDescription>
-              Consistent success in local and regional tournaments. Team members 
-              continue to develop and improve with each competition experience.
-            </AchievementDescription>
-          </AchievementCard>
-        </AchievementGrid>
-
-        <Section>
-          <SectionTitle>Join the Legacy</SectionTitle>
-          <Text>
-            <strong>JOIN THE BEGINNING OF A NEW GENERATION OF JIU-JITSU IN NEW ENGLAND</strong>
-          </Text>
-          <Text>
-            Be part of something special. Our competition team is more than just training - it's about building 
-            champions, creating a legacy, and pushing the boundaries of what's possible in New England Jiu-Jitsu.
-          </Text>
-          <Text>
-            Whether you're interested in competing or simply want to train with champions, 
-            BST provides the environment and coaching you need to achieve your goals.
-          </Text>
-        </Section>
+        <AchievementSection>
+          <AchievementTitle>2nd Place Overall - Grappling Industries Boston</AchievementTitle>
+          <AchievementDate>May 17, 2025</AchievementDate>
+          <AchievementDescription>
+            BST achieved an impressive 2nd Place Overall finish at Grappling Industries, marking a significant milestone in our team's competitive journey. This was our first tournament as a team, and we performed exceptionally well with 9 gold medals, 2 silver medals, and 3 bronze medals.
+            <br /><br />
+            The performance served as a foundation for our subsequent victories, showing the continuous improvement and dedication of our competition team. Each athlete contributed to the team's success, building momentum for future tournaments and establishing BST as a force to be reckoned with in the grappling community.
+          </AchievementDescription>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+            <img 
+              src="/teamsilver517.JPG" 
+              alt="Team Silver May 17" 
+              style={{ maxWidth: '500px', width: '500px', height: '350px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+          </div>
+        </AchievementSection>
       </Content>
     </PageContainer>
   );

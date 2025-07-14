@@ -249,9 +249,9 @@ export default function SpecialOffer() {
       <PricingSection>
         <Container>
           <Title>Limited-Time Offer!</Title>
-          <Subtitle>Get Started with Blood Sweat and Tears Jiu Jitsu and MMA for Only $220</Subtitle>
+          <Subtitle>Get Started with Blood Sweat and Tears Jiu Jitsu and MMA for Only $250</Subtitle>
           <Description>
-            For just $220, you'll receive a premium pair of Boxing Gloves, Striking Shin Guards, 
+            For just $250, you'll receive a premium pair of Boxing Gloves, Striking Shin Guards, 
             and ONE FULL MONTH of BST's Unlimited Membership!
           </Description>
           
@@ -259,7 +259,7 @@ export default function SpecialOffer() {
             <LimitedBadge>Limited Time!</LimitedBadge>
             <CardTitle>Special Starter Package</CardTitle>
             <Price>
-              <span className="currency">$</span>220
+              <span className="currency">$</span>250
               <span className="period">One Time</span>
             </Price>
             <Features>
@@ -302,7 +302,7 @@ export default function SpecialOffer() {
           
           <ContactInfo>
             <h3>Ready to Claim Your Special Offer?</h3>
-            <p>Call or text us to secure your spot: <strong>978-810-247</strong></p>
+            <p>Call or text us to secure your spot: <strong>978-810-2471</strong></p>
             <p>58 Pulaski Street, Building A, 2nd Floor, Peabody, MA</p>
             <p><strong>Limited time offer - don't wait!</strong></p>
           </ContactInfo>

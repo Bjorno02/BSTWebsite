@@ -204,6 +204,18 @@ export default function ColePatrick() {
               </InstructorInfo>
             </InstructorCard>
           </Container>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+            <img 
+              src="/cole1.JPG" 
+              alt="Cole Patrick 1" 
+              style={{ maxWidth: '400px', width: '100%', height: '300px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+            <img 
+              src="/cole2.JPG" 
+              alt="Cole Patrick 2" 
+              style={{ maxWidth: '400px', width: '100%', height: '300px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
+            />
+          </div>
         </InstructorSection>
       </Content>
     </PageContainer>

@@ -284,7 +284,7 @@ function Navigation() {
               </DropdownLink>
               <DropdownLink href="/pricing/special-offer">
                 <DropdownTitle>Special Offer</DropdownTitle>
-                <DropdownDescription>Limited-time: $220 for gear + 1 month unlimited</DropdownDescription>
+                <DropdownDescription>Limited-time: $250 for gear + 1 month unlimited</DropdownDescription>
               </DropdownLink>
             </Dropdown>
           </NavItem>
