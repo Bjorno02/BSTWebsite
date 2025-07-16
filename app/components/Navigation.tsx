@@ -160,8 +160,232 @@ const NavLink = styled(Link)`
   }
 `;
 
+// Mobile Navigation Components
+const MobileMenuButton = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1002;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+`;
+
+const HamburgerLine = styled.span<{ $isOpen: boolean }>`
+  width: 25px;
+  height: 3px;
+  background: ${colors.white};
+  transition: all 0.3s ease;
+  transform-origin: center;
+  
+  &:nth-child(1) {
+    transform: ${props => props.$isOpen ? 'rotate(45deg) translate(6px, 6px)' : 'rotate(0)'};
+  }
+  
+  &:nth-child(2) {
+    opacity: ${props => props.$isOpen ? '0' : '1'};
+    transform: ${props => props.$isOpen ? 'translateX(-20px)' : 'translateX(0)'};
+  }
+  
+  &:nth-child(3) {
+    transform: ${props => props.$isOpen ? 'rotate(-45deg) translate(6px, -6px)' : 'rotate(0)'};
+  }
+  
+  &:hover {
+    background: ${colors.red};
+  }
+`;
+
+const MobileMenuOverlay = styled.div<{ $isOpen: boolean }>`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    opacity: ${props => props.$isOpen ? '1' : '0'};
+    visibility: ${props => props.$isOpen ? 'visible' : 'hidden'};
+    transition: all 0.3s ease;
+  }
+`;
+
+const MobileMenu = styled.div<{ $isOpen: boolean }>`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: ${props => props.$isOpen ? '0' : '-100%'};
+    width: 300px;
+    height: 100vh;
+    background: ${colors.black}95;
+    backdrop-filter: blur(10px);
+    border-right: 2px solid ${colors.red};
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: 2rem 0;
+    overflow-y: auto;
+  }
+`;
+
+const MobileNavContent = styled.div`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+`;
+
+const MobileLogoContainer = styled.div`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid ${colors.red}30;
+    margin-bottom: 2rem;
+  }
+`;
+
+const MobileNavItem = styled.div`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+    border-bottom: 1px solid ${colors.red}20;
+  }
+`;
+
+const MobileNavButton = styled.button`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: ${colors.white};
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    
+    &:hover {
+      background: ${colors.red}20;
+      color: ${colors.red};
+    }
+  }
+`;
+
+const MobileNavLink = styled(Link)`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+    color: ${colors.white};
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    
+    &:hover {
+      background: ${colors.red}20;
+      color: ${colors.red};
+    }
+  }
+`;
+
+const MobileDropdown = styled.div<{ $isOpen: boolean }>`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+    background: ${colors.darkGrey}80;
+    max-height: ${props => props.$isOpen ? '500px' : '0'};
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+`;
+
+const MobileDropdownLink = styled(Link)`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+    padding: 0.75rem 3rem;
+    color: ${colors.white};
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid ${colors.red}20;
+    font-size: 0.9rem;
+    
+    &:hover {
+      background: ${colors.red}20;
+      color: ${colors.red};
+    }
+  }
+`;
+
+const MobileContactButton = styled(Link)`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+    background: ${colors.red};
+    color: ${colors.white};
+    border: 2px solid ${colors.red};
+    font-family: 'Orbitron', monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    
+    &:hover {
+      background: transparent;
+      color: ${colors.red};
+    }
+  }
+`;
+
+const DesktopNavContent = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
 function Navigation() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null);
 
   const handleDropdownToggle = (dropdown: string) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
@@ -169,6 +393,22 @@ function Navigation() {
 
   const handleMouseLeave = () => {
     setOpenDropdown(null);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+    if (mobileMenuOpen) {
+      setMobileDropdownOpen(null);
+    }
+  };
+
+  const toggleMobileDropdown = (dropdown: string) => {
+    setMobileDropdownOpen(mobileDropdownOpen === dropdown ? null : dropdown);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setMobileDropdownOpen(null);
   };
 
   return (
@@ -180,7 +420,16 @@ function Navigation() {
           </Link>
         </LogoContainer>
         
-        <NavMenu onMouseLeave={handleMouseLeave}>
+        {/* Mobile Menu Button */}
+        <MobileMenuButton onClick={toggleMobileMenu}>
+          <HamburgerLine $isOpen={mobileMenuOpen} />
+          <HamburgerLine $isOpen={mobileMenuOpen} />
+          <HamburgerLine $isOpen={mobileMenuOpen} />
+        </MobileMenuButton>
+        
+        {/* Desktop Navigation */}
+        <DesktopNavContent>
+          <NavMenu onMouseLeave={handleMouseLeave}>
           <NavItem>
             <NavButton
               onMouseEnter={() => handleDropdownToggle('programs')}
@@ -295,7 +544,118 @@ function Navigation() {
 
           <ContactButton href="/contact">Contact Us</ContactButton>
         </NavMenu>
+        </DesktopNavContent>
       </NavContent>
+      
+      {/* Mobile Menu Overlay */}
+      <MobileMenuOverlay $isOpen={mobileMenuOpen} onClick={closeMobileMenu} />
+      
+      {/* Mobile Menu */}
+      <MobileMenu $isOpen={mobileMenuOpen}>
+        <MobileNavContent>
+          <MobileLogoContainer>
+            <Link href="/" onClick={closeMobileMenu}>
+              <Image src="/bst-logo.PNG" alt="BST Jiu-Jitsu Logo" width={60} height={60} />
+            </Link>
+          </MobileLogoContainer>
+          
+          <MobileNavItem>
+            <MobileNavButton onClick={() => toggleMobileDropdown('programs')}>
+              Programs
+            </MobileNavButton>
+            <MobileDropdown $isOpen={mobileDropdownOpen === 'programs'}>
+              <MobileDropdownLink href="/programs/jiu-jitsu" onClick={closeMobileMenu}>
+                Jiu-Jitsu
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/programs/muay-thai" onClick={closeMobileMenu}>
+                Muay Thai
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/programs/kids" onClick={closeMobileMenu}>
+                Kids
+              </MobileDropdownLink>
+            </MobileDropdown>
+          </MobileNavItem>
+
+          <MobileNavItem>
+            <MobileNavLink href="/schedule" onClick={closeMobileMenu}>
+              Schedule
+            </MobileNavLink>
+          </MobileNavItem>
+
+          <MobileNavItem>
+            <MobileNavButton onClick={() => toggleMobileDropdown('adultInstructors')}>
+              Adult Instructors
+            </MobileNavButton>
+            <MobileDropdown $isOpen={mobileDropdownOpen === 'adultInstructors'}>
+              <MobileDropdownLink href="/instructors/sean-rubchinuk" onClick={closeMobileMenu}>
+                Sean Rubchinuk
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/instructors/diego-martin" onClick={closeMobileMenu}>
+                Diego Martin
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/instructors/dundi-vedantam" onClick={closeMobileMenu}>
+                Dundi Vedantam
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/instructors/cole-patrick" onClick={closeMobileMenu}>
+                Cole Patrick
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/instructors/mario-hoxha" onClick={closeMobileMenu}>
+                Mario Hoxha
+              </MobileDropdownLink>
+            </MobileDropdown>
+          </MobileNavItem>
+
+          <MobileNavItem>
+            <MobileNavButton onClick={() => toggleMobileDropdown('kidsInstructors')}>
+              Kids Instructors
+            </MobileNavButton>
+            <MobileDropdown $isOpen={mobileDropdownOpen === 'kidsInstructors'}>
+              <MobileDropdownLink href="/instructors/bjorn-shurdha" onClick={closeMobileMenu}>
+                Bjorn Shurdha
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/instructors/luke-loureiro" onClick={closeMobileMenu}>
+                Luke Loureiro
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/instructors/nico-mangano" onClick={closeMobileMenu}>
+                Nico Mangano
+              </MobileDropdownLink>
+            </MobileDropdown>
+          </MobileNavItem>
+
+          <MobileNavItem>
+            <MobileNavButton onClick={() => toggleMobileDropdown('pricing')}>
+              Pricing
+            </MobileNavButton>
+            <MobileDropdown $isOpen={mobileDropdownOpen === 'pricing'}>
+              <MobileDropdownLink href="/pricing/drop-in" onClick={closeMobileMenu}>
+                Drop-In Classes
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/pricing/jiu-jitsu-muay-thai" onClick={closeMobileMenu}>
+                Complete BST Package
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/pricing/muay-thai" onClick={closeMobileMenu}>
+                Muay Thai Only
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/pricing/kids" onClick={closeMobileMenu}>
+                Kids Program
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/pricing/special-offer" onClick={closeMobileMenu}>
+                Special Offer
+              </MobileDropdownLink>
+            </MobileDropdown>
+          </MobileNavItem>
+
+          <MobileNavItem>
+            <MobileNavLink href="/achievements" onClick={closeMobileMenu}>
+              Achievements
+            </MobileNavLink>
+          </MobileNavItem>
+
+          <MobileContactButton href="/contact" onClick={closeMobileMenu}>
+            Contact Us
+          </MobileContactButton>
+        </MobileNavContent>
+      </MobileMenu>
     </NavContainer>
   );
 }
