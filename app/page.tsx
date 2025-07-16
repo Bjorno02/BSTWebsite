@@ -140,13 +140,16 @@ export default function Home() {
       <style jsx>{`
         .mobile-test {
           display: none;
-          background: green;
+          background: #CC0000;
           color: white;
-          padding: 20px;
+          padding: 15px;
           text-align: center;
-          font-size: 24px;
+          font-size: 18px;
           font-weight: bold;
-          margin: 20px 0;
+          margin: 0;
+          font-family: 'Orbitron', monospace;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
         }
         
         .team-section {
@@ -176,6 +179,7 @@ export default function Home() {
           margin-bottom: 2rem;
           font-family: 'Orbitron', sans-serif;
           text-transform: uppercase;
+          letter-spacing: 0.05em;
         }
         
         .text-container {
@@ -197,23 +201,55 @@ export default function Home() {
             display: block;
           }
           
+          .team-section {
+            padding: 2rem 0;
+          }
+          
           .team-grid {
             grid-template-columns: 1fr;
             gap: 2rem;
-            background: red !important;
-            padding: 20px;
+            padding: 0 1rem;
           }
           
           .section-title {
             font-size: 2rem;
-            background: yellow !important;
-            color: black !important;
+            text-align: center;
+            margin-bottom: 1.5rem;
           }
           
           .text-paragraph {
-            background: blue !important;
-            color: white !important;
-            padding: 10px;
+            font-size: 1rem;
+            text-align: center;
+            padding: 0 0.5rem;
+          }
+          
+          .team-image-container {
+            order: -1;
+          }
+          
+          .team-image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .section-title {
+            font-size: 1.75rem;
+          }
+          
+          .text-paragraph {
+            font-size: 0.95rem;
+          }
+          
+          .team-section {
+            padding: 1.5rem 0;
+          }
+          
+          .team-grid {
+            gap: 1.5rem;
+            padding: 0 0.75rem;
           }
         }
       `}</style>

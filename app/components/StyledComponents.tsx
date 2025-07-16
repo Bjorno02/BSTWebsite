@@ -129,6 +129,25 @@ export const HeroSection = styled.section`
       radial-gradient(ellipse at center, transparent 40%, ${colors.black} 100%);
     z-index: 2;
   }
+  
+  @media (max-width: 768px) {
+    min-height: 90vh;
+    padding-top: 60px;
+    padding-bottom: 2rem;
+    
+    &::before {
+      opacity: 0.2;
+    }
+    
+    &::after {
+      background: radial-gradient(ellipse at center, transparent 30%, ${colors.black} 100%);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    min-height: 85vh;
+    padding-top: 50px;
+  }
 `;
 
 export const HeroContent = styled.div`
@@ -136,6 +155,15 @@ export const HeroContent = styled.div`
   position: relative;
   z-index: 3;
   animation: ${fadeIn} 0.8s ease-out;
+  padding: 0 1rem;
+  
+  @media (max-width: 768px) {
+    padding: 0 0.75rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0 0.5rem;
+  }
 `;
 
 export const GrungeTitle = styled.h1`
@@ -254,6 +282,16 @@ export const LinkButton = styled.a<{ $variant?: 'primary' | 'secondary' }>`
   overflow: hidden;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.25rem;
+  }
   
   &::before {
     content: '';
