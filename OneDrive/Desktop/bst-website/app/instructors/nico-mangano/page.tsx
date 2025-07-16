@@ -233,10 +233,10 @@ export default function NicoMangano() {
               <PhotosTitle>Photos</PhotosTitle>
               <PhotosGrid>
                 <PhotoContainer>
-                  <Photo src="/nico1.jpg" alt="Nico Mangano" />
+                  <Photo src="/Nico1.jpg" alt="Nico Mangano" />
                 </PhotoContainer>
                 <PhotoContainer>
-                  <Photo src="/nico2.jpg" alt="Nico Mangano" />
+                  <Photo src="/Nico2.jpg" alt="Nico Mangano" />
                 </PhotoContainer>
               </PhotosGrid>
             </PhotosSection>
