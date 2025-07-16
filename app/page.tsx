@@ -51,6 +51,8 @@ const TeamGrid = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 2rem;
+    background: red !important;
+    padding: 20px;
   }
 `;
 
@@ -75,6 +77,8 @@ const SectionTitleStyled = styled.h2`
   
   @media (max-width: 768px) {
     font-size: 2rem;
+    background: yellow !important;
+    color: black !important;
   }
 `;
 
@@ -90,12 +94,38 @@ const TextParagraph = styled.p`
   &:last-child {
     margin-bottom: 0;
   }
+  
+  @media (max-width: 768px) {
+    background: blue !important;
+    color: white !important;
+    padding: 10px;
+  }
+`;
+
+// Mobile test component
+const MobileTest = styled.div`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+    background: green;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
 `;
 
 export default function Home() {
   return (
     <main>
       <Navigation />
+      
+      <MobileTest>
+        MOBILE VERSION IS WORKING! 🎉
+      </MobileTest>
       
       <HeroSection>
         <HeroContent>
