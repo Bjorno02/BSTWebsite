@@ -39,6 +39,18 @@ const Content = styled.div`
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  
+  @media (max-width: 768px) {
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding-top: 70px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 `;
 
 const ScheduleSection = styled(Section)`
@@ -56,6 +68,14 @@ const Title = styled.h1`
   text-transform: uppercase;
   font-family: 'Orbitron', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+  }
 `;
 
 const Description = styled.p`
@@ -66,6 +86,16 @@ const Description = styled.p`
   line-height: 1.6;
   color: ${colors.white};
   opacity: 0.9;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin: 1rem auto 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    margin: 0.75rem auto 1.5rem;
+  }
 `;
 
 const TableWrapper = styled.div`
@@ -73,6 +103,16 @@ const TableWrapper = styled.div`
   padding: 20px;
   border-radius: 8px;
   margin: 2rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 15px;
+    margin: 1.5rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 10px;
+    margin: 1rem 0;
+  }
 `;
 
 const ScheduleTable = styled.div`
@@ -101,6 +141,16 @@ const Th = styled.th`
   font-family: 'Orbitron', sans-serif;
   position: relative;
   z-index: 10;
+  
+  @media (max-width: 768px) {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
 `;
 
 const Td = styled.td<{ $hasClass: boolean }>`
@@ -113,6 +163,16 @@ const Td = styled.td<{ $hasClass: boolean }>`
 
   &:hover {
     background: ${props => props.$hasClass ? '#330000' : '#1a1a1a'};
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+    font-size: 0.8rem;
   }
 `;
 

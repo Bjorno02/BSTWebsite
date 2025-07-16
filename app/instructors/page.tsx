@@ -40,12 +40,32 @@ const Content = styled.div`
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  
+  @media (max-width: 768px) {
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding-top: 70px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 `;
 
 const HeroSection = styled.div`
   text-align: center;
   padding: 4rem 0;
   position: relative;
+  
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -61,6 +81,10 @@ const Title = styled.h1`
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
 
 const Subtitle = styled.p`
@@ -70,10 +94,26 @@ const Subtitle = styled.p`
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const CategorySection = styled.div`
   margin-bottom: 4rem;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const CategoryTitle = styled.h3`
@@ -87,6 +127,15 @@ const CategoryTitle = styled.h3`
   text-shadow: 2px 2px 0px ${colors.black};
   border-bottom: 2px solid ${colors.red};
   padding-bottom: 0.5rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const InstructorGrid = styled.div`
@@ -94,6 +143,17 @@ const InstructorGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
 `;
 
 const InstructorCard = styled(Link)`
@@ -120,6 +180,14 @@ const InstructorCard = styled(Link)`
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(204, 0, 0, 0.3);
     border-color: ${colors.red};
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
   }
 `;
 

@@ -41,12 +41,32 @@ const Content = styled.div`
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  
+  @media (max-width: 768px) {
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding-top: 70px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 `;
 
 const HeroSection = styled.div`
   text-align: center;
   padding: 4rem 0;
   position: relative;
+  
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -62,6 +82,10 @@ const Title = styled.h1`
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
 
 const Subtitle = styled.p`
@@ -71,6 +95,14 @@ const Subtitle = styled.p`
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const Section = styled.section`
@@ -91,6 +123,16 @@ const Section = styled.section`
     transform: rotate(1deg);
     pointer-events: none;
   }
+  
+  @media (max-width: 768px) {
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin: 1.5rem 0;
+    padding: 1rem;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -102,6 +144,15 @@ const SectionTitle = styled.h2`
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-shadow: 2px 2px 0px ${colors.black};
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+  }
 `;
 
 const Text = styled.p`
@@ -126,6 +177,16 @@ const FormContainer = styled.div`
     right: 0;
     height: 3px;
     background: ${colors.red};
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+    margin: 1rem 0;
   }
 `;
 
@@ -200,6 +261,17 @@ const SubmitButton = styled.button`
     opacity: 0.6;
     cursor: not-allowed;
   }
+  
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    padding: 0.875rem 1.5rem;
+    width: 100%;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+  }
 `;
 
 const InfoBox = styled.div`
@@ -219,6 +291,16 @@ const InfoBox = styled.div`
     border: 1px solid ${colors.dustyRed};
     transform: rotate(1deg);
     pointer-events: none;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+    margin: 0.75rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
   }
 `;
 
