@@ -230,7 +230,6 @@ export default function NicoMangano() {
             </InstructorCard>
             
             <PhotosSection>
-              <PhotosTitle>Photos</PhotosTitle>
               <PhotosGrid>
                 <PhotoContainer>
                   <Photo src="/Nico1.jpg" alt="Nico Mangano" />

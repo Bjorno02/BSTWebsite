@@ -228,7 +228,6 @@ export default function LukeLoureiro() {
             </InstructorCard>
             
             <PhotosSection>
-              <Title style={{ fontSize: '2rem', marginBottom: '2rem' }}>Photos</Title>
               <PhotosGrid>
                 <PhotoContainer>
                   <img src="/luke1.jpg" alt="Luke Loureiro Wrestling" />
