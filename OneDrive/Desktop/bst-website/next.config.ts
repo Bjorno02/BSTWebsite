@@ -4,8 +4,6 @@ const nextConfig: NextConfig = {
   compiler: {
     styledComponents: true,
   },
-  // Optimize for Vercel deployment
-  output: 'standalone',
   // Enable image optimization
   images: {
     formats: ['image/webp', 'image/avif'],
