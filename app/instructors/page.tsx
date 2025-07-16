@@ -116,6 +116,37 @@ const CategorySection = styled.div`
   }
 `;
 
+const InstructorSection = styled.div`
+  margin: 2rem 0;
+  padding: 2rem;
+  background: ${colors.black}80;
+  border: 3px solid ${colors.red};
+  position: relative;
+  text-align: center;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid ${colors.dustyRed};
+    transform: rotate(1deg);
+    pointer-events: none;
+  }
+  
+  @media (max-width: 768px) {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+`;
+
 const CategoryTitle = styled.h3`
   font-family: 'Orbitron', monospace;
   font-size: 2rem;
@@ -146,12 +177,12 @@ const InstructorGrid = styled.div`
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 1.5rem;
   }
   
   @media (max-width: 480px) {
-    gap: 1rem;
+    gap: 0.75rem;
     margin-top: 1rem;
   }
 `;
@@ -184,10 +215,12 @@ const InstructorCard = styled(Link)`
   
   @media (max-width: 768px) {
     padding: 1.5rem;
+    margin-bottom: 1rem;
   }
   
   @media (max-width: 480px) {
     padding: 1rem;
+    margin-bottom: 0.75rem;
   }
 `;
 
@@ -199,6 +232,14 @@ const InstructorName = styled.h3`
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const InstructorTitle = styled.div`
@@ -209,6 +250,14 @@ const InstructorTitle = styled.div`
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
+  
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+  }
 `;
 
 const InstructorDescription = styled.p`
@@ -216,6 +265,16 @@ const InstructorDescription = styled.p`
   line-height: 1.6;
   color: ${colors.white};
   text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
 `;
 
 export default function Instructors() {
