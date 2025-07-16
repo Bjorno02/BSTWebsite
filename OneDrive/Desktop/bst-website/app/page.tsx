@@ -25,7 +25,7 @@ export default function Home() {
       <HeroSection>
         <HeroContent>
           <Image 
-            src="/bst-logo.png" 
+            src="/bst-logo.PNG" 
             alt="BST Jiu-Jitsu Logo" 
             width={350} 
             height={350}

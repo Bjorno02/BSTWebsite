@@ -176,7 +176,7 @@ function Navigation() {
       <NavContent>
         <LogoContainer>
           <Link href="/">
-            <Image src="/bst-logo.png" alt="BST Jiu-Jitsu Logo" width={60} height={60} />
+            <Image src="/bst-logo.PNG" alt="BST Jiu-Jitsu Logo" width={60} height={60} />
           </Link>
         </LogoContainer>
         
