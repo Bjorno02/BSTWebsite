@@ -3,6 +3,7 @@
 import styled from 'styled-components';
 import { Container, Section, colors } from '../../components/StyledComponents';
 import Navigation from '../../components/Navigation';
+import Image from 'next/image';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -230,10 +231,34 @@ export default function LukeLoureiro() {
             <PhotosSection>
               <PhotosGrid>
                 <PhotoContainer>
-                  <img src="/luke1.jpg" alt="Luke Loureiro Wrestling" />
+                  <Image 
+                    src="/luke1.jpg" 
+                    alt="Luke Loureiro Wrestling" 
+                    width={400}
+                    height={300}
+                    style={{
+                      maxWidth: '100%',
+                      height: '300px',
+                      objectFit: 'cover',
+                      borderRadius: '8px',
+                      border: '3px solid #dc143c'
+                    }}
+                  />
                 </PhotoContainer>
                 <PhotoContainer>
-                  <img src="/luke2.jpg" alt="Luke Loureiro Coaching" />
+                  <Image 
+                    src="/luke2.jpg" 
+                    alt="Luke Loureiro Coaching" 
+                    width={400}
+                    height={300}
+                    style={{
+                      maxWidth: '100%',
+                      height: '300px',
+                      objectFit: 'cover',
+                      borderRadius: '8px',
+                      border: '3px solid #dc143c'
+                    }}
+                  />
                 </PhotoContainer>
               </PhotosGrid>
             </PhotosSection>

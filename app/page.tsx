@@ -61,9 +61,11 @@ export default function Home() {
           }}>
             {/* Team Image on Left */}
             <div style={{ textAlign: 'center' }}>
-              <img 
+              <Image 
                 src="/Team1.JPG" 
                 alt="BST Team" 
+                width={600}
+                height={400}
                 style={{ 
                   maxWidth: '100%', 
                   height: '400px', 
@@ -71,6 +73,7 @@ export default function Home() {
                   borderRadius: '12px', 
                   border: '3px solid #dc143c' 
                 }}
+                priority
               />
             </div>
             
@@ -138,9 +141,11 @@ export default function Home() {
             
             {/* Team3 Image on Right */}
             <div style={{ textAlign: 'center' }}>
-              <img 
+              <Image 
                 src="/Team3.JPG" 
                 alt="BST Team Commitment" 
+                width={600}
+                height={500}
                 style={{ 
                   maxWidth: '100%', 
                   height: '500px', 
@@ -148,6 +153,7 @@ export default function Home() {
                   borderRadius: '12px', 
                   border: '3px solid #dc143c'
                 }}
+                priority
               />
             </div>
           </div>
