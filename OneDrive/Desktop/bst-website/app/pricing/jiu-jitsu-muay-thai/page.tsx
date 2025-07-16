@@ -262,6 +262,8 @@ const BookNowButton = styled.a`
   max-width: 300px;
   cursor: pointer;
   pointer-events: auto;
+  position: relative;
+  z-index: 10;
   
   &:hover {
     background: ${colors.dustyRed};
@@ -300,7 +302,7 @@ export default function JiuJitsuMuayThaiPricing() {
             </Features>
           </MainPricingCard>
           
-          <BookNowButton href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+          <BookNowButton href="https://www.vagaro.com/cl/0LCQTPllGVtI-amdC8s0J9YXBnX6B745z6l~08ixPes=" target="_blank" rel="noopener noreferrer">
             Book Now
           </BookNowButton>
           

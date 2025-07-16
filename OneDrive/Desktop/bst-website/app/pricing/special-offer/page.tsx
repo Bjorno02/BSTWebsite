@@ -233,6 +233,10 @@ const BookNowButton = styled.a`
   border: 2px solid ${colors.red};
   text-align: center;
   max-width: 300px;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
   
   &:hover {
     background: ${colors.dustyRed};
@@ -274,7 +278,7 @@ export default function SpecialOffer() {
             </Features>
           </MainPricingCard>
           
-          <BookNowButton href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+          <BookNowButton href="/contact">
             Book Now
           </BookNowButton>
           

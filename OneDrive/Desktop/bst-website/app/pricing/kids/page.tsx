@@ -276,6 +276,8 @@ const BookNowButton = styled.a`
   max-width: 300px;
   cursor: pointer;
   pointer-events: auto;
+  position: relative;
+  z-index: 10;
   
   &:hover {
     background: ${colors.dustyRed};
@@ -357,7 +359,7 @@ export default function KidsPricing() {
             </PricingCard>
           </PricingGrid>
           
-          <BookNowButton href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+          <BookNowButton href="https://www.vagaro.com/cl/uPQjZ6nE9Kw1jo6pVoFZRjN075kuRMeV7CnOoBJTwBQ=" target="_blank" rel="noopener noreferrer">
             Book Now
           </BookNowButton>
           

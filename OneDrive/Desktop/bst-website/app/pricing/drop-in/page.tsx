@@ -233,13 +233,18 @@ const BookNowButton = styled.a`
   text-align: center;
   max-width: 300px;
   cursor: pointer;
-  pointer-events: auto;
+  position: relative;
+  z-index: 10;
   
   &:hover {
     background: ${colors.dustyRed};
     border-color: ${colors.dustyRed};
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(220, 20, 60, 0.3);
+  }
+  
+  &:active {
+    transform: translateY(0);
   }
 `;
 
@@ -273,7 +278,7 @@ export default function DropInPricing() {
             </PricingCard>
           </PricingGrid>
           
-          <BookNowButton href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+          <BookNowButton href="/contact">
             Book Now
           </BookNowButton>
           

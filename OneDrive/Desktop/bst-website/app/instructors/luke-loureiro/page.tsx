@@ -145,6 +145,28 @@ const InfoSection = styled.div`
   }
 `;
 
+const PhotosSection = styled.div`
+  margin: 4rem 0;
+  text-align: center;
+`;
+
+const PhotosGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+`;
+
+const PhotoContainer = styled.div`
+  img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid ${colors.red};
+  }
+`;
+
 export default function LukeLoureiro() {
   return (
     <PageContainer>
@@ -204,6 +226,18 @@ export default function LukeLoureiro() {
                 </InfoSection>
               </InstructorInfo>
             </InstructorCard>
+            
+            <PhotosSection>
+              <Title style={{ fontSize: '2rem', marginBottom: '2rem' }}>Photos</Title>
+              <PhotosGrid>
+                <PhotoContainer>
+                  <img src="/luke1.jpg" alt="Luke Loureiro Wrestling" />
+                </PhotoContainer>
+                <PhotoContainer>
+                  <img src="/luke2.jpg" alt="Luke Loureiro Coaching" />
+                </PhotoContainer>
+              </PhotosGrid>
+            </PhotosSection>
           </Container>
         </InstructorSection>
       </Content>

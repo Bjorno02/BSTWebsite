@@ -3,7 +3,7 @@ import {
   HeroContent,
   Subtitle,
   HeroDescription,
-  Button,
+  LinkButton,
   ButtonGroup,
   Container,
   SectionTitle,
@@ -37,7 +37,7 @@ export default function Home() {
           </HeroDescription>
           
           <ButtonGroup>
-            <Button>START TRAINING</Button>
+            <LinkButton href="/contact">START TRAINING</LinkButton>
           </ButtonGroup>
         </HeroContent>
       </HeroSection>

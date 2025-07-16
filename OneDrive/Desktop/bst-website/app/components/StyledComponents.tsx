@@ -237,6 +237,58 @@ export const Button = styled.button<{ $variant?: 'primary' | 'secondary' }>`
   }
 `;
 
+export const LinkButton = styled.a<{ $variant?: 'primary' | 'secondary' }>`
+  font-family: 'Orbitron', monospace;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border: 2px solid ${colors.red};
+  background: ${props => props.$variant === 'secondary' ? 'transparent' : colors.red};
+  color: ${props => props.$variant === 'secondary' ? colors.red : colors.white};
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 3px,
+        ${colors.red}10 3px,
+        ${colors.red}10 6px
+      );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  &:hover {
+    background: ${props => props.$variant === 'secondary' ? colors.red : 'transparent'};
+    color: ${props => props.$variant === 'secondary' ? colors.white : colors.red};
+    transform: translateY(-1px);
+    box-shadow: 
+      0 0 0 1px ${colors.black},
+      0 0 0 3px ${colors.red},
+      0 0 15px ${colors.red}40;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+`;
+
 export const ButtonGroup = styled.div`
   display: flex;
   flex-direction: column;

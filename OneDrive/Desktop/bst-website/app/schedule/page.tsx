@@ -243,8 +243,8 @@ export default function Schedule() {
     days: DAYS,
     classes: {
       '12PM': {
-        SUN: '',
-        MON: 'Adults Jiu-Jitsu',
+        SUN: 'Adults Jiu-Jitsu',
+        MON: 'Jiu-Jitsu Fundamentals',
         TUE: 'Jiu-Jitsu Fundamentals',
         WED: 'Jiu-Jitsu Fundamentals',
         THU: 'Jiu-Jitsu Fundamentals',
@@ -252,7 +252,7 @@ export default function Schedule() {
         SAT: 'Adults Jiu-Jitsu'
       },
       '1PM': {
-        SUN: '',
+        SUN: 'Kids Muay Thai',
         MON: '',
         TUE: '',
         WED: '',
