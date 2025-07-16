@@ -145,6 +145,41 @@ const InfoSection = styled.div`
   }
 `;
 
+const PhotosSection = styled.div`
+  margin: 3rem 0;
+  text-align: center;
+`;
+
+const PhotosTitle = styled.h3`
+  color: ${colors.red};
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+`;
+
+const PhotosGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
+const PhotoContainer = styled.div`
+  text-align: center;
+`;
+
+const Photo = styled.img`
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 3px solid ${colors.red};
+  border-radius: 8px;
+  margin-bottom: 1rem;
+`;
+
 export default function NicoMangano() {
   return (
     <PageContainer>
@@ -193,6 +228,18 @@ export default function NicoMangano() {
                 </InfoSection>
               </InstructorInfo>
             </InstructorCard>
+            
+            <PhotosSection>
+              <PhotosTitle>Photos</PhotosTitle>
+              <PhotosGrid>
+                <PhotoContainer>
+                  <Photo src="/nico1.jpg" alt="Nico Mangano" />
+                </PhotoContainer>
+                <PhotoContainer>
+                  <Photo src="/nico2.jpg" alt="Nico Mangano" />
+                </PhotoContainer>
+              </PhotosGrid>
+            </PhotosSection>
           </Container>
         </InstructorSection>
       </Content>

@@ -346,9 +346,7 @@ export default function KidsPage() {
           </Text>
         </Section>
 
-        <div style={{ textAlign: 'center', margin: '3rem 0' }}>
-          <CTAButton>Enroll Your Child Today</CTAButton>
-        </div>
+
       </Content>
     </PageContainer>
   );

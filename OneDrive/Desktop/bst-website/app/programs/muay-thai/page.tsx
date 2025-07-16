@@ -312,9 +312,7 @@ export default function MuayThaiPage() {
           </Text>
         </Section>
 
-        <div style={{ textAlign: 'center', margin: '3rem 0' }}>
-          <CTAButton>Start Your Muay Thai Journey</CTAButton>
-        </div>
+
       </Content>
     </PageContainer>
   );
