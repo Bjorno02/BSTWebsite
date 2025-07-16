@@ -123,12 +123,23 @@ const ScheduleTable = styled.div`
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   background: #404040;
   padding: 1px;
+  
+  @media (max-width: 768px) {
+    overflow-x: visible;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
 `;
 
 const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   background: #404040;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Th = styled.th`
@@ -185,6 +196,82 @@ const TimeColumn = styled.td`
   font-family: 'Orbitron', sans-serif;
   position: relative;
   z-index: 10;
+  
+  @media (max-width: 768px) {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+`;
+
+const MobileSchedule = styled.div`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const MobileDay = styled.div`
+  margin-bottom: 2rem;
+  background: #404040;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+`;
+
+const MobileDayHeader = styled.div`
+  background: #CC0000;
+  color: #FFFFFF;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+`;
+
+const MobileTimeSlot = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #000000;
+  background: #404040;
+  color: #FFFFFF;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  &:hover {
+    background: #330000;
+  }
+`;
+
+const MobileTime = styled.div`
+  background: #CC0000;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  min-width: 80px;
+  text-align: center;
+`;
+
+const MobileClass = styled.div`
+  flex: 1;
+  margin-left: 1rem;
+  font-size: 1rem;
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const PricingSection = styled(Section)`
@@ -399,6 +486,24 @@ export default function Schedule() {
                   </tbody>
                 </Table>
               </ScheduleTable>
+              
+              <MobileSchedule>
+                {schedule.days.map(day => (
+                  <MobileDay key={day}>
+                    <MobileDayHeader>{day}</MobileDayHeader>
+                    {schedule.times.map(time => {
+                      const className = schedule.classes[time][day];
+                      if (className === '') return null;
+                      return (
+                        <MobileTimeSlot key={`${day}-${time}`}>
+                          <MobileTime>{time}</MobileTime>
+                          <MobileClass>{className}</MobileClass>
+                        </MobileTimeSlot>
+                      );
+                    })}
+                  </MobileDay>
+                ))}
+              </MobileSchedule>
             </TableWrapper>
           </Container>
 

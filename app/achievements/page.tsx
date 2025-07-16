@@ -39,12 +39,32 @@ const Content = styled.div`
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  
+  @media (max-width: 768px) {
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding-top: 70px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 `;
 
 const HeroSection = styled.div`
   text-align: center;
   padding: 4rem 0;
   position: relative;
+  
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -60,6 +80,10 @@ const Title = styled.h1`
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
 
 const Subtitle = styled.p`
@@ -69,6 +93,14 @@ const Subtitle = styled.p`
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const AchievementSection = styled.div`
@@ -90,6 +122,16 @@ const AchievementSection = styled.div`
     transform: rotate(2deg);
     pointer-events: none;
   }
+  
+  @media (max-width: 768px) {
+    margin: 2rem 0;
+    padding: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+  }
 `;
 
 const AchievementTitle = styled.h3`
@@ -99,6 +141,14 @@ const AchievementTitle = styled.h3`
   color: ${colors.red};
   margin-bottom: 1.5rem;
   text-transform: uppercase;
+  
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const AchievementDate = styled.div`
@@ -116,6 +166,15 @@ const AchievementDescription = styled.div`
   text-align: left;
   max-width: 800px;
   margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 `;
 
 const ImagePlaceholder = styled.div`
@@ -130,6 +189,50 @@ const ImagePlaceholder = styled.div`
   color: ${colors.dustyRed};
   font-family: 'Orbitron', monospace;
   font-size: 1.1rem;
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+`;
+
+const AchievementImage = styled.img`
+  max-width: 100%;
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid ${colors.red};
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 250px;
+  }
+  
+  @media (max-width: 480px) {
+    height: 200px;
+  }
+`;
+
+const AchievementImageSmall = styled.img`
+  max-width: 100%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid ${colors.red};
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 250px;
+  }
+  
+  @media (max-width: 480px) {
+    height: 200px;
+  }
 `;
 
 export default function Achievements() {
@@ -150,13 +253,12 @@ export default function Achievements() {
             <br /><br />
             The victory was highlighted by Sean Rubchinuk's spectacular submission of a brown belt world champion, whose team ultimately finished in 2nd place. This triumph over multiple elite schools solidified BST's position as a powerhouse in the New England grappling scene.
           </AchievementDescription>
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-            <img 
+          <ImageContainer>
+            <AchievementImage 
               src="/TeamGold717.JPG" 
               alt="Team Gold July 17" 
-              style={{ maxWidth: '500px', width: '500px', height: '350px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
             />
-          </div>
+          </ImageContainer>
         </AchievementSection>
 
         <AchievementSection>
@@ -169,18 +271,16 @@ export default function Achievements() {
             <br /><br />
             This victory showcased the comprehensive training methodology at BST, where each team member's individual excellence contributes to collective success.
           </AchievementDescription>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
-            <img 
+          <ImageContainer>
+            <AchievementImageSmall 
               src="/quintet1.JPG" 
               alt="Quintet Tournament 1" 
-              style={{ maxWidth: '300px', width: '300px', height: '300px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
             />
-            <img 
+            <AchievementImageSmall 
               src="/quintet2.JPG" 
               alt="Quintet Tournament 2" 
-              style={{ maxWidth: '300px', width: '300px', height: '300px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
             />
-          </div>
+          </ImageContainer>
         </AchievementSection>
 
         <AchievementSection>
@@ -191,13 +291,12 @@ export default function Achievements() {
             <br /><br />
             The performance served as a foundation for our subsequent victories, showing the continuous improvement and dedication of our competition team. Each athlete contributed to the team's success, building momentum for future tournaments and establishing BST as a force to be reckoned with in the grappling community.
           </AchievementDescription>
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-            <img 
+          <ImageContainer>
+            <AchievementImage 
               src="/teamsilver517.JPG" 
               alt="Team Silver May 17" 
-              style={{ maxWidth: '500px', width: '500px', height: '350px', objectFit: 'cover', borderRadius: '12px', border: `3px solid ${colors.red}` }}
             />
-          </div>
+          </ImageContainer>
         </AchievementSection>
       </Content>
     </PageContainer>
