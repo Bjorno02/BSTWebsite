@@ -177,12 +177,12 @@ const InstructorGrid = styled.div`
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 1.5rem;
   }
   
   @media (max-width: 480px) {
-    gap: 0.75rem;
+    gap: 1.5rem;
     margin-top: 1rem;
   }
 `;
@@ -214,13 +214,13 @@ const InstructorCard = styled(Link)`
   }
   
   @media (max-width: 768px) {
-    padding: 1.5rem;
-    margin-bottom: 1rem;
+    padding: 2rem;
+    margin-bottom: 0;
   }
   
   @media (max-width: 480px) {
-    padding: 1rem;
-    margin-bottom: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 0;
   }
 `;
 

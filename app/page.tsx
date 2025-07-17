@@ -24,10 +24,7 @@ export default function Home() {
     <main>
       <Navigation />
       
-      {/* Mobile test banner */}
-      <div className="mobile-test">
-        MOBILE VERSION IS WORKING! 🎉
-      </div>
+
       
       <HeroSection>
         <HeroContent>
@@ -138,19 +135,6 @@ export default function Home() {
       </div>
 
       <style jsx>{`
-        .mobile-test {
-          display: none;
-          background: #CC0000;
-          color: white;
-          padding: 15px;
-          text-align: center;
-          font-size: 18px;
-          font-weight: bold;
-          margin: 0;
-          font-family: 'Orbitron', monospace;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-        }
         
         .team-section {
           padding: 4rem 0;
@@ -197,9 +181,6 @@ export default function Home() {
         }
         
         @media (max-width: 768px) {
-          .mobile-test {
-            display: block;
-          }
           
           .team-section {
             padding: 2rem 0;
