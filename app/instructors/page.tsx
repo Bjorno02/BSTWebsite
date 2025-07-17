@@ -3,7 +3,6 @@
 import styled from 'styled-components';
 import { colors } from '../components/StyledComponents';
 import Navigation from '../components/Navigation';
-import Link from 'next/link';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -104,18 +103,6 @@ const Subtitle = styled.p`
   }
 `;
 
-const CategorySection = styled.div`
-  margin-bottom: 4rem;
-  
-  @media (max-width: 768px) {
-    margin-bottom: 2rem;
-  }
-  
-  @media (max-width: 480px) {
-    margin-bottom: 1.5rem;
-  }
-`;
-
 const InstructorSection = styled.div`
   margin: 4rem 0;
   padding: 3rem;
@@ -144,83 +131,6 @@ const InstructorSection = styled.div`
   @media (max-width: 480px) {
     margin: 1.5rem 0;
     padding: 1.5rem;
-  }
-`;
-
-const CategoryTitle = styled.h3`
-  font-family: 'Orbitron', monospace;
-  font-size: 2rem;
-  font-weight: 700;
-  color: ${colors.red};
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-shadow: 2px 2px 0px ${colors.black};
-  border-bottom: 2px solid ${colors.red};
-  padding-bottom: 0.5rem;
-  
-  @media (max-width: 768px) {
-    font-size: 1.75rem;
-    text-align: center;
-  }
-  
-  @media (max-width: 480px) {
-    font-size: 1.5rem;
-  }
-`;
-
-const InstructorGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-  
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 1.5rem;
-  }
-  
-  @media (max-width: 480px) {
-    gap: 1.5rem;
-    margin-top: 1rem;
-  }
-`;
-
-const InstructorCard = styled(Link)`
-  background: ${colors.black}80;
-  border: 2px solid ${colors.red};
-  padding: 2rem;
-  position: relative;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border: 1px solid ${colors.dustyRed};
-    transform: rotate(1deg);
-    pointer-events: none;
-  }
-  
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(204, 0, 0, 0.3);
-    border-color: ${colors.red};
-  }
-  
-  @media (max-width: 768px) {
-    padding: 2rem;
-    margin-bottom: 0;
-  }
-  
-  @media (max-width: 480px) {
-    padding: 1.5rem;
-    margin-bottom: 0;
   }
 `;
 
