@@ -117,8 +117,8 @@ const CategorySection = styled.div`
 `;
 
 const InstructorSection = styled.div`
-  margin: 2rem 0;
-  padding: 2rem;
+  margin: 4rem 0;
+  padding: 3rem;
   background: ${colors.black}80;
   border: 3px solid ${colors.red};
   position: relative;
@@ -132,18 +132,18 @@ const InstructorSection = styled.div`
     right: -2px;
     bottom: -2px;
     border: 2px solid ${colors.dustyRed};
-    transform: rotate(1deg);
+    transform: rotate(2deg);
     pointer-events: none;
   }
   
   @media (max-width: 768px) {
-    margin: 1.5rem 0;
-    padding: 1.5rem;
+    margin: 2rem 0;
+    padding: 2rem;
   }
   
   @media (max-width: 480px) {
-    margin: 1rem 0;
-    padding: 1rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
   }
 `;
 
