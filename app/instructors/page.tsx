@@ -104,8 +104,8 @@ const Subtitle = styled.p`
 `;
 
 const InstructorSection = styled.div`
-  margin: 4rem 0;
-  padding: 3rem;
+  margin: 3rem 0;
+  padding: 2.5rem;
   background: ${colors.black}80;
   border: 3px solid ${colors.red};
   position: relative;
@@ -119,18 +119,18 @@ const InstructorSection = styled.div`
     right: -2px;
     bottom: -2px;
     border: 2px solid ${colors.dustyRed};
-    transform: rotate(2deg);
+    transform: rotate(1deg);
     pointer-events: none;
   }
   
   @media (max-width: 768px) {
     margin: 2rem 0;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
   }
   
   @media (max-width: 480px) {
     margin: 1.5rem 0;
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 `;
 
@@ -139,16 +139,18 @@ const InstructorName = styled.h3`
   font-size: 2.2rem;
   font-weight: 700;
   color: ${colors.red};
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
   
   @media (max-width: 768px) {
     font-size: 1.8rem;
+    margin-bottom: 0.75rem;
   }
   
   @media (max-width: 480px) {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -156,23 +158,25 @@ const InstructorTitle = styled.div`
   font-family: 'Orbitron', monospace;
   font-size: 1.3rem;
   color: ${colors.dustyRed};
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   
   @media (max-width: 768px) {
     font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
   
   @media (max-width: 480px) {
     font-size: 1rem;
+    margin-bottom: 0.75rem;
   }
 `;
 
 const InstructorDescription = styled.div`
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.6;
   color: ${colors.white};
   text-align: left;
   max-width: 800px;
@@ -180,11 +184,13 @@ const InstructorDescription = styled.div`
   
   @media (max-width: 768px) {
     font-size: 1rem;
+    line-height: 1.5;
     text-align: center;
   }
   
   @media (max-width: 480px) {
     font-size: 0.95rem;
+    line-height: 1.4;
   }
 `;
 
