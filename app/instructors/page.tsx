@@ -226,54 +226,55 @@ const InstructorCard = styled(Link)`
 
 const InstructorName = styled.h3`
   font-family: 'Orbitron', monospace;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: ${colors.red};
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
   text-align: center;
   
   @media (max-width: 768px) {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
   
   @media (max-width: 480px) {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 `;
 
 const InstructorTitle = styled.div`
   font-family: 'Orbitron', monospace;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: ${colors.dustyRed};
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
   
   @media (max-width: 480px) {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 `;
 
-const InstructorDescription = styled.p`
-  font-size: 1rem;
-  line-height: 1.6;
+const InstructorDescription = styled.div`
+  font-size: 1.1rem;
+  line-height: 1.8;
   color: ${colors.white};
-  text-align: center;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
   
   @media (max-width: 768px) {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    text-align: center;
   }
   
   @media (max-width: 480px) {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 0.95rem;
   }
 `;
 
@@ -287,87 +288,77 @@ export default function Instructors() {
           <Subtitle>Meet the BST Team</Subtitle>
         </HeroSection>
 
-        <CategorySection>
-          <CategoryTitle>Head Coaches</CategoryTitle>
-          <InstructorGrid>
-            <InstructorCard href="/instructors/sean-rubchinuk">
-              <InstructorName>Sean Rubchinuk</InstructorName>
-              <InstructorTitle>Head Coach & World Champion</InstructorTitle>
-              <InstructorDescription>
-                World-class Jiu-Jitsu competitor and head coach of BST. 
-                Sean brings championship-level expertise and leadership to our gym.
-              </InstructorDescription>
-            </InstructorCard>
-          </InstructorGrid>
-        </CategorySection>
+        <InstructorSection>
+          <InstructorName>Sean Rubchinuk</InstructorName>
+          <InstructorTitle>Head Coach & World Champion</InstructorTitle>
+          <InstructorDescription>
+            World-class Jiu-Jitsu competitor and head coach of BST. 
+            Sean brings championship-level expertise and leadership to our gym.
+          </InstructorDescription>
+        </InstructorSection>
 
-        <CategorySection>
-          <CategoryTitle>Adult Program Instructors</CategoryTitle>
-          <InstructorGrid>
-            <InstructorCard href="/instructors/diego-martin">
-              <InstructorName>Diego Martin</InstructorName>
-              <InstructorTitle>Muay Thai Instructor</InstructorTitle>
-              <InstructorDescription>
-                Traditional Muay Thai instructor with extensive experience in 
-                the art of eight limbs. Teaches authentic Thai boxing techniques.
-              </InstructorDescription>
-            </InstructorCard>
-            <InstructorCard href="/instructors/dundi-vedantam">
-              <InstructorName>Dundi Vedantam</InstructorName>
-              <InstructorTitle>Jiu-Jitsu Fundamentals Instructor</InstructorTitle>
-              <InstructorDescription>
-                Teaches Tuesday and Thursday Jiu-Jitsu fundamentals classes. 
-                Focuses on building strong foundations for all skill levels.
-              </InstructorDescription>
-            </InstructorCard>
-            <InstructorCard href="/instructors/cole-patrick">
-              <InstructorName>Cole Patrick</InstructorName>
-              <InstructorTitle>Jiu-Jitsu Fundamentals Instructor</InstructorTitle>
-              <InstructorDescription>
-                Teaches Monday Jiu-Jitsu fundamentals classes. 
-                Dedicated to helping students develop solid grappling foundations.
-              </InstructorDescription>
-            </InstructorCard>
-            <InstructorCard href="/instructors/mario-hoxha">
-              <InstructorName>Mario Hoxha</InstructorName>
-              <InstructorTitle>Wrestling Instructor</InstructorTitle>
-              <InstructorDescription>
-                Wrestling specialist who brings high-level grappling expertise 
-                to our adult programs. Focuses on takedowns and wrestling fundamentals.
-              </InstructorDescription>
-            </InstructorCard>
-          </InstructorGrid>
-        </CategorySection>
+        <InstructorSection>
+          <InstructorName>Diego Martin</InstructorName>
+          <InstructorTitle>Muay Thai Instructor</InstructorTitle>
+          <InstructorDescription>
+            Traditional Muay Thai instructor with extensive experience in 
+            the art of eight limbs. Teaches authentic Thai boxing techniques.
+          </InstructorDescription>
+        </InstructorSection>
 
-        <CategorySection>
-          <CategoryTitle>Kids Program Instructors</CategoryTitle>
-          <InstructorGrid>
-            <InstructorCard href="/instructors/bjorn-shurdha">
-              <InstructorName>Bjorn Shurdha</InstructorName>
-              <InstructorTitle>Kids Jiu-Jitsu Instructor</InstructorTitle>
-              <InstructorDescription>
-                Specializes in teaching Jiu-Jitsu to children. Creates a fun, 
-                safe environment where kids can learn martial arts fundamentals.
-              </InstructorDescription>
-            </InstructorCard>
-            <InstructorCard href="/instructors/luke-loureiro">
-              <InstructorName>Luke Loureiro</InstructorName>
-              <InstructorTitle>Kids Wrestling Instructor</InstructorTitle>
-              <InstructorDescription>
-                Kids wrestling specialist who teaches age-appropriate grappling 
-                techniques. Focuses on building confidence and athletic skills.
-              </InstructorDescription>
-            </InstructorCard>
-            <InstructorCard href="/instructors/nico-mangano">
-              <InstructorName>Nico Mangano</InstructorName>
-              <InstructorTitle>Kids Muay Thai Instructor</InstructorTitle>
-              <InstructorDescription>
-                Dedicated to teaching Muay Thai to children. Emphasizes technique, 
-                fitness, and character development in a supportive environment.
-              </InstructorDescription>
-            </InstructorCard>
-          </InstructorGrid>
-        </CategorySection>
+        <InstructorSection>
+          <InstructorName>Dundi Vedantam</InstructorName>
+          <InstructorTitle>Jiu-Jitsu Fundamentals Instructor</InstructorTitle>
+          <InstructorDescription>
+            Teaches Tuesday and Thursday Jiu-Jitsu fundamentals classes. 
+            Focuses on building strong foundations for all skill levels.
+          </InstructorDescription>
+        </InstructorSection>
+
+        <InstructorSection>
+          <InstructorName>Cole Patrick</InstructorName>
+          <InstructorTitle>Jiu-Jitsu Fundamentals Instructor</InstructorTitle>
+          <InstructorDescription>
+            Teaches Monday Jiu-Jitsu fundamentals classes. 
+            Dedicated to helping students develop solid grappling foundations.
+          </InstructorDescription>
+        </InstructorSection>
+
+        <InstructorSection>
+          <InstructorName>Mario Hoxha</InstructorName>
+          <InstructorTitle>Wrestling Instructor</InstructorTitle>
+          <InstructorDescription>
+            Wrestling specialist who brings high-level grappling expertise 
+            to our adult programs. Focuses on takedowns and wrestling fundamentals.
+          </InstructorDescription>
+        </InstructorSection>
+
+        <InstructorSection>
+          <InstructorName>Bjorn Shurdha</InstructorName>
+          <InstructorTitle>Kids Jiu-Jitsu Instructor</InstructorTitle>
+          <InstructorDescription>
+            Specializes in teaching Jiu-Jitsu to children. Creates a fun, 
+            safe environment where kids can learn martial arts fundamentals.
+          </InstructorDescription>
+        </InstructorSection>
+
+        <InstructorSection>
+          <InstructorName>Luke Loureiro</InstructorName>
+          <InstructorTitle>Kids Wrestling Instructor</InstructorTitle>
+          <InstructorDescription>
+            Kids wrestling specialist who teaches age-appropriate grappling 
+            techniques. Focuses on building confidence and athletic skills.
+          </InstructorDescription>
+        </InstructorSection>
+
+        <InstructorSection>
+          <InstructorName>Nico Mangano</InstructorName>
+          <InstructorTitle>Kids Muay Thai Instructor</InstructorTitle>
+          <InstructorDescription>
+            Dedicated to teaching Muay Thai to children. Emphasizes technique, 
+            fitness, and character development in a supportive environment.
+          </InstructorDescription>
+        </InstructorSection>
       </Content>
     </PageContainer>
   );
