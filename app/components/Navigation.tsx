@@ -542,6 +542,10 @@ function Navigation() {
             <NavLink href="/achievements">Achievements</NavLink>
           </NavItem>
 
+          <NavItem>
+            <NavLink href="/sponsorships">Sponsorships</NavLink>
+          </NavItem>
+
           <ContactButton href="/contact">Contact Us</ContactButton>
         </NavMenu>
         </DesktopNavContent>
@@ -648,6 +652,12 @@ function Navigation() {
           <MobileNavItem>
             <MobileNavLink href="/achievements" onClick={closeMobileMenu}>
               Achievements
+            </MobileNavLink>
+          </MobileNavItem>
+
+          <MobileNavItem>
+            <MobileNavLink href="/sponsorships" onClick={closeMobileMenu}>
+              Sponsorships
             </MobileNavLink>
           </MobileNavItem>
 
