@@ -366,7 +366,7 @@ const ContactInfo = styled.div`
   }
 `;
 
-const TIMES = ['12PM', '1PM', '5PM', '6PM', '7PM', '8PM'] as const;
+const TIMES = ['12PM', '1PM', '3:15PM', '5PM', '6PM', '7PM', '8PM'] as const;
 const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'] as const;
 
 type ScheduleTime = typeof TIMES[number];
@@ -399,20 +399,29 @@ export default function Schedule() {
         SAT: 'Adults Jiu-Jitsu'
       },
       '1PM': {
-        SUN: 'Kids Muay Thai',
+        SUN: '',
         MON: '',
         TUE: '',
         WED: '',
         THU: '',
         FRI: '',
-        SAT: 'Kids Muay Thai'
+        SAT: ''
+      },
+      '3:15PM': {
+        SUN: '',
+        MON: '',
+        TUE: 'Kids Wrestling',
+        WED: '',
+        THU: 'Kids Wrestling',
+        FRI: '',
+        SAT: ''
       },
       '5PM': {
         SUN: '',
         MON: 'Kids Jiu-Jitsu',
-        TUE: 'Kids Wrestling',
+        TUE: '',
         WED: 'Kids Jiu-Jitsu',
-        THU: 'Kids Wrestling',
+        THU: '',
         FRI: 'Kids Jiu-Jitsu',
         SAT: ''
       },

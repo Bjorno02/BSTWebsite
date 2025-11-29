@@ -475,10 +475,6 @@ function Navigation() {
                 <DropdownTitle>Dundi Vedantam</DropdownTitle>
                 <DropdownDescription>Jiu-Jitsu Fundamentals Instructor</DropdownDescription>
               </DropdownLink>
-              <DropdownLink href="/instructors/cole-patrick">
-                <DropdownTitle>Cole Patrick</DropdownTitle>
-                <DropdownDescription>Jiu-Jitsu Fundamentals Instructor</DropdownDescription>
-              </DropdownLink>
               <DropdownLink href="/instructors/mario-hoxha">
                 <DropdownTitle>Mario Hoxha</DropdownTitle>
                 <DropdownDescription>Wrestling Instructor</DropdownDescription>
@@ -543,7 +539,7 @@ function Navigation() {
           </NavItem>
 
           <NavItem>
-            <NavLink href="/sponsorships">Sponsorships</NavLink>
+            <NavLink href="/sponsorships">Sponsorships/Media</NavLink>
           </NavItem>
 
           <ContactButton href="/contact">Contact Us</ContactButton>
@@ -600,9 +596,6 @@ function Navigation() {
               <MobileDropdownLink href="/instructors/dundi-vedantam" onClick={closeMobileMenu}>
                 Dundi Vedantam
               </MobileDropdownLink>
-              <MobileDropdownLink href="/instructors/cole-patrick" onClick={closeMobileMenu}>
-                Cole Patrick
-              </MobileDropdownLink>
               <MobileDropdownLink href="/instructors/mario-hoxha" onClick={closeMobileMenu}>
                 Mario Hoxha
               </MobileDropdownLink>
@@ -657,7 +650,7 @@ function Navigation() {
 
           <MobileNavItem>
             <MobileNavLink href="/sponsorships" onClick={closeMobileMenu}>
-              Sponsorships
+              Sponsorships/Media
             </MobileNavLink>
           </MobileNavItem>
 

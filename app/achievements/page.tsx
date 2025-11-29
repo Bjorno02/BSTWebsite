@@ -246,6 +246,58 @@ export default function Achievements() {
         </HeroSection>
 
         <AchievementSection>
+          <AchievementTitle>Enigma Invitational Quintet</AchievementTitle>
+          <AchievementDate>October 18, 2025</AchievementDate>
+          <AchievementDescription>
+            BST competed in a quintet at the Enigma Invitational at Blue Collar Grappling Academy in Marion, Arkansas. They won their first matchup against Eco Submission Grappling, then lost a close matchup to Adamas Jiu Jitsu.
+            <br /><br />
+            This was an invitational with elite professional grapplers. BST was in the same bracket as Kingsway and Odyssey Jiu Jitsu, competing alongside notable names like Abe the Mountain and PGF competitors Derek Rayfield and Jett Thompson.
+            <br /><br />
+            For such a young team, BST showed immense promise competing in a bracket full of professional grapplers. They brought crazy energy and entertainment, and got the eyes of the grappling world on them. BST was incredibly grateful for the opportunity which couldn't have come with Blue Collar Grappling Academy.
+          </AchievementDescription>
+          <ImageContainer>
+            <AchievementImage 
+              src="/EnigmaOct18.JPG" 
+              alt="Enigma Invitational October 18" 
+            />
+          </ImageContainer>
+        </AchievementSection>
+
+        <AchievementSection>
+          <AchievementTitle>Team Gold - Grappling Industries Boston</AchievementTitle>
+          <AchievementDate>October 11, 2025</AchievementDate>
+          <AchievementDescription>
+            BST secured another 1st Place Overall Team Performance at Grappling Industries Boston, continuing their dominant run. The team brought home 9 individual gold medals and 1 silver medal, showcasing the consistent excellence across the entire roster.
+            <br /><br />
+            This marks BST's third consecutive team gold at Grappling Industries, and it's clear they're not slowing down. With each tournament, they're proving they're truly a force to be reckoned with in the New England grappling scene. The results speak for themselves—when BST shows up, they show up to win.
+          </AchievementDescription>
+          <ImageContainer>
+            <AchievementImage 
+              src="/Oct11GI.JPG" 
+              alt="Team Gold Grappling Industries October 11" 
+            />
+          </ImageContainer>
+        </AchievementSection>
+
+        <AchievementSection>
+          <AchievementTitle>Team Gold - Grappling Industries New Hampshire</AchievementTitle>
+          <AchievementDate>August 30, 2025</AchievementDate>
+          <AchievementDescription>
+            BST took first place at Grappling Industries New Hampshire with 11 individual golds, 2 silvers, 6 bronzes, and the overall team gold. For such a new school, it wouldn't be possible to be happier with their results.
+            <br /><br />
+            Everyone on the team showed up and performed. From the guys who've been competing for years to the newer athletes stepping up, it was a complete team effort. New England's starting to see what BST is about.
+            <br /><br />
+            Everyone is here to win, and they're proving it every time they step on the mats.
+          </AchievementDescription>
+          <ImageContainer>
+            <AchievementImage 
+              src="/August30GI.JPG" 
+              alt="Grappling Stories Team Gold August 30" 
+            />
+          </ImageContainer>
+        </AchievementSection>
+
+        <AchievementSection>
           <AchievementTitle>Team Gold - Grappling Industries Boston</AchievementTitle>
           <AchievementDate>July 12, 2025</AchievementDate>
           <AchievementDescription>

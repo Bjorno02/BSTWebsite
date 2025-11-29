@@ -264,15 +264,121 @@ const ContactEmail = styled.a`
   }
 `;
 
+const VideoSection = styled.div`
+  margin: 3rem 0;
+  padding: 2.5rem;
+  background: ${colors.black}80;
+  border: 3px solid ${colors.red};
+  position: relative;
+  text-align: center;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid ${colors.dustyRed};
+    transform: rotate(1deg);
+    pointer-events: none;
+  }
+  
+  @media (max-width: 768px) {
+    margin: 2rem 0;
+    padding: 2rem 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin: 1.5rem 0;
+    padding: 1.5rem 1rem;
+  }
+`;
+
+const VideoContainer = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 3px solid ${colors.red};
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    margin: 1.5rem auto;
+  }
+  
+  @media (max-width: 480px) {
+    margin: 1rem auto;
+  }
+`;
+
+const VideoLink = styled.a`
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  color: ${colors.red};
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: ${colors.dustyRed};
+    text-shadow: 0 0 10px ${colors.red}50;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+`;
+
 export default function Sponsorships() {
   return (
     <PageContainer>
       <Navigation />
       <Content>
         <HeroSection>
-          <Title>SPONSORSHIPS</Title>
+          <Title>SPONSORSHIPS/MEDIA</Title>
           <Subtitle>Join the BST Community</Subtitle>
         </HeroSection>
+
+        <VideoSection>
+          <SectionTitle>BST Documentary Series</SectionTitle>
+          <SectionDescription>
+            Check out the first episode of our documentary series. The complete series is available now on YouTube—you won't want to miss this behind-the-scenes look at what makes BST special.
+          </SectionDescription>
+          <VideoContainer>
+            <iframe
+              src="https://www.youtube.com/embed/X_KEHYf1Itg"
+              title="BST Documentary Series - Episode 1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </VideoContainer>
+          <VideoLink 
+            href="https://youtu.be/X_KEHYf1Itg?si=s8_fNQVBymppZKyx" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Watch on YouTube →
+          </VideoLink>
+        </VideoSection>
 
         <SponsorshipSection>
           <SectionTitle>Support Our Team</SectionTitle>

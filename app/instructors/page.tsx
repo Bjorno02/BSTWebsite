@@ -232,15 +232,6 @@ export default function Instructors() {
         </InstructorSection>
 
         <InstructorSection>
-          <InstructorName>Cole Patrick</InstructorName>
-          <InstructorTitle>Jiu-Jitsu Fundamentals Instructor</InstructorTitle>
-          <InstructorDescription>
-            Teaches Monday Jiu-Jitsu fundamentals classes. 
-            Dedicated to helping students develop solid grappling foundations.
-          </InstructorDescription>
-        </InstructorSection>
-
-        <InstructorSection>
           <InstructorName>Mario Hoxha</InstructorName>
           <InstructorTitle>Wrestling Instructor</InstructorTitle>
           <InstructorDescription>
