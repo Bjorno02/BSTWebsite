@@ -15,20 +15,31 @@ const NavContainer = styled.nav`
   backdrop-filter: blur(10px);
   border-bottom: 2px solid ${colors.red};
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 0.75rem 0;
+  
+  @media (max-width: 1024px) {
+    padding: 0.5rem 0;
+  }
 `;
 
 const NavContent = styled.div`
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
+  
+  @media (max-width: 1024px) {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
 `;
 
 const LogoContainer = styled.div`
+  flex-shrink: 0;
+  
   a {
     display: block;
   }
@@ -36,8 +47,14 @@ const LogoContainer = styled.div`
 
 const NavMenu = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
+  flex: 1;
+  justify-content: center;
+  
+  @media (max-width: 1024px) {
+    gap: 0.25rem;
+  }
 `;
 
 const NavItem = styled.div`
@@ -49,17 +66,23 @@ const NavButton = styled.button`
   border: none;
   color: ${colors.white};
   font-family: 'Orbitron', monospace;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
   
   &:hover {
     color: ${colors.red};
     text-shadow: 0 0 10px ${colors.red}50;
+  }
+  
+  @media (max-width: 1024px) {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.5rem;
   }
 `;
 
@@ -126,37 +149,50 @@ const ContactButton = styled(Link)`
   color: ${colors.white};
   border: 2px solid ${colors.red};
   font-family: 'Orbitron', monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   text-decoration: none;
   display: inline-block;
+  white-space: nowrap;
+  flex-shrink: 0;
   
   &:hover {
     background: transparent;
     color: ${colors.red};
     box-shadow: 0 0 10px ${colors.red}50;
   }
+  
+  @media (max-width: 1024px) {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.5rem;
+  }
 `;
 
 const NavLink = styled(Link)`
   color: ${colors.white};
   font-family: 'Orbitron', monospace;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   text-decoration: none;
+  white-space: nowrap;
   
   &:hover {
     color: ${colors.red};
     text-shadow: 0 0 10px ${colors.red}50;
+  }
+  
+  @media (max-width: 1024px) {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.5rem;
   }
 `;
 
@@ -416,7 +452,7 @@ function Navigation() {
       <NavContent>
         <LogoContainer>
           <Link href="/">
-            <Image src="/bst-logo.PNG" alt="BST Jiu-Jitsu Logo" width={60} height={60} />
+            <Image src="/bst-logo.PNG" alt="BST Jiu-Jitsu Logo" width={50} height={50} />
           </Link>
         </LogoContainer>
         
@@ -542,7 +578,7 @@ function Navigation() {
             <NavLink href="/sponsorships">Sponsorships/Media</NavLink>
           </NavItem>
 
-          <ContactButton href="/contact">Contact Us</ContactButton>
+          <ContactButton href="/contact">Contact</ContactButton>
         </NavMenu>
         </DesktopNavContent>
       </NavContent>
