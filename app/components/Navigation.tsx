@@ -25,15 +25,15 @@ const NavContainer = styled.nav`
 const NavContent = styled.div`
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 0.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.75rem;
   
   @media (max-width: 1024px) {
-    padding: 0 1rem;
-    gap: 1rem;
+    padding: 0 0.5rem;
+    gap: 0.5rem;
   }
 `;
 
@@ -43,17 +43,29 @@ const LogoContainer = styled.div`
   a {
     display: block;
   }
+  
+  img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  @media (max-width: 1024px) {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
 `;
 
 const NavMenu = styled.div`
   display: flex;
-  gap: 0.5rem;
+  gap: 0.35rem;
   align-items: center;
   flex: 1;
   justify-content: center;
   
   @media (max-width: 1024px) {
-    gap: 0.25rem;
+    gap: 0.2rem;
   }
 `;
 
@@ -66,13 +78,13 @@ const NavButton = styled.button`
   border: none;
   color: ${colors.white};
   font-family: 'Orbitron', monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.6rem;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   white-space: nowrap;
   
   &:hover {
@@ -81,8 +93,8 @@ const NavButton = styled.button`
   }
   
   @media (max-width: 1024px) {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.45rem;
   }
 `;
 
@@ -149,13 +161,13 @@ const ContactButton = styled(Link)`
   color: ${colors.white};
   border: 2px solid ${colors.red};
   font-family: 'Orbitron', monospace;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.65rem;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
@@ -168,7 +180,7 @@ const ContactButton = styled(Link)`
   }
   
   @media (max-width: 1024px) {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     padding: 0.5rem 0.5rem;
   }
 `;
@@ -176,12 +188,12 @@ const ContactButton = styled(Link)`
 const NavLink = styled(Link)`
   color: ${colors.white};
   font-family: 'Orbitron', monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.6rem;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   text-decoration: none;
   white-space: nowrap;
   
@@ -191,8 +203,8 @@ const NavLink = styled(Link)`
   }
   
   @media (max-width: 1024px) {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.45rem;
   }
 `;
 
@@ -452,7 +464,7 @@ function Navigation() {
       <NavContent>
         <LogoContainer>
           <Link href="/">
-            <Image src="/bst-logo.PNG" alt="BST Jiu-Jitsu Logo" width={50} height={50} />
+            <Image src="/bst-logo.PNG" alt="BST Jiu-Jitsu Logo" width={45} height={45} />
           </Link>
         </LogoContainer>
         
@@ -571,6 +583,10 @@ function Navigation() {
           </NavItem>
 
           <NavItem>
+            <NavLink href="/merch">Merch</NavLink>
+          </NavItem>
+
+          <NavItem>
             <NavLink href="/achievements">Achievements</NavLink>
           </NavItem>
 
@@ -676,6 +692,12 @@ function Navigation() {
                 Special Offer
               </MobileDropdownLink>
             </MobileDropdown>
+          </MobileNavItem>
+
+          <MobileNavItem>
+            <MobileNavLink href="/merch" onClick={closeMobileMenu}>
+              Merch
+            </MobileNavLink>
           </MobileNavItem>
 
           <MobileNavItem>
