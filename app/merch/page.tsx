@@ -127,6 +127,141 @@ const FeaturedImageContainer = styled.div`
   }
 `;
 
+const LatestDropSection = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 0 auto 3.5rem;
+  align-items: start;
+  
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 0 auto 2.5rem;
+  }
+`;
+
+const NewestDropCard = styled.div`
+  padding: 2rem;
+  background: ${colors.darkGrey}90;
+  border: 2px solid ${colors.red};
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.25rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid ${colors.dustyRed};
+    transform: rotate(0.4deg);
+    pointer-events: none;
+  }
+`;
+
+const NewestDropTitle = styled.h2`
+  font-family: 'Orbitron', monospace;
+  font-size: 1.9rem;
+  color: ${colors.red};
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  text-shadow: 2px 2px 0px ${colors.black};
+
+  @media (max-width: 768px) {
+    font-size: 1.45rem;
+    letter-spacing: 0.06em;
+  }
+`;
+
+const NewestDropText = styled.p`
+  color: ${colors.white};
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0 auto 1rem;
+  max-width: 640px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+`;
+
+const PriceLine = styled.p`
+  color: ${colors.white};
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  margin: 0.35rem 0;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 0.92rem;
+  }
+`;
+
+const ContactOrderLink = styled.a`
+  display: inline-block;
+  margin-top: 1rem;
+  color: ${colors.red};
+  font-family: 'Orbitron', monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid ${colors.red};
+  border-radius: 4px;
+  background: ${colors.red}10;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: ${colors.red}20;
+    box-shadow: 0 0 15px ${colors.red}35;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+`;
+
+const LatestDropImageContainer = styled.div`
+  position: relative;
+  border: 3px solid ${colors.red};
+  border-radius: 8px;
+  overflow: hidden;
+  background: ${colors.black};
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid ${colors.dustyRed};
+    transform: rotate(0.5deg);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+`;
+
 const CollabText = styled.div`
   text-align: center;
   margin: 2.5rem 0 3.5rem;
@@ -137,6 +272,11 @@ const CollabText = styled.div`
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: 768px) {
+    margin: 1.5rem 0 2.5rem;
+    padding: 1.5rem 1.25rem;
+  }
 `;
 
 const CollabDescription = styled.p`
@@ -151,20 +291,20 @@ const CollabDescription = styled.p`
   }
 `;
 
-const ComingSoonLink = styled.span`
+const CollabLink = styled.a`
   color: ${colors.red};
   font-family: 'Orbitron', monospace;
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  cursor: default;
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border: 2px solid ${colors.red};
   border-radius: 4px;
   transition: all 0.3s ease;
   background: ${colors.red}10;
+  text-decoration: none;
   
   &:hover {
     background: ${colors.red}20;
@@ -200,6 +340,10 @@ const StandaloneImageContainer = styled.div`
     pointer-events: none;
     z-index: 1;
   }
+
+  @media (max-width: 768px) {
+    margin: 2rem auto;
+  }
 `;
 
 const ProductSection = styled.section`
@@ -224,14 +368,14 @@ const ProductSection = styled.section`
   }
   
   @media (max-width: 768px) {
-    margin: 3.5rem 0;
-    padding: 3rem 1.5rem 6rem;
-    min-height: 700px;
+    margin: 2.5rem 0;
+    padding: 2.25rem 1rem 3rem;
+    min-height: 560px;
   }
   
   @media (max-width: 480px) {
-    padding: 2.5rem 1rem 5rem;
-    min-height: 650px;
+    padding: 2rem 0.85rem 2.5rem;
+    min-height: 500px;
   }
 `;
 
@@ -247,8 +391,8 @@ const SectionTitle = styled.h2`
   text-align: center;
   
   @media (max-width: 768px) {
-    font-size: 1.9rem;
-    margin-bottom: 2.5rem;
+    font-size: 1.55rem;
+    margin-bottom: 1.75rem;
   }
 `;
 
@@ -264,13 +408,13 @@ const StackContainer = styled.div`
   overflow: visible;
   
   @media (max-width: 768px) {
-    height: 500px;
-    max-width: 650px;
+    height: 420px;
+    max-width: 520px;
   }
   
   @media (max-width: 480px) {
-    height: 450px;
-    max-width: 550px;
+    height: 340px;
+    max-width: 340px;
   }
 `;
 
@@ -360,8 +504,9 @@ const SupportSection = styled.div`
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 2.5rem;
+    gap: 1.75rem;
+    padding: 1.5rem 1rem;
+    margin: 2.75rem 0 2rem;
   }
 `;
 
@@ -405,7 +550,8 @@ const SupportTitle = styled.h3`
   text-shadow: 2px 2px 0px ${colors.black};
   
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.55rem;
+    margin-bottom: 0.75rem;
   }
 `;
 
@@ -416,7 +562,8 @@ const SupportDescription = styled.p`
   font-weight: 400;
   
   @media (max-width: 768px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.65;
   }
 `;
 
@@ -429,6 +576,34 @@ export default function Merch() {
           <Title>MERCH</Title>
           <Subtitle>BST Apparel & Gear</Subtitle>
         </HeroSection>
+
+        <LatestDropSection>
+          <NewestDropCard>
+            <NewestDropTitle>Shop Our Latest Drop</NewestDropTitle>
+            <NewestDropText>
+              Oversized BST T-shirt available now. Reach out and we will help you place your order fast.
+            </NewestDropText>
+            <PriceLine>Oversized T-Shirt: $60</PriceLine>
+            <PriceLine>Sweatpants: $75</PriceLine>
+            <PriceLine>Hoodies: $85</PriceLine>
+            <ContactOrderLink href="/contact">Contact Us to Order</ContactOrderLink>
+          </NewestDropCard>
+
+          <LatestDropImageContainer>
+            <Image 
+              src="/ShirtBSTTop.JPEG" 
+              alt="BST Oversized T-Shirt" 
+              width={800}
+              height={1000}
+              style={{ 
+                width: '100%', 
+                height: 'auto',
+                objectFit: 'contain',
+                display: 'block'
+              }}
+            />
+          </LatestDropImageContainer>
+        </LatestDropSection>
 
         {/* Featured Image - SUllySeanLucas */}
         <FeaturedImageContainer>
@@ -449,10 +624,9 @@ export default function Merch() {
         {/* Collab Text */}
         <CollabText>
           <CollabDescription>
-            Shop the latest BST and Butterfly X collaboration and get fly. 
-            Premium quality gear designed for champions.
+            BST x Butterfly X collaboration piece. Limited release styling built for standout training and everyday wear.
           </CollabDescription>
-          <ComingSoonLink>Merch Link Coming Soon</ComingSoonLink>
+          <CollabLink href="/contact">Contact Us for Collaboration Orders</CollabLink>
         </CollabText>
 
         {/* BST Sweat Hoodie Standalone */}

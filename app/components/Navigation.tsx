@@ -217,7 +217,7 @@ const MobileMenuButton = styled.button`
   padding: 0.5rem;
   z-index: 1002;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -252,7 +252,7 @@ const HamburgerLine = styled.span<{ $isOpen: boolean }>`
 const MobileMenuOverlay = styled.div<{ $isOpen: boolean }>`
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: block;
     position: fixed;
     top: 0;
@@ -270,13 +270,13 @@ const MobileMenuOverlay = styled.div<{ $isOpen: boolean }>`
 const MobileMenu = styled.div<{ $isOpen: boolean }>`
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: flex;
     flex-direction: column;
     position: fixed;
     top: 0;
     left: ${props => props.$isOpen ? '0' : '-100%'};
-    width: 300px;
+    width: min(320px, 86vw);
     height: 100vh;
     background: ${colors.black}95;
     backdrop-filter: blur(10px);
@@ -291,7 +291,7 @@ const MobileMenu = styled.div<{ $isOpen: boolean }>`
 const MobileNavContent = styled.div`
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -301,7 +301,7 @@ const MobileNavContent = styled.div`
 const MobileLogoContainer = styled.div`
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: block;
     text-align: center;
     padding: 1rem 2rem;
@@ -313,7 +313,7 @@ const MobileLogoContainer = styled.div`
 const MobileNavItem = styled.div`
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: block;
     border-bottom: 1px solid ${colors.red}20;
   }
@@ -322,7 +322,7 @@ const MobileNavItem = styled.div`
 const MobileNavButton = styled.button`
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: block;
     width: 100%;
     background: none;
@@ -348,7 +348,7 @@ const MobileNavButton = styled.button`
 const MobileNavLink = styled(Link)`
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: block;
     color: ${colors.white};
     font-family: 'Orbitron', monospace;
@@ -370,7 +370,7 @@ const MobileNavLink = styled(Link)`
 const MobileDropdown = styled.div<{ $isOpen: boolean }>`
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: block;
     background: ${colors.darkGrey}80;
     max-height: ${props => props.$isOpen ? '500px' : '0'};
@@ -382,7 +382,7 @@ const MobileDropdown = styled.div<{ $isOpen: boolean }>`
 const MobileDropdownLink = styled(Link)`
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: block;
     padding: 0.75rem 3rem;
     color: ${colors.white};
@@ -401,7 +401,7 @@ const MobileDropdownLink = styled(Link)`
 const MobileContactButton = styled(Link)`
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: block;
     background: ${colors.red};
     color: ${colors.white};
@@ -425,7 +425,7 @@ const MobileContactButton = styled(Link)`
 `;
 
 const DesktopNavContent = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 1240px) {
     display: none;
   }
 `;
@@ -545,10 +545,6 @@ function Navigation() {
                 <DropdownTitle>Luke Loureiro</DropdownTitle>
                 <DropdownDescription>Kids Wrestling Instructor</DropdownDescription>
               </DropdownLink>
-              <DropdownLink href="/instructors/nico-mangano">
-                <DropdownTitle>Nico Mangano</DropdownTitle>
-                <DropdownDescription>Kids Muay Thai Instructor</DropdownDescription>
-              </DropdownLink>
             </Dropdown>
           </NavItem>
 
@@ -664,9 +660,6 @@ function Navigation() {
               </MobileDropdownLink>
               <MobileDropdownLink href="/instructors/luke-loureiro" onClick={closeMobileMenu}>
                 Luke Loureiro
-              </MobileDropdownLink>
-              <MobileDropdownLink href="/instructors/nico-mangano" onClick={closeMobileMenu}>
-                Nico Mangano
               </MobileDropdownLink>
             </MobileDropdown>
           </MobileNavItem>
