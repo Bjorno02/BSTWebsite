@@ -53,6 +53,37 @@ export default function Home() {
           </ButtonGroup>
         </HeroContent>
       </HeroSection>
+      <div className="hero-divider" />
+
+      {/* Scroll Reveal Feature Image */}
+      <div className="feature-image-section">
+        <Container>
+          <div className="feature-grid">
+            <div className="feature-copy">
+              <h2 className="feature-title">Check out our Kids Program!</h2>
+              <p className="feature-text">
+                A fun, structured program that builds confidence, discipline, and real skills.
+              </p>
+              <a className="feature-cta" href="/programs/kids">Learn More</a>
+            </div>
+            <div className="feature-image-frame">
+              <Image
+                src="/IMG_7421.PNG"
+                alt="BST Kids Program"
+                width={600}
+                height={420}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  objectFit: 'cover',
+                }}
+                priority={false}
+              />
+            </div>
+          </div>
+        </Container>
+      </div>
 
       {/* Team Image and Story Section */}
       <div className="team-section">
@@ -135,6 +166,136 @@ export default function Home() {
       </div>
 
       <style jsx>{`
+        .hero-divider {
+          height: 4px;
+          width: 100%;
+          background: #CC0000;
+          box-shadow: 0 0 18px rgba(204, 0, 0, 0.35);
+        }
+
+        .feature-image-section {
+          padding: 2.25rem 0 1.25rem;
+          background: #1a1a1a;
+        }
+
+        .feature-grid {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: 1fr 600px;
+          gap: 2rem;
+          align-items: center;
+        }
+
+        .feature-image-frame {
+          border-radius: 14px;
+          overflow: hidden;
+          border: 3px solid #CC0000;
+          box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+          background: #000;
+          width: 100%;
+          max-width: 600px;
+        }
+
+        .feature-copy {
+          padding: 0.35rem 0;
+        }
+
+        .feature-title {
+          color: #CC0000;
+          font-size: 2.25rem;
+          margin: 0 0 0.75rem;
+          font-family: 'Orbitron', sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          line-height: 1.1;
+        }
+
+        .feature-text {
+          color: #ffffff;
+          opacity: 0.92;
+          margin: 0 0 1.15rem;
+          font-size: 1.1rem;
+          line-height: 1.6;
+        }
+
+        .feature-cta {
+          display: inline-block;
+          background: #CC0000;
+          color: #ffffff;
+          border: 2px solid #CC0000;
+          padding: 0.7rem 1rem;
+          border-radius: 10px;
+          text-decoration: none;
+          font-family: 'Orbitron', sans-serif;
+          font-weight: 800;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          transition: all 0.25s ease;
+        }
+
+        .feature-cta:hover {
+          background: transparent;
+          color: #CC0000;
+          box-shadow: 0 0 12px rgba(204, 0, 0, 0.35);
+        }
+
+        @media (max-width: 768px) {
+          .feature-image-section {
+            padding: 1.75rem 0 0.85rem;
+          }
+
+          .feature-image-frame {
+            border-radius: 12px;
+          }
+
+          .feature-grid {
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+          }
+
+          .feature-image-frame {
+            order: -1;
+          }
+
+          .feature-image-frame {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+          }
+
+          .feature-copy {
+            text-align: center;
+          }
+
+          .feature-title {
+            font-size: 1.85rem;
+          }
+
+          .feature-text {
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .feature-image-section {
+            padding: 1.35rem 0 0.6rem;
+          }
+
+          .feature-image-frame {
+            border-radius: 10px;
+          }
+
+          .feature-image-frame {
+            width: 100%;
+            max-width: 600px;
+          }
+
+          .feature-title {
+            font-size: 1.55rem;
+          }
+        }
+
         
         .team-section {
           padding: 4rem 0;
