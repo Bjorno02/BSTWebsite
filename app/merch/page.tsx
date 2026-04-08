@@ -325,7 +325,7 @@ const StandaloneImageContainer = styled.div`
   border-radius: 8px;
   overflow: hidden;
   background: ${colors.black};
-  max-width: 900px;
+  max-width: 820px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   
   &::before {
@@ -344,6 +344,127 @@ const StandaloneImageContainer = styled.div`
   @media (max-width: 768px) {
     margin: 2rem auto;
   }
+`;
+
+const SectionDivider = styled.div`
+  height: 2px;
+  width: 100%;
+  margin: 3.25rem 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    ${colors.red}55 15%,
+    ${colors.dustyRed}70 50%,
+    ${colors.red}55 85%,
+    transparent 100%
+  );
+  box-shadow: 0 0 18px ${colors.red}18;
+
+  @media (max-width: 768px) {
+    margin: 2.25rem 0;
+  }
+`;
+
+const NewestShowcaseSection = styled.section`
+  margin: 0 auto 1rem;
+`;
+
+const NewestShowcaseHeader = styled.div`
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 1.75rem;
+`;
+
+const NewestShowcaseTitle = styled.h2`
+  font-family: 'Orbitron', monospace;
+  font-size: 2rem;
+  font-weight: 800;
+  color: ${colors.red};
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+  text-shadow: 2px 2px 0px ${colors.black};
+
+  @media (max-width: 768px) {
+    font-size: 1.45rem;
+    letter-spacing: 0.06em;
+  }
+`;
+
+const NewestShowcaseSub = styled.p`
+  font-family: 'Orbitron', monospace;
+  color: ${colors.white};
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 720px;
+  opacity: 0.95;
+
+  @media (max-width: 768px) {
+    font-size: 0.98rem;
+  }
+`;
+
+const NewestShowcaseGrid = styled.div`
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+`;
+
+const ShowcaseCard = styled.div`
+  position: relative;
+  border: 2px solid ${colors.red};
+  border-radius: 10px;
+  overflow: hidden;
+  background: ${colors.black};
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.55);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid ${colors.dustyRed};
+    transform: rotate(0.35deg);
+    pointer-events: none;
+    z-index: 1;
+  }
+`;
+
+const ShowcaseCaption = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.9rem 1rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.78) 55%, rgba(0,0,0,0.9) 100%);
+  z-index: 2;
+`;
+
+const ShowcaseCaptionTitle = styled.div`
+  font-family: 'Orbitron', monospace;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: ${colors.white};
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+`;
+
+const ShowcaseCaptionNote = styled.div`
+  margin-top: 0.25rem;
+  font-family: 'Orbitron', monospace;
+  font-size: 0.9rem;
+  color: ${colors.white};
+  opacity: 0.9;
 `;
 
 const ProductSection = styled.section`
@@ -579,9 +700,9 @@ export default function Merch() {
 
         <LatestDropSection>
           <NewestDropCard>
-            <NewestDropTitle>Shop Our Latest Drop</NewestDropTitle>
+            <NewestDropTitle>Shop Our Newest Rashguard</NewestDropTitle>
             <NewestDropText>
-              Oversized BST T-shirt available now. Reach out and we will help you place your order fast.
+              This is our latest drop. Reach out and we will help you place your order fast.
             </NewestDropText>
             <PriceLine>Oversized T-Shirt: $60</PriceLine>
             <PriceLine>Sweatpants: $75</PriceLine>
@@ -604,6 +725,75 @@ export default function Merch() {
             />
           </LatestDropImageContainer>
         </LatestDropSection>
+
+        <SectionDivider />
+
+        <NewestShowcaseSection>
+          <NewestShowcaseHeader>
+            <NewestShowcaseTitle>Newest Designs</NewestShowcaseTitle>
+            <NewestShowcaseSub>
+              Fresh graphics just landed. Check out the front + back design, plus the newest shorts.
+            </NewestShowcaseSub>
+          </NewestShowcaseHeader>
+
+          <NewestShowcaseGrid>
+            <ShowcaseCard>
+              <Image
+                src="/FrontDesign.JPEG"
+                alt="BST Front Design"
+                width={1200}
+                height={1500}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                }}
+              />
+              <ShowcaseCaption>
+                <ShowcaseCaptionTitle>Front Design</ShowcaseCaptionTitle>
+                <ShowcaseCaptionNote>Newest rashguard graphic</ShowcaseCaptionNote>
+              </ShowcaseCaption>
+            </ShowcaseCard>
+
+            <ShowcaseCard>
+              <Image
+                src="/BackDesign.JPEG"
+                alt="BST Back Design"
+                width={1200}
+                height={1500}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                }}
+              />
+              <ShowcaseCaption>
+                <ShowcaseCaptionTitle>Back Design</ShowcaseCaptionTitle>
+                <ShowcaseCaptionNote>Full back print</ShowcaseCaptionNote>
+              </ShowcaseCaption>
+            </ShowcaseCard>
+
+            <ShowcaseCard style={{ gridColumn: '1 / -1' }}>
+              <Image
+                src="/ShortsFront.JPEG"
+                alt="BST Shorts Front"
+                width={1600}
+                height={1000}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                }}
+              />
+              <ShowcaseCaption>
+                <ShowcaseCaptionTitle>Shorts</ShowcaseCaptionTitle>
+                <ShowcaseCaptionNote>Newest shorts</ShowcaseCaptionNote>
+              </ShowcaseCaption>
+            </ShowcaseCard>
+          </NewestShowcaseGrid>
+        </NewestShowcaseSection>
+
+        <SectionDivider />
 
         {/* Featured Image - SUllySeanLucas */}
         <FeaturedImageContainer>
@@ -629,6 +819,8 @@ export default function Merch() {
           <CollabLink href="/contact">Contact Us for Collaboration Orders</CollabLink>
         </CollabText>
 
+        <SectionDivider />
+
         {/* BST Sweat Hoodie Standalone */}
         <StandaloneImageContainer>
           <Image 
@@ -643,6 +835,8 @@ export default function Merch() {
             }}
           />
         </StandaloneImageContainer>
+
+        <SectionDivider />
 
         {/* Hoodies Section with Stack Effect */}
         <ProductSection>
@@ -679,6 +873,8 @@ export default function Merch() {
           </StackContainer>
         </ProductSection>
 
+        <SectionDivider />
+
         {/* Sweatpants Section with Stack Effect */}
         <ProductSection>
           <SectionTitle>Premium Sweatpants</SectionTitle>
@@ -713,6 +909,8 @@ export default function Merch() {
             </StackImageFront>
           </StackContainer>
         </ProductSection>
+
+        <SectionDivider />
 
         {/* Support Section with Ryan Wenis */}
         <SupportSection>
