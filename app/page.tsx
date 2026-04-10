@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import {
   HeroSection,
   HeroContent,
@@ -15,13 +17,214 @@ import {
   CommitmentSection,
   CommitmentContent,
   CommitmentText,
+  colors,
 } from './components/StyledComponents';
 import Navigation from './components/Navigation';
 import Image from 'next/image';
 
+const BASICS_POPUP_STORAGE_KEY = 'bst_home_basics_class_popup_seen';
+
+const PopupOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  background: rgba(0, 0, 0, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  animation: fadeIn 0.25s ease-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+`;
+
+const PopupPanel = styled.div`
+  background: linear-gradient(165deg, #222 0%, #141414 100%);
+  border: 2px solid ${colors.red};
+  border-radius: 14px;
+  max-width: 520px;
+  width: 100%;
+  padding: 1.75rem 1.5rem 1.5rem;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 24px 64px rgba(0, 0, 0, 0.55);
+  position: relative;
+`;
+
+const PopupBadge = styled.span`
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: ${colors.white};
+  background: ${colors.red};
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+`;
+
+const PopupTitle = styled.h2`
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: ${colors.white};
+  margin: 0 0 0.85rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+`;
+
+const PopupBody = styled.p`
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+`;
+
+const PopupCasual = styled.p`
+  margin: 0 0 1.35rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: ${colors.red};
+  font-weight: 600;
+`;
+
+const PopupActions = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+`;
+
+const PopupButtonPrimary = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: ${colors.white};
+  background: ${colors.red};
+  border: 2px solid ${colors.red};
+  padding: 0.65rem 1.1rem;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: transparent;
+    color: ${colors.red};
+  }
+`;
+
+const PopupButtonSecondary = styled.button`
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    color: ${colors.white};
+    border-color: rgba(255, 255, 255, 0.45);
+  }
+`;
+
 export default function Home() {
+  const [showBasicsPopup, setShowBasicsPopup] = useState(false);
+
+  useEffect(() => {
+    try {
+      if (typeof window === 'undefined') return;
+      const seen = window.localStorage.getItem(BASICS_POPUP_STORAGE_KEY);
+      if (!seen) {
+        setShowBasicsPopup(true);
+        document.body.style.overflow = 'hidden';
+      }
+    } catch {
+      setShowBasicsPopup(true);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!showBasicsPopup) {
+      document.body.style.overflow = '';
+    }
+  }, [showBasicsPopup]);
+
+  const dismissBasicsPopup = () => {
+    try {
+      window.localStorage.setItem(BASICS_POPUP_STORAGE_KEY, '1');
+    } catch {
+      /* ignore */
+    }
+    setShowBasicsPopup(false);
+  };
+
   return (
     <main>
+      {showBasicsPopup && (
+        <PopupOverlay
+          role="presentation"
+          onClick={dismissBasicsPopup}
+        >
+          <PopupPanel
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="basics-popup-title"
+            onClick={e => e.stopPropagation()}
+          >
+            <PopupBadge>New</PopupBadge>
+            <PopupTitle id="basics-popup-title">
+              New basics class — 5 PM weekdays
+            </PopupTitle>
+            <PopupBody>
+              We added a <strong>Beginner Jiu-Jitsu</strong> slot at <strong>5 PM Monday through Friday</strong>,
+              a more casual class for hobbyists, curious first-timers, and anyone who wants a solid
+              foundation without the pressure.
+            </PopupBody>
+            <PopupCasual>
+              It&apos;s a relaxed, learning pace: show up as you are, grasp the fundamentals, and ease into the mats
+              on your terms.
+            </PopupCasual>
+            <PopupActions>
+              <PopupButtonPrimary href="/schedule" onClick={dismissBasicsPopup}>
+                View schedule
+              </PopupButtonPrimary>
+              <PopupButtonSecondary type="button" onClick={dismissBasicsPopup}>
+                Got it
+              </PopupButtonSecondary>
+            </PopupActions>
+          </PopupPanel>
+        </PopupOverlay>
+      )}
       <Navigation />
       
 

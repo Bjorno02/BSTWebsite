@@ -412,9 +412,9 @@ export default function KidsPricing() {
           <InfoSection>
             <h3>Class Schedule</h3>
             <p>
-              Kids classes are held Monday, Tuesday, Wednesday, Thursday, and Friday at 5PM. 
-              Classes are 45-60 minutes long and include warm-ups, technique instruction, 
-              and supervised practice. Parents are welcome to watch from our viewing area.
+              Kids Jiu-Jitsu meets Monday, Wednesday, and Friday at 4 PM. Kids Wrestling meets 
+              Tuesday and Thursday at 3:15 PM. Classes are 45-60 minutes long and include warm-ups, 
+              technique instruction, and supervised practice. Parents are welcome to watch from our viewing area.
             </p>
           </InfoSection>
           

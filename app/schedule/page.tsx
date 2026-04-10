@@ -98,6 +98,31 @@ const Description = styled.p`
   }
 `;
 
+const NewClassTag = styled.p`
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto 1.25rem;
+  padding: 0.85rem 1.25rem;
+  background: ${colors.red};
+  color: ${colors.white};
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    padding: 0.75rem 1rem;
+  }
+`;
+
 const TableWrapper = styled.div`
   background: #000000;
   padding: 20px;
@@ -366,7 +391,7 @@ const ContactInfo = styled.div`
   }
 `;
 
-const TIMES = ['12PM', '1PM', '3:15PM', '5PM', '6PM', '7PM', '8PM'] as const;
+const TIMES = ['12PM', '1PM', '3:15PM', '4PM', '5PM', '6PM', '7PM', '8PM'] as const;
 const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'] as const;
 
 type ScheduleTime = typeof TIMES[number];
@@ -416,13 +441,22 @@ export default function Schedule() {
         FRI: '',
         SAT: ''
       },
-      '5PM': {
+      '4PM': {
         SUN: '',
         MON: 'Kids Jiu-Jitsu',
         TUE: '',
         WED: 'Kids Jiu-Jitsu',
         THU: '',
         FRI: 'Kids Jiu-Jitsu',
+        SAT: ''
+      },
+      '5PM': {
+        SUN: '',
+        MON: 'Beginner Jiu-Jitsu',
+        TUE: 'Beginner Jiu-Jitsu',
+        WED: 'Beginner Jiu-Jitsu',
+        THU: 'Beginner Jiu-Jitsu',
+        FRI: 'Beginner Jiu-Jitsu',
         SAT: ''
       },
       '6PM': {
@@ -468,6 +502,9 @@ export default function Schedule() {
             </Description>
             
             <TableWrapper>
+              <NewClassTag>
+                New Beginner Jiu-Jitsu class (Perfect for Hobbyists) — check it out today!
+              </NewClassTag>
               <ScheduleTable>
                 <Table>
                   <thead>
