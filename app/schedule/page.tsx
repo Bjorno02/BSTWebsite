@@ -391,7 +391,7 @@ const ContactInfo = styled.div`
   }
 `;
 
-const TIMES = ['12PM', '1PM', '3:15PM', '4PM', '5PM', '6PM', '7PM', '8PM'] as const;
+const TIMES = ['12PM', '3:15PM', '4PM', '4:15PM', '5PM', '6PM', '7PM', '8PM'] as const;
 const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'] as const;
 
 type ScheduleTime = typeof TIMES[number];
@@ -415,75 +415,75 @@ export default function Schedule() {
     days: DAYS,
     classes: {
       '12PM': {
-        SUN: 'Beginner Jiu-Jitsu',
-        MON: 'Jiu-Jitsu Fundamentals',
-        TUE: 'Jiu-Jitsu Fundamentals',
-        WED: 'Jiu-Jitsu Fundamentals',
-        THU: 'Jiu-Jitsu Fundamentals',
-        FRI: '',
-        SAT: 'Beginner Jiu-Jitsu'
-      },
-      '1PM': {
-        SUN: '',
+        SUN: 'OPEN MAT',
         MON: '',
-        TUE: '',
-        WED: '',
-        THU: '',
+        TUE: 'BASICS',
+        WED: 'BASICS JIU JITSU',
+        THU: 'BASICS JIU JITSU',
         FRI: '',
         SAT: ''
       },
       '3:15PM': {
         SUN: '',
         MON: '',
-        TUE: 'Kids Wrestling',
+        TUE: 'KIDS WRESTLING',
         WED: '',
-        THU: 'Kids Wrestling',
+        THU: 'KIDS WRESTLING',
         FRI: '',
         SAT: ''
       },
       '4PM': {
         SUN: '',
-        MON: 'Kids Jiu-Jitsu',
+        MON: 'KIDS NO GI',
         TUE: '',
-        WED: 'Kids Jiu-Jitsu',
+        WED: 'KIDS NO GI',
         THU: '',
-        FRI: 'Kids Jiu-Jitsu',
+        FRI: 'KIDS NO GI',
+        SAT: ''
+      },
+      '4:15PM': {
+        SUN: '',
+        MON: '',
+        TUE: 'KIDS MUAY THAI',
+        WED: '',
+        THU: 'KIDS MUAY THAI',
+        FRI: '',
         SAT: ''
       },
       '5PM': {
         SUN: '',
-        MON: 'Beginner Jiu-Jitsu',
-        TUE: 'Beginner Jiu-Jitsu',
-        WED: 'Beginner Jiu-Jitsu',
-        THU: 'Beginner Jiu-Jitsu',
-        FRI: 'Beginner Jiu-Jitsu',
+        MON: 'BASICS',
+        TUE: 'BASICS JIU JITSU',
+        WED: 'BASICS',
+        THU: 'BASICS JIU JITSU',
+        FRI: 'BASICS',
         SAT: ''
       },
       '6PM': {
-        SUN: 'Adults Jiu-Jitsu',
-        MON: 'Adults Jiu-Jitsu',
-        TUE: 'Adults Wrestling',
-        WED: 'Adults Jiu-Jitsu',
-        THU: 'Adults Wrestling',
-        FRI: 'Adults Jiu-Jitsu',
-        SAT: 'Adults Jiu-Jitsu'
+        SUN: '',
+        MON: 'ALL LEVELS',
+        TUE: 'WRESTLING ALL LEVELS',
+        WED: 'ALL LEVELS',
+        THU: 'JIU JITSU ALL LEVELS',
+        FRI: 'OPEN MAT',
+        SAT: ''
       },
       '7PM': {
-        SUN: 'Adults Jiu-Jitsu',
-        MON: 'Jiu-Jitsu Adults',
-        TUE: 'Adults Jiu-Jitsu',
-        WED: 'Adults Jiu-Jitsu',
-        THU: 'Adults Jiu-Jitsu',
-        FRI: 'Adults Jiu-Jitsu',
-        SAT: 'Adults Jiu-Jitsu'
+        SUN: '',
+        MON: 'LIVE TRAINING',
+        TUE: 'LIVE TRAINING',
+        WED: 'LIVE TRAINING',
+        THU: 'LIVE TRAINING',
+        FRI: 'OPEN MAT',
+        SAT: ''
       },
       '8PM': {
         SUN: '',
-        MON: 'Adults Muay Thai',
+        MON: 'MUAY THAI',
         TUE: '',
-        WED: 'Adults Muay Thai',
+        WED: 'MUAY THAI',
         THU: '',
-        FRI: 'Adults Muay Thai',
+        FRI: 'MUAY THAI',
         SAT: ''
       }
     }
