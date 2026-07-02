@@ -555,6 +555,10 @@ function Navigation() {
               Pricing
             </NavButton>
             <Dropdown $isOpen={openDropdown === 'pricing'}>
+              <DropdownLink href="/pricing/30-days">
+                <DropdownTitle>30 Days of Jiu-Jitsu</DropdownTitle>
+                <DropdownDescription>$49.99 for a full month — includes the 5 PM beginner class</DropdownDescription>
+              </DropdownLink>
               <DropdownLink href="/pricing/drop-in">
                 <DropdownTitle>Drop-In Classes</DropdownTitle>
                 <DropdownDescription>Single class and day pass options</DropdownDescription>
@@ -669,6 +673,9 @@ function Navigation() {
               Pricing
             </MobileNavButton>
             <MobileDropdown $isOpen={mobileDropdownOpen === 'pricing'}>
+              <MobileDropdownLink href="/pricing/30-days" onClick={closeMobileMenu}>
+                30 Days of Jiu-Jitsu
+              </MobileDropdownLink>
               <MobileDropdownLink href="/pricing/drop-in" onClick={closeMobileMenu}>
                 Drop-In Classes
               </MobileDropdownLink>
