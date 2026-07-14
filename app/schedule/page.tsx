@@ -415,7 +415,7 @@ export default function Schedule() {
     days: DAYS,
     classes: {
       '12PM': {
-        SUN: 'OPEN MAT',
+        SUN: '',
         MON: '',
         TUE: 'BASICS',
         WED: 'BASICS JIU JITSU',
