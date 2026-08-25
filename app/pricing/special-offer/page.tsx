@@ -1,6 +1,7 @@
 "use client";
 
 import styled from 'styled-components';
+import Image from 'next/image';
 import { Container, Section, colors } from '../../components/StyledComponents';
 import Navigation from '../../components/Navigation';
 
@@ -9,7 +10,7 @@ const PageContainer = styled.div`
   background: ${colors.black};
   position: relative;
   overflow-x: hidden;
-  
+
   &::before {
     content: '';
     position: fixed;
@@ -69,6 +70,17 @@ const Description = styled.p`
   opacity: 0.9;
 `;
 
+const PosterFrame = styled.div`
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  border: 3px solid ${colors.red};
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+  position: relative;
+  z-index: 1;
+`;
+
 const MainPricingCard = styled.div`
   background: #1a1a1a;
   border: 3px solid ${colors.red};
@@ -80,7 +92,7 @@ const MainPricingCard = styled.div`
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -107,12 +119,12 @@ const Price = styled.div`
   font-weight: 700;
   color: ${colors.white};
   margin-bottom: 1rem;
-  
+
   .currency {
     font-size: 2rem;
     vertical-align: top;
   }
-  
+
   .period {
     font-size: 1.2rem;
     color: ${colors.dustyRed};
@@ -133,7 +145,7 @@ const Feature = styled.li`
   padding-left: 2rem;
   position: relative;
   font-size: 1.1rem;
-  
+
   &::before {
     content: '✓';
     color: ${colors.red};
@@ -144,41 +156,20 @@ const Feature = styled.li`
   }
 `;
 
-const LimitedBadge = styled.div`
-  position: absolute;
-  top: -15px;
-  right: 20px;
-  background: ${colors.red};
-  color: ${colors.white};
-  padding: 0.75rem 1.5rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 25px;
-  font-family: 'Orbitron', sans-serif;
-  animation: pulse 2s infinite;
-  
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-`;
-
 const InfoSection = styled.div`
   background: #1a1a1a;
   border: 1px solid ${colors.red};
   padding: 2rem;
   border-radius: 8px;
   margin: 2rem 0;
-  
+
   h3 {
     color: ${colors.red};
     font-family: 'Orbitron', sans-serif;
     margin-bottom: 1rem;
     text-transform: uppercase;
   }
-  
+
   p {
     color: ${colors.white};
     line-height: 1.6;
@@ -209,7 +200,7 @@ const ContactInfo = styled.div`
     color: ${colors.red};
     text-decoration: none;
     transition: color 0.3s ease;
-    
+
     &:hover {
       color: ${colors.dustyRed};
       text-decoration: underline;
@@ -237,7 +228,7 @@ const BookNowButton = styled.a`
   pointer-events: auto;
   position: relative;
   z-index: 10;
-  
+
   &:hover {
     background: ${colors.dustyRed};
     border-color: ${colors.dustyRed};
@@ -252,66 +243,80 @@ export default function SpecialOffer() {
       <Navigation />
       <PricingSection>
         <Container>
-          <Title>Limited-Time Offer!</Title>
-          <Subtitle>Get Started with Blood Sweat and Tears Jiu Jitsu and MMA for Only $250</Subtitle>
+          <Title>Unlimited Membership</Title>
+          <Subtitle>Access to ALL Classes — Only $150/Month</Subtitle>
           <Description>
-            For just $250, you'll receive a premium pair of Boxing Gloves, Striking Shin Guards, 
-            and ONE FULL MONTH of BST's Unlimited Membership!
+            Train No Gi Jiu Jitsu and Muay Thai striking as much as you want. Sign up after
+            your FREE trial and get FREE boxing gloves and shin pads!
           </Description>
-          
+
+          <PosterFrame>
+            <Image
+              src="/unlimited-membership.png"
+              alt="BST Unlimited Membership — access to all classes, Jiu Jitsu (No Gi only) and Muay Thai striking, $150 per month. Sign up after your free trial and get free boxing gloves and shin pads."
+              width={1254}
+              height={1254}
+              sizes="(max-width: 640px) 92vw, 600px"
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+              }}
+              priority
+            />
+          </PosterFrame>
+
           <MainPricingCard>
-            <LimitedBadge>Limited Time!</LimitedBadge>
-            <CardTitle>Special Starter Package</CardTitle>
+            <CardTitle>Unlimited Membership</CardTitle>
             <Price>
-              <span className="currency">$</span>250
-              <span className="period">One Time</span>
+              <span className="currency">$</span>150
+              <span className="period">/month</span>
             </Price>
             <Features>
-              <Feature>Premium Boxing Gloves</Feature>
-              <Feature>Striking Shin Guards</Feature>
-              <Feature>ONE FULL MONTH of Unlimited Membership</Feature>
-              <Feature>Access to all 22 weekly classes</Feature>
-              <Feature>Brazilian Jiu-Jitsu and MMA training</Feature>
-              <Feature>Top-tier equipment included</Feature>
-              <Feature>Perfect for beginners and experienced fighters</Feature>
-              <Feature>No additional fees or commitments</Feature>
+              <Feature>Access to ALL classes</Feature>
+              <Feature>Jiu Jitsu — No Gi only</Feature>
+              <Feature>Muay Thai — Striking</Feature>
+              <Feature>FREE boxing gloves + shin pads when you sign up after your free trial</Feature>
+              <Feature>All levels welcome</Feature>
+              <Feature>Compete or just train</Feature>
+              <Feature>Supportive community</Feature>
             </Features>
           </MainPricingCard>
-          
+
           <BookNowButton href="/contact">
-            Book Now
+            Start Your Free Trial
           </BookNowButton>
-          
+
           <InfoSection>
-            <h3>What's Included</h3>
+            <h3>What&apos;s Included</h3>
             <p>
-              This all-inclusive deal gives you the gear you need to train hard and the access 
-              to all of our 22 weekly classes. Whether you're a beginner or a seasoned fighter, 
-              get ready to level up your skills in Brazilian Jiu-Jitsu and MMA with top-tier 
-              equipment and unlimited training.
+              The Unlimited Membership gives you full access to every class on our schedule —
+              No Gi Jiu Jitsu and Muay Thai striking. Whether you want to compete or just train,
+              you&apos;ll be surrounded by real people, real training, and real results.
             </p>
             <p>
-              <strong>Don't miss out—your journey starts here!</strong>
+              <strong>Sign up after your free trial and we&apos;ll set you up with FREE boxing
+              gloves and shin pads.</strong>
             </p>
           </InfoSection>
-          
+
           <InfoSection>
             <h3>Why This Offer?</h3>
             <p>
-              We want to make it as easy as possible for you to start your martial arts journey. 
-              This special package eliminates the common barriers to getting started: equipment 
-              costs and membership commitments. You get everything you need to succeed from day one.
+              We want to make it as easy as possible for you to start your martial arts journey.
+              Try a class for free, and when you join, your striking gear is on us — no equipment
+              costs standing between you and the mats. All levels are welcome from day one.
             </p>
           </InfoSection>
-          
+
           <ContactInfo>
-            <h3>Ready to Claim Your Special Offer?</h3>
-            <p>Call or text us to secure your spot: <strong>978-810-2471</strong></p>
+            <h3>Start Your Journey Today</h3>
+            <p>Call or text us to book your free trial: <strong>978-810-2471</strong></p>
             <p>58 Pulaski Street, Building A, 2nd Floor, Peabody, MA</p>
-            <p><strong>Limited time offer - don't wait!</strong></p>
+            <p><strong>Real people. Real training. Real results.</strong></p>
           </ContactInfo>
         </Container>
       </PricingSection>
     </PageContainer>
   );
-} 
+}

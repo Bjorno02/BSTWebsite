@@ -576,8 +576,8 @@ function Navigation() {
                 <DropdownDescription>Kids Jiu-Jitsu and Wrestling</DropdownDescription>
               </DropdownLink>
               <DropdownLink href="/pricing/special-offer">
-                <DropdownTitle>Special Offer</DropdownTitle>
-                <DropdownDescription>Limited-time: $250 for gear + 1 month unlimited</DropdownDescription>
+                <DropdownTitle>Unlimited Membership</DropdownTitle>
+                <DropdownDescription>$150/month — free gloves + shin pads after your free trial</DropdownDescription>
               </DropdownLink>
             </Dropdown>
           </NavItem>
@@ -689,7 +689,7 @@ function Navigation() {
                 Kids Program
               </MobileDropdownLink>
               <MobileDropdownLink href="/pricing/special-offer" onClick={closeMobileMenu}>
-                Special Offer
+                Unlimited Membership
               </MobileDropdownLink>
             </MobileDropdown>
           </MobileNavItem>

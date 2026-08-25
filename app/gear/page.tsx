@@ -381,11 +381,11 @@ export default function Gear() {
         <GearSection>
           <SectionTitle>Special Offers</SectionTitle>
           <GearDescription>
-            New to BST? Take advantage of our special gear package! Get everything you need to start 
-            training, including essential equipment and your first month of unlimited classes.
+            New to BST? Sign up for our Unlimited Membership after your free trial and get
+            FREE boxing gloves and shin pads — everything you need to start training.
           </GearDescription>
           <ContactText style={{ marginTop: '1.5rem' }}>
-            Check out our <a href="/pricing/special-offer" style={{ color: colors.red, textDecoration: 'underline' }}>Special Offer</a> page for details on our gear + membership package.
+            Check out our <a href="/pricing/special-offer" style={{ color: colors.red, textDecoration: 'underline' }}>Unlimited Membership</a> page for details on the free gear offer.
           </ContactText>
         </GearSection>
 
