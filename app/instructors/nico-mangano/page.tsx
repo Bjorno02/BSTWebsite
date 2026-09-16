@@ -188,7 +188,7 @@ export default function NicoMangano() {
         <InstructorSection>
           <Container>
             <Title>Nico Mangano</Title>
-            <Subtitle>Kids Muay Thai Instructor</Subtitle>
+            <Subtitle>Muay Thai Instructor</Subtitle>
             <Description>
               Nico Mangano is a dedicated martial artist and coach with years of striking experience, an undefeated amateur Muay Thai record, and a background in athletics. He brings a unique blend of discipline, technical skill, and passion to his coaching.
             </Description>
@@ -209,7 +209,7 @@ export default function NicoMangano() {
                     <li>3+ years of Jeet-Kune-Do</li>
                     <li>3+ years of Muay Thai</li>
                     <li>1-0 undefeated amateur Muay Thai fighter</li>
-                    <li>1+ year teaching kids Muay Thai and private sessions</li>
+                    <li>1+ year teaching Muay Thai classes and private sessions</li>
                   </ul>
                 </InfoSection>
               </InstructorInfo>
@@ -217,13 +217,13 @@ export default function NicoMangano() {
                 <InfoSection>
                   <h3>Background</h3>
                   <p>
-                    Nico’s experience as a martial artist and athlete has shaped his approach to coaching. He is passionate about sharing his knowledge of Muay Thai and self-defense with the next generation, helping young athletes build confidence, discipline, and resilience.
+                    Nico’s experience as a martial artist and athlete has shaped his approach to coaching. He is passionate about sharing his knowledge of Muay Thai and self-defense with his students, helping them build confidence, discipline, and resilience.
                   </p>
                 </InfoSection>
                 <InfoSection>
                   <h3>Teaching Philosophy</h3>
                   <p>
-                    Nico’s ultimate goal is to teach youth self-defense through Muay Thai, providing them with a toolset that will benefit them in all areas of life. He believes in fostering confidence, hard work, and consistency, empowering his students to succeed both on and off the mats.
+                    Nico’s ultimate goal is to teach self-defense through Muay Thai, providing his students with a toolset that will benefit them in all areas of life. He believes in fostering confidence, hard work, and consistency, empowering his students to succeed both on and off the mats.
                   </p>
                 </InfoSection>
               </InstructorInfo>

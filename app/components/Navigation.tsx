@@ -425,6 +425,9 @@ const MobileContactButton = styled(Link)`
 `;
 
 const DesktopNavContent = styled.div`
+  flex: 1;
+  min-width: 0;
+
   @media (max-width: 1240px) {
     display: none;
   }
@@ -506,11 +509,11 @@ function Navigation() {
 
           <NavItem>
             <NavButton
-              onMouseEnter={() => handleDropdownToggle('adultInstructors')}
+              onMouseEnter={() => handleDropdownToggle('instructors')}
             >
-              Adult Instructors
+              Instructors
             </NavButton>
-            <Dropdown $isOpen={openDropdown === 'adultInstructors'}>
+            <Dropdown $isOpen={openDropdown === 'instructors'}>
               <DropdownLink href="/instructors/sean-rubchinuk">
                 <DropdownTitle>Sean Rubchinuk</DropdownTitle>
                 <DropdownDescription>Head Coach & World Champion</DropdownDescription>
@@ -519,31 +522,13 @@ function Navigation() {
                 <DropdownTitle>Diego Martin</DropdownTitle>
                 <DropdownDescription>Muay Thai Instructor</DropdownDescription>
               </DropdownLink>
-              <DropdownLink href="/instructors/dundi-vedantam">
-                <DropdownTitle>Dundi Vedantam</DropdownTitle>
-                <DropdownDescription>Jiu-Jitsu Fundamentals Instructor</DropdownDescription>
-              </DropdownLink>
-              <DropdownLink href="/instructors/mario-hoxha">
-                <DropdownTitle>Mario Hoxha</DropdownTitle>
-                <DropdownDescription>Wrestling Instructor</DropdownDescription>
-              </DropdownLink>
-            </Dropdown>
-          </NavItem>
-
-          <NavItem>
-            <NavButton
-              onMouseEnter={() => handleDropdownToggle('kidsInstructors')}
-            >
-              Kids Instructors
-            </NavButton>
-            <Dropdown $isOpen={openDropdown === 'kidsInstructors'}>
               <DropdownLink href="/instructors/bjorn-shurdha">
                 <DropdownTitle>Bjorn Shurdha</DropdownTitle>
-                <DropdownDescription>Kids Jiu-Jitsu Instructor</DropdownDescription>
+                <DropdownDescription>Jiu Jitsu Instructor</DropdownDescription>
               </DropdownLink>
-              <DropdownLink href="/instructors/luke-loureiro">
-                <DropdownTitle>Luke Loureiro</DropdownTitle>
-                <DropdownDescription>Kids Wrestling Instructor</DropdownDescription>
+              <DropdownLink href="/instructors/nico-mangano">
+                <DropdownTitle>Nico Mangano</DropdownTitle>
+                <DropdownDescription>Muay Thai Instructor</DropdownDescription>
               </DropdownLink>
             </Dropdown>
           </NavItem>
@@ -578,6 +563,10 @@ function Navigation() {
               <DropdownLink href="/pricing/special-offer">
                 <DropdownTitle>Unlimited Membership</DropdownTitle>
                 <DropdownDescription>$150/month — free gloves + shin pads after your free trial</DropdownDescription>
+              </DropdownLink>
+              <DropdownLink href="/pricing/law-enforcement">
+                <DropdownTitle>Law Enforcement Discount</DropdownTitle>
+                <DropdownDescription>$100/month for active law enforcement — all classes</DropdownDescription>
               </DropdownLink>
             </Dropdown>
           </NavItem>
@@ -635,35 +624,21 @@ function Navigation() {
           </MobileNavItem>
 
           <MobileNavItem>
-            <MobileNavButton onClick={() => toggleMobileDropdown('adultInstructors')}>
-              Adult Instructors
+            <MobileNavButton onClick={() => toggleMobileDropdown('instructors')}>
+              Instructors
             </MobileNavButton>
-            <MobileDropdown $isOpen={mobileDropdownOpen === 'adultInstructors'}>
+            <MobileDropdown $isOpen={mobileDropdownOpen === 'instructors'}>
               <MobileDropdownLink href="/instructors/sean-rubchinuk" onClick={closeMobileMenu}>
                 Sean Rubchinuk
               </MobileDropdownLink>
               <MobileDropdownLink href="/instructors/diego-martin" onClick={closeMobileMenu}>
                 Diego Martin
               </MobileDropdownLink>
-              <MobileDropdownLink href="/instructors/dundi-vedantam" onClick={closeMobileMenu}>
-                Dundi Vedantam
-              </MobileDropdownLink>
-              <MobileDropdownLink href="/instructors/mario-hoxha" onClick={closeMobileMenu}>
-                Mario Hoxha
-              </MobileDropdownLink>
-            </MobileDropdown>
-          </MobileNavItem>
-
-          <MobileNavItem>
-            <MobileNavButton onClick={() => toggleMobileDropdown('kidsInstructors')}>
-              Kids Instructors
-            </MobileNavButton>
-            <MobileDropdown $isOpen={mobileDropdownOpen === 'kidsInstructors'}>
               <MobileDropdownLink href="/instructors/bjorn-shurdha" onClick={closeMobileMenu}>
                 Bjorn Shurdha
               </MobileDropdownLink>
-              <MobileDropdownLink href="/instructors/luke-loureiro" onClick={closeMobileMenu}>
-                Luke Loureiro
+              <MobileDropdownLink href="/instructors/nico-mangano" onClick={closeMobileMenu}>
+                Nico Mangano
               </MobileDropdownLink>
             </MobileDropdown>
           </MobileNavItem>
@@ -690,6 +665,9 @@ function Navigation() {
               </MobileDropdownLink>
               <MobileDropdownLink href="/pricing/special-offer" onClick={closeMobileMenu}>
                 Unlimited Membership
+              </MobileDropdownLink>
+              <MobileDropdownLink href="/pricing/law-enforcement" onClick={closeMobileMenu}>
+                Law Enforcement Discount
               </MobileDropdownLink>
             </MobileDropdown>
           </MobileNavItem>

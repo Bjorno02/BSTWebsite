@@ -223,47 +223,20 @@ export default function Instructors() {
         </InstructorSection>
 
         <InstructorSection>
-          <InstructorName>Dundi Vedantam</InstructorName>
-          <InstructorTitle>Jiu-Jitsu Fundamentals Instructor</InstructorTitle>
-          <InstructorDescription>
-            Teaches Tuesday and Thursday Jiu-Jitsu fundamentals classes. 
-            Focuses on building strong foundations for all skill levels.
-          </InstructorDescription>
-        </InstructorSection>
-
-        <InstructorSection>
-          <InstructorName>Mario Hoxha</InstructorName>
-          <InstructorTitle>Wrestling Instructor</InstructorTitle>
-          <InstructorDescription>
-            Wrestling specialist who brings high-level grappling expertise 
-            to our adult programs. Focuses on takedowns and wrestling fundamentals.
-          </InstructorDescription>
-        </InstructorSection>
-
-        <InstructorSection>
           <InstructorName>Bjorn Shurdha</InstructorName>
-          <InstructorTitle>Kids Jiu-Jitsu Instructor</InstructorTitle>
+          <InstructorTitle>Jiu Jitsu Instructor</InstructorTitle>
           <InstructorDescription>
-            Specializes in teaching Jiu-Jitsu to children. Creates a fun, 
-            safe environment where kids can learn martial arts fundamentals.
-          </InstructorDescription>
-        </InstructorSection>
-
-        <InstructorSection>
-          <InstructorName>Luke Loureiro</InstructorName>
-          <InstructorTitle>Kids Wrestling Instructor</InstructorTitle>
-          <InstructorDescription>
-            Kids wrestling specialist who teaches age-appropriate grappling 
-            techniques. Focuses on building confidence and athletic skills.
+            Experienced competitor with multiple super fight victories. Creates a 
+            supportive, engaging environment where students build strong fundamentals.
           </InstructorDescription>
         </InstructorSection>
 
         <InstructorSection>
           <InstructorName>Nico Mangano</InstructorName>
-          <InstructorTitle>Kids Muay Thai Instructor</InstructorTitle>
+          <InstructorTitle>Muay Thai Instructor</InstructorTitle>
           <InstructorDescription>
-            Dedicated to teaching Muay Thai to children. Emphasizes technique, 
-            fitness, and character development in a supportive environment.
+            Undefeated amateur Muay Thai fighter with a background in athletics. Emphasizes 
+            technique, fitness, and discipline in a supportive environment.
           </InstructorDescription>
         </InstructorSection>
       </Content>

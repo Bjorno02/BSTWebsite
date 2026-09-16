@@ -153,9 +153,9 @@ export default function BjornShurdha() {
         <InstructorSection>
           <Container>
             <Title>Bjorn Shurdha</Title>
-            <Subtitle>Kids Jiu-Jitsu Instructor</Subtitle>
+            <Subtitle>Jiu Jitsu Instructor</Subtitle>
             <Description>
-              Bjorn Shurdha is a dedicated martial artist and coach with extensive competition experience, multiple super fight victories, and a deep understanding of the game of jiu-jitsu. He brings his wealth of knowledge and passion to teaching the next generation of martial artists.
+              Bjorn Shurdha is a dedicated martial artist and coach with extensive competition experience, multiple super fight victories, and a deep understanding of the game of jiu-jitsu. He brings his wealth of knowledge and passion to teaching students at every level of their journey.
             </Description>
             
             <InstructorCard>
