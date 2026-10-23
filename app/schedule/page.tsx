@@ -40,6 +40,11 @@ const Content = styled.div`
   padding-left: 2rem;
   padding-right: 2rem;
   
+  @media (max-width: 1279px) {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
   @media (max-width: 768px) {
     padding-top: 80px;
     padding-left: 1rem;
@@ -129,6 +134,10 @@ const TableWrapper = styled.div`
   border-radius: 8px;
   margin: 2rem 0;
   
+  @media (max-width: 1279px) {
+    padding: 8px;
+  }
+  
   @media (max-width: 768px) {
     padding: 15px;
     margin: 1.5rem 0;
@@ -149,7 +158,7 @@ const ScheduleTable = styled.div`
   background: #404040;
   padding: 1px;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     overflow-x: visible;
     background: transparent;
     box-shadow: none;
@@ -159,10 +168,16 @@ const ScheduleTable = styled.div`
 
 const Table = styled.table`
   width: 100%;
+  min-width: 960px;
+  table-layout: fixed;
   border-collapse: collapse;
   background: #404040;
   
-  @media (max-width: 768px) {
+  @media (max-width: 1279px) {
+    min-width: 900px;
+  }
+  
+  @media (max-width: 1024px) {
     display: none;
   }
 `;
@@ -170,28 +185,36 @@ const Table = styled.table`
 const Th = styled.th`
   background: #CC0000 !important;
   color: #FFFFFF !important;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   text-align: center;
   font-weight: bold;
+  font-size: 0.9rem;
   border: 1px solid #000000;
   font-family: 'Orbitron', sans-serif;
   position: relative;
   z-index: 10;
   
-  @media (max-width: 768px) {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-  
-  @media (max-width: 480px) {
-    padding: 0.5rem;
+  @media (max-width: 1279px) {
+    padding: 0.85rem 0.35rem;
     font-size: 0.8rem;
   }
 `;
 
+const TimeHeader = styled(Th)`
+  width: 80px;
+  
+  @media (max-width: 1279px) {
+    width: 68px;
+  }
+`;
+
 const Td = styled.td<{ $hasClass: boolean }>`
-  padding: 1rem;
+  padding: 1rem 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
   text-align: center;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
   border: 1px solid #000000;
   background: #404040;
   color: #FFFFFF;
@@ -201,13 +224,8 @@ const Td = styled.td<{ $hasClass: boolean }>`
     background: ${props => props.$hasClass ? '#330000' : '#1a1a1a'};
   }
   
-  @media (max-width: 768px) {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-  
-  @media (max-width: 480px) {
-    padding: 0.5rem;
+  @media (max-width: 1279px) {
+    padding: 0.85rem 0.3rem;
     font-size: 0.8rem;
   }
 `;
@@ -216,19 +234,16 @@ const TimeColumn = styled.td`
   background: #CC0000 !important;
   color: #FFFFFF !important;
   font-weight: bold;
-  padding: 1rem;
+  font-size: 0.9rem;
+  padding: 1rem 0.5rem;
+  text-align: center;
   border: 1px solid #000000;
   font-family: 'Orbitron', sans-serif;
   position: relative;
   z-index: 10;
   
-  @media (max-width: 768px) {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-  
-  @media (max-width: 480px) {
-    padding: 0.5rem;
+  @media (max-width: 1279px) {
+    padding: 0.85rem 0.35rem;
     font-size: 0.8rem;
   }
 `;
@@ -236,13 +251,31 @@ const TimeColumn = styled.td`
 const MobileSchedule = styled.div`
   display: none;
   
-  @media (max-width: 768px) {
-    display: block;
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: start;
+  }
+  
+  /* Tablet pairs: MON/TUE, WED/THU, FRI/SAT, then SUN alone and centered */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    & > [data-day='SUN'] {
+      order: 1;
+      grid-column: 1 / -1;
+      width: calc(50% - 0.625rem);
+      justify-self: center;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
   }
 `;
 
 const MobileDay = styled.div`
-  margin-bottom: 2rem;
+  min-width: 0;
   background: #404040;
   border-radius: 8px;
   overflow: hidden;
@@ -261,9 +294,9 @@ const MobileDayHeader = styled.div`
 
 const MobileTimeSlot = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
   border-bottom: 1px solid #000000;
   background: #404040;
   color: #FFFFFF;
@@ -275,89 +308,51 @@ const MobileTimeSlot = styled.div`
   &:hover {
     background: #330000;
   }
+  
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+    gap: 0.6rem;
+  }
 `;
 
 const MobileTime = styled.div`
+  flex: 0 0 auto;
   background: #CC0000;
   color: #FFFFFF;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 4px;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
-  font-size: 0.9rem;
-  min-width: 80px;
+  font-size: 0.85rem;
+  min-width: 72px;
   text-align: center;
+  white-space: nowrap;
+  
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+    min-width: 64px;
+    padding: 0.45rem 0.5rem;
+  }
 `;
 
 const MobileClass = styled.div`
-  flex: 1;
-  margin-left: 1rem;
-  font-size: 1rem;
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
   
   @media (max-width: 480px) {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
   }
 `;
 
-const PricingSection = styled(Section)`
-  background: ${colors.darkGrey};
-  color: ${colors.white};
-  padding: 4rem 0;
-`;
-
-const PricingContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 800px;
-  margin: 2rem auto;
-`;
-
-const PricingOption = styled.div`
-  background: ${colors.black};
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border-left: 4px solid ${colors.red};
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: translateX(5px);
-  }
-
-  h3 {
-    color: ${colors.red};
-    margin: 0 0 1rem 0;
-    font-family: 'Orbitron', sans-serif;
-  }
-
-  p {
-    margin: 0;
-    font-size: 1.2rem;
-    color: ${colors.white};
-  }
-`;
-
-const NoContract = styled.div`
-  background: ${colors.red};
-  color: ${colors.white};
-  padding: 1.5rem;
+const MobileEmpty = styled.div`
+  padding: 1rem;
   text-align: center;
-  border-radius: 8px;
-  margin: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-  h3 {
-    margin: 0 0 0.5rem 0;
-    color: ${colors.white};
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
-  }
-
-  p {
-    margin: 0;
-    font-weight: bold;
-  }
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  font-style: italic;
 `;
 
 const ContactInfo = styled.div`
@@ -391,7 +386,7 @@ const ContactInfo = styled.div`
   }
 `;
 
-const TIMES = ['4PM', '5PM', '6PM', '7PM', '8PM'] as const;
+const TIMES = ['10AM', '11AM', '12PM', '4PM', '5PM', '6PM', '7PM', '8PM'] as const;
 const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'] as const;
 
 type ScheduleTime = typeof TIMES[number];
@@ -414,30 +409,57 @@ export default function Schedule() {
     times: TIMES,
     days: DAYS,
     classes: {
-      '4PM': {
+      '10AM': {
         SUN: '',
-        MON: 'CONDITIONING',
+        MON: 'BOXING FUNDAMENTALS',
+        TUE: '',
+        WED: 'BOXING FUNDAMENTALS',
+        THU: '',
+        FRI: 'BOXING FUNDAMENTALS',
+        SAT: 'BOXING ALL LEVELS'
+      },
+      '11AM': {
+        SUN: '',
+        MON: '',
         TUE: '',
         WED: '',
         THU: '',
-        FRI: 'CONDITIONING',
+        FRI: '',
+        SAT: 'MUAY THAI ALL LEVELS'
+      },
+      '12PM': {
+        SUN: '',
+        MON: 'NO-GI JIU JITSU BASICS',
+        TUE: 'NO-GI JIU JITSU BASICS',
+        WED: 'NO-GI JIU JITSU BASICS',
+        THU: 'NO-GI JIU JITSU BASICS',
+        FRI: '',
+        SAT: ''
+      },
+      '4PM': {
+        SUN: '',
+        MON: 'BOXING',
+        TUE: 'MUAY THAI FUNDAMENTALS',
+        WED: 'BOXING',
+        THU: 'MUAY THAI ALL LEVELS',
+        FRI: 'BOXING',
         SAT: ''
       },
       '5PM': {
         SUN: '',
-        MON: 'BASICS',
-        TUE: 'BASICS JIU JITSU',
-        WED: 'BASICS',
-        THU: 'BASICS JIU JITSU',
-        FRI: 'BASICS',
+        MON: 'NO-GI JIU JITSU BASICS',
+        TUE: 'NO-GI JIU JITSU BASICS',
+        WED: 'NO-GI JIU JITSU BASICS',
+        THU: 'NO-GI JIU JITSU BASICS',
+        FRI: 'NO-GI JIU JITSU BASICS',
         SAT: ''
       },
       '6PM': {
         SUN: '',
-        MON: 'ALL LEVELS',
-        TUE: 'WRESTLING ALL LEVELS',
-        WED: 'ALL LEVELS',
-        THU: 'JIU JITSU ALL LEVELS',
+        MON: 'NO-GI JIU JITSU ALL LEVELS',
+        TUE: 'WRESTLING',
+        WED: 'NO-GI JIU JITSU ALL LEVELS',
+        THU: 'NO-GI JIU JITSU ALL LEVELS',
         FRI: 'OPEN MAT',
         SAT: ''
       },
@@ -482,7 +504,7 @@ export default function Schedule() {
                 <Table>
                   <thead>
                     <tr>
-                      <Th>Time</Th>
+                      <TimeHeader>Time</TimeHeader>
                       {schedule.days.map(day => (
                         <Th key={day}>{day}</Th>
                       ))}
@@ -508,8 +530,11 @@ export default function Schedule() {
               
               <MobileSchedule>
                 {schedule.days.map(day => (
-                  <MobileDay key={day}>
+                  <MobileDay key={day} data-day={day}>
                     <MobileDayHeader>{day}</MobileDayHeader>
+                    {schedule.times.every(time => schedule.classes[time][day] === '') && (
+                      <MobileEmpty>No scheduled classes</MobileEmpty>
+                    )}
                     {schedule.times.map(time => {
                       const className = schedule.classes[time][day];
                       if (className === '') return null;
@@ -525,50 +550,6 @@ export default function Schedule() {
               </MobileSchedule>
             </TableWrapper>
           </Container>
-
-          <PricingSection>
-            <Container>
-              <PricingContainer>
-                <PricingOption>
-                  <h3>Blood Sweat and Tears Unlimited</h3>
-                  <p>$150</p>
-                </PricingOption>
-                <PricingOption>
-                  <h3>Blood Sweat and Tears Youth MMA Program!</h3>
-                </PricingOption>
-                <PricingOption>
-                  <h3>Unlimited Youth Membership</h3>
-                  <p>$125</p>
-                </PricingOption>
-                <PricingOption>
-                  <h3>Youth Grappling Membership</h3>
-                  <p>$75</p>
-                </PricingOption>
-                <PricingOption>
-                  <h3>Youth Striking Membership</h3>
-                  <p>$75</p>
-                </PricingOption>
-                <PricingOption>
-                  <h3>Blood Sweat and Tears Striking Program</h3>
-                </PricingOption>
-                <PricingOption>
-                  <h3>Striking Membership</h3>
-                  <p>$125</p>
-                </PricingOption>
-                <PricingOption>
-                  <h3>ONE MONTH UNLIMITED + Shin Pads & Gloves</h3>
-                  <p>$250</p>
-                </PricingOption>
-                <NoContract>
-                  <h3>NO CONTRACT - NO COMMITMENT</h3>
-                  <p>SPACE LIMITED</p>
-                </NoContract>
-                <PricingOption>
-                  <h3>ADULT DROP-IN'S WELCOMED!</h3>
-                </PricingOption>
-              </PricingContainer>
-            </Container>
-          </PricingSection>
 
           <ContactInfo>
             <h3>Contact Information</h3>

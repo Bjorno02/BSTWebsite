@@ -321,7 +321,7 @@ export default function MuayThaiPricing() {
           <InfoSection>
             <h3>Training Schedule</h3>
             <p>
-              Muay Thai classes are held Monday, Wednesday, and Friday at 8PM. Classes focus on 
+              Muay Thai classes run six days a week: Monday, Wednesday, and Friday at 8PM, Tuesday at 4PM (Fundamentals), Thursday at 4PM (All Levels), and Saturday at 11AM (All Levels). Classes focus on 
               technique development, conditioning, and practical application. Check our schedule 
               page for detailed class times and availability.
             </p>
