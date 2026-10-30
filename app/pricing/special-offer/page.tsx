@@ -246,14 +246,15 @@ export default function SpecialOffer() {
           <Title>Unlimited Membership</Title>
           <Subtitle>Access to ALL Classes — Only $150/Month</Subtitle>
           <Description>
-            Train No Gi Jiu Jitsu and Muay Thai striking as much as you want. Sign up after
-            your FREE trial and get FREE boxing gloves and shin pads!
+            Every class on the schedule for one price. No-Gi Jiu Jitsu, Muay Thai, Boxing and
+            Wrestling, as often as you want. Sign up after your FREE trial and get FREE boxing
+            gloves and shin pads!
           </Description>
 
           <PosterFrame>
             <Image
               src="/unlimited-membership.png"
-              alt="BST Unlimited Membership — access to all classes, Jiu Jitsu (No Gi only) and Muay Thai striking, $150 per month. Sign up after your free trial and get free boxing gloves and shin pads."
+              alt="BST Unlimited Membership — access to all classes: No-Gi Jiu Jitsu, Muay Thai, Boxing, and Wrestling, $150 per month. Sign up after your free trial and get free boxing gloves and shin pads."
               width={1254}
               height={1254}
               sizes="(max-width: 640px) 92vw, 600px"
@@ -273,9 +274,11 @@ export default function SpecialOffer() {
               <span className="period">/month</span>
             </Price>
             <Features>
-              <Feature>Access to ALL classes</Feature>
-              <Feature>Jiu Jitsu — No Gi only</Feature>
-              <Feature>Muay Thai — Striking</Feature>
+              <Feature>Access to ALL classes on the schedule</Feature>
+              <Feature>No-Gi Jiu Jitsu — Basics, All Levels, Live Training &amp; Open Mat</Feature>
+              <Feature>Muay Thai — Fundamentals &amp; All Levels</Feature>
+              <Feature>Boxing — Fundamentals &amp; All Levels (new 10 AM and 4 PM classes)</Feature>
+              <Feature>Wrestling — Tuesday nights</Feature>
               <Feature>FREE boxing gloves + shin pads when you sign up after your free trial</Feature>
               <Feature>All levels welcome</Feature>
               <Feature>Compete or just train</Feature>
@@ -290,9 +293,10 @@ export default function SpecialOffer() {
           <InfoSection>
             <h3>What&apos;s Included</h3>
             <p>
-              The Unlimited Membership gives you full access to every class on our schedule —
-              No Gi Jiu Jitsu and Muay Thai striking. Whether you want to compete or just train,
-              you&apos;ll be surrounded by real people, real training, and real results.
+              The Unlimited Membership covers every class on our schedule: No-Gi Jiu Jitsu,
+              Muay Thai, Boxing and Wrestling. Morning, afternoon and night classes all week.
+              Whether you want to compete or just train, you&apos;ll be surrounded by real people,
+              real training, and real results.
             </p>
             <p>
               <strong>Sign up after your free trial and we&apos;ll set you up with FREE boxing

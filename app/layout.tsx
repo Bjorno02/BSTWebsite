@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import StyledComponentsRegistry from './lib/registry';
+import FreeTrialPopup from './components/FreeTrialPopup';
 
 export const metadata: Metadata = {
   title: "BST Jiu Jitsu - Blood, Sweat & Tears",
@@ -39,7 +40,10 @@ export default function RootLayout({
             gtag('config', 'G-FKM5KFGDBB');
           `}
         </Script>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <FreeTrialPopup />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

@@ -9,13 +9,11 @@ import {
   Container,
 } from './components/StyledComponents';
 import Navigation from './components/Navigation';
-import PromoPopup from './components/PromoPopup';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <main>
-      <PromoPopup />
       <Navigation />
       
 

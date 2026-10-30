@@ -562,7 +562,7 @@ function Navigation() {
               </DropdownLink>
               <DropdownLink href="/pricing/special-offer">
                 <DropdownTitle>Unlimited Membership</DropdownTitle>
-                <DropdownDescription>$150/month — free gloves + shin pads after your free trial</DropdownDescription>
+                <DropdownDescription>$150/month — No-Gi, Muay Thai, Boxing &amp; Wrestling, plus free gloves + shin pads</DropdownDescription>
               </DropdownLink>
               <DropdownLink href="/pricing/law-enforcement">
                 <DropdownTitle>Law Enforcement Discount</DropdownTitle>
