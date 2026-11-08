@@ -452,7 +452,7 @@ export default function Schedule() {
         WED: 'NO-GI JIU JITSU BASICS',
         THU: 'NO-GI JIU JITSU BASICS',
         FRI: 'NO-GI JIU JITSU BASICS',
-        SAT: ''
+        SAT: "WOMEN'S ONLY BOXING"
       },
       '6PM': {
         SUN: '',
@@ -469,7 +469,7 @@ export default function Schedule() {
         TUE: 'LIVE TRAINING',
         WED: 'LIVE TRAINING',
         THU: 'LIVE TRAINING',
-        FRI: 'OPEN MAT',
+        FRI: "WOMEN'S ONLY BOXING",
         SAT: ''
       },
       '8PM': {
