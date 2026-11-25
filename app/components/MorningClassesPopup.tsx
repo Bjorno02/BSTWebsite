@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import { colors } from './StyledComponents';
 
-// Shown once per browser session (sessionStorage), so returning visitors get
-// a fresh nudge but nobody sees it on every page they open.
-const STORAGE_KEY = 'bst_free_trial_popup_v1';
+// The 10AM / 12PM class announcement. Shown exactly once per browser
+// (localStorage) the first time someone opens the site.
+const STORAGE_KEY = 'bst_morning_classes_popup_v1';
 const SHOW_DELAY_MS = 1200;
 export const BOOKING_URL = 'https://www.vagaro.com/bloodsweatandtearsjiujitsu/classes';
 
@@ -19,9 +19,9 @@ const Overlay = styled.div`
   display: flex;
   overflow-y: auto;
   padding: 1.5rem 1.25rem;
-  animation: trialFadeIn 0.28s ease-out;
+  animation: popupFadeIn 0.28s ease-out;
 
-  @keyframes trialFadeIn {
+  @keyframes popupFadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
   }
@@ -41,7 +41,7 @@ const Panel = styled.div`
     0 0 0 1px rgba(255, 255, 255, 0.06),
     0 0 40px rgba(204, 0, 0, 0.25),
     0 24px 64px rgba(0, 0, 0, 0.7);
-  animation: trialRise 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: popupRise 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Tilted inner frame — echoes the pricing cards' signature look. */
   &::before {
@@ -55,7 +55,7 @@ const Panel = styled.div`
     z-index: -1;
   }
 
-  @keyframes trialRise {
+  @keyframes popupRise {
     from {
       opacity: 0;
       transform: translateY(14px) scale(0.98);
@@ -118,7 +118,7 @@ const Eyebrow = styled.span`
 
 const Heading = styled.h2`
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.85rem;
+  font-size: 1.3rem;
   font-weight: 900;
   line-height: 1.15;
   text-transform: uppercase;
@@ -127,7 +127,7 @@ const Heading = styled.h2`
   text-shadow: 0 0 18px rgba(204, 0, 0, 0.35);
 
   @media (max-width: 480px) {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -193,14 +193,15 @@ const FinePrint = styled.p`
   color: rgba(255, 255, 255, 0.45);
 `;
 
-export default function FreeTrialPopup() {
+export default function MorningClassesPopup() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     let shouldShow = false;
     try {
-      shouldShow = !window.sessionStorage.getItem(STORAGE_KEY);
+      shouldShow = !window.localStorage.getItem(STORAGE_KEY);
     } catch {
+      // Storage blocked (private mode etc.) — still show the announcement.
       shouldShow = true;
     }
     if (!shouldShow) return;
@@ -218,7 +219,7 @@ export default function FreeTrialPopup() {
 
   const dismiss = useCallback(() => {
     try {
-      window.sessionStorage.setItem(STORAGE_KEY, '1');
+      window.localStorage.setItem(STORAGE_KEY, '1');
     } catch {
       /* ignore */
     }
@@ -242,7 +243,7 @@ export default function FreeTrialPopup() {
       <Panel
         role="dialog"
         aria-modal="true"
-        aria-labelledby="free-trial-popup-title"
+        aria-labelledby="morning-classes-popup-title"
         onClick={e => e.stopPropagation()}
       >
         <CloseButton type="button" aria-label="Close" onClick={dismiss}>
@@ -257,11 +258,14 @@ export default function FreeTrialPopup() {
           priority
         />
 
-        <Eyebrow>Free Trial</Eyebrow>
-        <Heading id="free-trial-popup-title">Come Train With Us</Heading>
+        <Eyebrow>Off Shift?</Eyebrow>
+        <Heading id="morning-classes-popup-title">
+          Morning Classes for First Responders &amp; Law Enforcement
+        </Heading>
         <Copy>
-          First class is on us. <strong>Jiu Jitsu, Muay Thai, Boxing or Wrestling</strong>,
-          your pick. Grab a spot on the schedule and we&apos;ll see you on the mats.
+          Train at <strong>10AM or 12PM</strong> in Peabody.{' '}
+          <strong>Law enforcement discount</strong> available, and your first
+          class is free.
         </Copy>
 
         <PrimaryLink
@@ -270,7 +274,7 @@ export default function FreeTrialPopup() {
           rel="noopener noreferrer"
           onClick={dismiss}
         >
-          Book a Free Trial
+          Book Your Free Class
         </PrimaryLink>
 
         <DismissButton type="button" onClick={dismiss}>

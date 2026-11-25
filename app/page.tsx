@@ -9,6 +9,7 @@ import {
   Container,
 } from './components/StyledComponents';
 import Navigation from './components/Navigation';
+import { BOOKING_URL } from './components/MorningClassesPopup';
 import Image from 'next/image';
 
 export default function Home() {
@@ -41,7 +42,9 @@ export default function Home() {
           </HeroDescription>
           
           <ButtonGroup>
-            <LinkButton href="/contact">START TRAINING</LinkButton>
+            <LinkButton href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              START TRAINING
+            </LinkButton>
           </ButtonGroup>
         </HeroContent>
       </HeroSection>
